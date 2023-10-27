@@ -9,3 +9,8 @@
 5) Work with team on merge conflicts.
 6) Merge branch into develop when the feature is complete
 7) Pull from develop often
+
+## Workflow Update:
+You can now merge your own changes.
+Feel free to merge small changes that you make into develop.
+For larger pieces of code, you can request to have someone review your pull request.
