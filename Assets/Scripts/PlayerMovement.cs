@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
         //Processing the horizontal movement.
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            Debug.Log(horizonalInput);
             rb.AddForce(horizonalInput * playerSpeed * Time.deltaTime);
         }
     }

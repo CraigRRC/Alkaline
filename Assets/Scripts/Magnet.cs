@@ -23,27 +23,38 @@ using UnityEngine;
 public class Magnet : MonoBehaviour
 {
     //State
-    private Polarity polarityState;
+    public Polarity polarityState;
     private float magnitude;
+    private AreaEffector2D areaEffector;
 
     public void Awake()
     {
         //Default state
         polarityState = Polarity.Positive;
-
+        areaEffector = GetComponent<AreaEffector2D>();
         //Set Magnitude
+        magnitude = 50;
+        areaEffector.forceMagnitude = magnitude;
     }
 
-    //One way we can do this, is with a box collider.
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        if (polarityState == Polarity.Positive)
+        //Check polarity of magnet and act accordingly.
+        switch (polarityState)
         {
-            //Pull towards
-        }
-        else if (polarityState == Polarity.Negative)
-        {
-            //Push away
+            case Polarity.Positive:
+                areaEffector.forceAngle = 90;
+                areaEffector.forceMagnitude = magnitude;
+                break;
+            case Polarity.Negative:
+                areaEffector.forceAngle = -90;
+                areaEffector.forceMagnitude = magnitude;
+                break;
+            case Polarity.Off:
+                areaEffector.forceMagnitude = 0;
+                break;
+            default:
+                break;
         }
     }
 
