@@ -10,18 +10,12 @@ public class Button : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
-        {
-            baseCollider.enabled = false;
-        }
+        baseCollider.enabled = false;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
-        {
-            baseCollider.enabled = true;
-        }
+        baseCollider.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

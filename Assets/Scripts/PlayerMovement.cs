@@ -58,14 +58,15 @@ public class PlayerMovement : MonoBehaviour
                 rb.drag = 0;
                 playerSpeed = 3000f;
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
-                Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
+                Debug.DrawRay(transform.position, Vector2.down * 1f, Color.red);
                 //If player is close enough to ground
                 //This will also need to change when the player grows in size.
                 if(hit.collider != null)
                 {
-                    if (hit.collider.gameObject.layer == 7)
+                    Debug.Log(hit.collider.gameObject.layer);
+                    if (hit.collider.gameObject.layer == 7 || hit.collider.gameObject.layer == 8)
                     {
-                        Debug.Log(hit.collider.gameObject.layer);
+                        
                         playerMovementState = PlayerMovementState.Grounded;
                     }
                 }
@@ -85,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         }
         //Added a jump
         if (jump && playerMovementState == PlayerMovementState.Grounded)
-        {   
+        {
             rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
             playerMovementState = PlayerMovementState.Jumping;
         }
