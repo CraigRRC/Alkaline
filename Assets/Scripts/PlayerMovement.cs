@@ -9,18 +9,33 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 horizonalInput = Vector2.zero;
     //public to debug
     public PlayerMovementState playerMovementState = PlayerMovementState.Grounded;
-    public float playerSpeed = 200f;
+    public float playerSpeed = 30000f;
     private bool jump;
-    private float jumpPower = 100f;
+    private float jumpPower = 15000f;
    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
     }
 
     void Update()
     {
+        Debug.Log(rb.velocity.y);
+        if(rb.velocity.y < -1)
+        {
+            playerMovementState = PlayerMovementState.Falling;
+        }
+        else if (rb.velocity.y == 0)
+        {
+            playerMovementState = PlayerMovementState.Grounded;
+        }
+        else
+        {
+            playerMovementState = PlayerMovementState.Jumping;
+        }
+
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
         jump = Input.GetKey(KeyCode.Space);
 
@@ -31,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
             //a raycast to check when we hit the ground again.
             //This raycast may need to be refactored using physics layers in the future.
             case PlayerMovementState.Jumping:
-                playerSpeed = 100f;
+                playerSpeed = 10000f;
+                rb.drag = 1.5f;
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down * 0.5f);
                 //If player is close enough to ground
                 //This will also need to change when the player grows in size.
@@ -42,7 +58,12 @@ public class PlayerMovement : MonoBehaviour
                 break;
                 //When grounded, go back to normal speed.
             case PlayerMovementState.Grounded:
-                playerSpeed = 200f;
+                playerSpeed = 30000f;
+                rb.drag = 1.5f;
+                break;
+            case PlayerMovementState.Falling:
+                rb.drag = 0;
+                playerSpeed = 3000f;
                 break;
             default:
                 break;
@@ -70,4 +91,5 @@ public enum PlayerMovementState
 {
     Jumping,
     Grounded,
+    Falling,
 }
