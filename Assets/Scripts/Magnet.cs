@@ -33,7 +33,7 @@ public class Magnet : MonoBehaviour
         polarityState = Polarity.Positive;
         areaEffector = GetComponent<AreaEffector2D>();
         //Set Magnitude
-        magnitude = 50;
+        magnitude = 40000;
         areaEffector.forceMagnitude = magnitude;
     }
 
