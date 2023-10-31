@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         //Added a jump
         if (jump && playerMovementState == PlayerMovementState.Grounded)
         {   
-            rb.AddForce(new Vector2(rb.velocity.x / 4, jumpPower), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
             playerMovementState = PlayerMovementState.Jumping;
         }
     }
