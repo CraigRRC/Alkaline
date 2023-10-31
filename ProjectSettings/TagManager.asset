@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Button
   - Water
   - UI
-  - 
-  - 
-  - 
+  - ButtonBase
+  - Ground
+  - Object
   - 
   - 
   - 

@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerMovementState playerMovementState = PlayerMovementState.Grounded;
     public float playerSpeed = 30000f;
     private bool jump;
-    private float jumpPower = 15000f;
+    private float jumpPower = 10000f;
    
 
     private void Awake()
@@ -21,8 +21,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
-    {
-        Debug.Log(rb.velocity.y);
+    { 
         if(rb.velocity.y < -1)
         {
             playerMovementState = PlayerMovementState.Falling;
@@ -48,13 +47,7 @@ public class PlayerMovement : MonoBehaviour
             case PlayerMovementState.Jumping:
                 playerSpeed = 10000f;
                 rb.drag = 1.5f;
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down * 0.5f);
-                //If player is close enough to ground
-                //This will also need to change when the player grows in size.
-                if (hit.distance < 0.6f)
-                {
-                    playerMovementState = PlayerMovementState.Grounded;
-                }
+               
                 break;
                 //When grounded, go back to normal speed.
             case PlayerMovementState.Grounded:
@@ -64,6 +57,19 @@ public class PlayerMovement : MonoBehaviour
             case PlayerMovementState.Falling:
                 rb.drag = 0;
                 playerSpeed = 3000f;
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
+                Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
+                //If player is close enough to ground
+                //This will also need to change when the player grows in size.
+                if(hit.collider != null)
+                {
+                    if (hit.collider.gameObject.layer == 7)
+                    {
+                        Debug.Log(hit.collider.gameObject.layer);
+                        playerMovementState = PlayerMovementState.Grounded;
+                    }
+                }
+                
                 break;
             default:
                 break;
