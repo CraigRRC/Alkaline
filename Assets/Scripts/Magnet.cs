@@ -26,19 +26,41 @@ public class Magnet : MonoBehaviour
     public Polarity polarityState;
     private float magnitude;
     private AreaEffector2D areaEffector;
+    private BoxCollider2D boxCollider;
+    public LayerMask currentMask;
+    public LayerMask tempMask; 
 
     public void Awake()
     {
-        //Default state
-        polarityState = Polarity.Positive;
         areaEffector = GetComponent<AreaEffector2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         //Set Magnitude
         magnitude = 40000;
         areaEffector.forceMagnitude = magnitude;
+        currentMask = areaEffector.colliderMask;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 8)
+        {
+            areaEffector.colliderMask = tempMask;
+        }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        areaEffector.colliderMask = currentMask;
+    }
+
+
 
     private void Update()
     {
+
+        
+
         //Check polarity of magnet and act accordingly.
         switch (polarityState)
         {
@@ -63,6 +85,22 @@ public class Magnet : MonoBehaviour
     //Or, maybe a switch in the world. Or both!
     public void SetPolarity(Polarity polarity) { polarityState = polarity; }
 
+    public void FlipPolarity()
+    {
+        switch (polarityState)
+        {
+            case Polarity.Positive:
+                polarityState = Polarity.Negative;
+                break;
+            case Polarity.Negative:
+                polarityState = Polarity.Positive;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void TurnMagnetOff() { polarityState = Polarity.Off; }
 }
 
 //Enum that will control the flow of the magnet.

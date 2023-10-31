@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.8775713, y: 2.1228895, z: -0.13353959}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 3.53125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,7 +91,7 @@ AreaEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 503
   m_UseGlobalAngle: 0
   m_ForceAngle: 90
   m_ForceMagnitude: 10
@@ -112,3 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   polarityState: 0
+  currentMask:
+    serializedVersion: 2
+    m_Bits: 0
+  tempMask:
+    serializedVersion: 2
+    m_Bits: 256
