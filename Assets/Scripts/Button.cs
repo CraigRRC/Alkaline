@@ -10,7 +10,7 @@ public class Button : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "player")
+        if (collision.gameObject.name == "Player")
         {
             baseCollider.enabled = false;
         }
@@ -18,7 +18,7 @@ public class Button : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "player")
+        if (collision.gameObject.name == "Player")
         {
             baseCollider.enabled = true;
         }
