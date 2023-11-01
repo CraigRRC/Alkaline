@@ -27,18 +27,20 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
-    { 
+    {
+        Debug.Log(jump);
+
         if(rb.velocity.y < -1)
         {
             playerMovementState = PlayerMovementState.Falling;
         }
-        else if (rb.velocity.y == 0)
+        else if (rb.velocity.y > 0.1f)
         {
-            playerMovementState = PlayerMovementState.Grounded;
+            playerMovementState = PlayerMovementState.Jumping;
         }
         else
         {
-            playerMovementState = PlayerMovementState.Jumping;
+            playerMovementState = PlayerMovementState.Grounded;
         }
 
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
