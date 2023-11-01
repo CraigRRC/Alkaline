@@ -35,7 +35,7 @@ public class Magnet : MonoBehaviour
         areaEffector = GetComponent<AreaEffector2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         //Set Magnitude
-        magnitude = 40000;
+        magnitude = 20000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
     }
