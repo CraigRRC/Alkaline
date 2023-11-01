@@ -568,6 +568,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagnetTopper
       objectReference: {fileID: 0}
+    - target: {fileID: 7218706933570984548, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218706933570984548, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8195410448519177089, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.71

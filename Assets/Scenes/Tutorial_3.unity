@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.118134
+      value: 3.585854
       objectReference: {fileID: 0}
     - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.73
+      value: 1.7627
       objectReference: {fileID: 0}
     - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -381,7 +381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957057598212289489, guid: 6d36933c697920d4fb79f5d5b4551bfa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.2207937
+      value: -4.99
       objectReference: {fileID: 0}
     - target: {fileID: 7957057598212289489, guid: 6d36933c697920d4fb79f5d5b4551bfa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -432,6 +432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4693111913960648777, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
+      propertyPath: magnet
+      value: 
+      objectReference: {fileID: 1517256335}
     - target: {fileID: 517833779303286730, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.03
@@ -481,6 +485,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
+--- !u!114 &1517256335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1707281086880399524, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
+  m_PrefabInstance: {fileID: 86582862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4785095d1824ad4891665d3315e7dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1728784494 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6756818013559891597, guid: ce7472f30be773542a666508fd79552d, type: 3}
