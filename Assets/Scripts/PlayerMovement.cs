@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,11 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private float jumpPower = 5000f;
     private float jumpSpeed = 3000f;
     private float baseJumpPower = 0f;
+    private SpriteRenderer playerSprite;
    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
         rb.freezeRotation = true;
         baseSpeed = playerSpeed;
         baseJumpPower = jumpPower;
@@ -85,6 +88,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             rb.AddForce(horizonalInput * playerSpeed);
+            if (Input.GetKey(KeyCode.A))
+            {
+               playerSprite.flipX = true;
+            }
+            else
+            {
+                playerSprite.flipX = false;
+            }
         }
         //Added a jump
         if (jump && playerMovementState == PlayerMovementState.Grounded)
