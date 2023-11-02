@@ -26,16 +26,18 @@ public class Magnet : MonoBehaviour
     public Polarity polarityState;
     private float magnitude;
     private AreaEffector2D areaEffector;
-    private BoxCollider2D boxCollider;
+    private SpriteRenderer magetVisual;
+    private SpriteRenderer magnetColour;
     public LayerMask currentMask;
     public LayerMask tempMask; 
 
     public void Awake()
     {
         areaEffector = GetComponent<AreaEffector2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        magetVisual = GetComponentInChildren<SpriteRenderer>();
+        magnetColour = GetComponentInParent<SpriteRenderer>();
         //Set Magnitude
-        magnitude = 40000;
+        magnitude = 20000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
     }
@@ -58,22 +60,25 @@ public class Magnet : MonoBehaviour
 
     private void Update()
     {
-
-        
-
         //Check polarity of magnet and act accordingly.
         switch (polarityState)
         {
             case Polarity.Positive:
                 areaEffector.forceAngle = 90;
                 areaEffector.forceMagnitude = magnitude;
+                magnetColour.color = Color.red;
+                magetVisual.enabled = true;
                 break;
             case Polarity.Negative:
                 areaEffector.forceAngle = -90;
                 areaEffector.forceMagnitude = magnitude;
+                magnetColour.color = Color.blue;
+                magetVisual.enabled = true;
                 break;
             case Polarity.Off:
                 areaEffector.forceMagnitude = 0;
+                magnetColour.color = Color.black;
+                magetVisual.enabled = false;
                 break;
             default:
                 break;

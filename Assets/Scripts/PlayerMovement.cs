@@ -9,32 +9,27 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 horizonalInput = Vector2.zero;
     //public to debug
     public PlayerMovementState playerMovementState = PlayerMovementState.Grounded;
-    public float playerSpeed = 30000f;
+    public float playerSpeed = 5000f;
+    private float fallSpeed = 2000f;
+    private float baseSpeed = 0f;
     private bool jump;
-    private float jumpPower = 10000f;
+    private float jumpPower = 5000f;
+    private float jumpSpeed = 3000f;
+    private float baseJumpPower = 0f;
+    private SpriteRenderer playerSprite;
    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
         rb.freezeRotation = true;
+        baseSpeed = playerSpeed;
+        baseJumpPower = jumpPower;
     }
 
     void Update()
-    { 
-        if(rb.velocity.y < -1)
-        {
-            playerMovementState = PlayerMovementState.Falling;
-        }
-        else if (rb.velocity.y == 0)
-        {
-            playerMovementState = PlayerMovementState.Grounded;
-        }
-        else
-        {
-            playerMovementState = PlayerMovementState.Jumping;
-        }
-
+    {
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
         jump = Input.GetKey(KeyCode.Space);
 
@@ -45,18 +40,18 @@ public class PlayerMovement : MonoBehaviour
             //a raycast to check when we hit the ground again.
             //This raycast may need to be refactored using physics layers in the future.
             case PlayerMovementState.Jumping:
-                playerSpeed = 10000f;
+                playerSpeed = jumpSpeed;
                 rb.drag = 1.5f;
                
                 break;
                 //When grounded, go back to normal speed.
             case PlayerMovementState.Grounded:
-                playerSpeed = 30000f;
+                playerSpeed = baseSpeed;
                 rb.drag = 1.5f;
                 break;
             case PlayerMovementState.Falling:
                 rb.drag = 0;
-                playerSpeed = 3000f;
+                playerSpeed = fallSpeed;
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
                 Debug.DrawRay(transform.position, Vector2.down * 1f, Color.red);
                 //If player is close enough to ground
@@ -66,16 +61,25 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log(hit.collider.gameObject.layer);
                     if (hit.collider.gameObject.layer == 7 || hit.collider.gameObject.layer == 8)
                     {
-                        
                         playerMovementState = PlayerMovementState.Grounded;
                     }
                 }
-                
                 break;
             default:
                 break;
         }
+
+        if (rb.velocity.y < -1)
+        {
+            playerMovementState = PlayerMovementState.Falling;
+        }
+        else if (rb.velocity.y == 0f)
+        {
+            playerMovementState = PlayerMovementState.Grounded;
+        }
     }
+
+
 
     private void FixedUpdate()
     {
@@ -83,6 +87,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             rb.AddForce(horizonalInput * playerSpeed);
+            if (Input.GetKey(KeyCode.A))
+            {
+               playerSprite.flipX = true;
+            }
+            else
+            {
+                playerSprite.flipX = false;
+            }
         }
         //Added a jump
         if (jump && playerMovementState == PlayerMovementState.Grounded)
