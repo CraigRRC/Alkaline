@@ -10,25 +10,31 @@ public class Button : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if(collision.gameObject.name == "Player")
+        {
+            if (door != null)
+            {
+                door.enabled = false;
+            }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        
+        if (door != null && buttonType == ButtonType.Hold)
+        {
+            door.enabled = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        door.enabled = false;
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(buttonType == ButtonType.Hold)
-        {
-            door.enabled = true;
-        }
+        
        
     }
 }

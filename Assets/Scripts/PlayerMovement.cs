@@ -28,21 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(jump);
-
-        if(rb.velocity.y < -1)
-        {
-            playerMovementState = PlayerMovementState.Falling;
-        }
-        else if (rb.velocity.y > 0.1f)
-        {
-            playerMovementState = PlayerMovementState.Jumping;
-        }
-        else
-        {
-            playerMovementState = PlayerMovementState.Grounded;
-        }
-
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
         jump = Input.GetKey(KeyCode.Space);
 
@@ -74,16 +59,25 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log(hit.collider.gameObject.layer);
                     if (hit.collider.gameObject.layer == 7 || hit.collider.gameObject.layer == 8)
                     {
-                        
                         playerMovementState = PlayerMovementState.Grounded;
                     }
                 }
-                
                 break;
             default:
                 break;
         }
+
+        if (rb.velocity.y < -1)
+        {
+            playerMovementState = PlayerMovementState.Falling;
+        }
+        else if (rb.velocity.y == 0f)
+        {
+            playerMovementState = PlayerMovementState.Grounded;
+        }
     }
+
+
 
     private void FixedUpdate()
     {
