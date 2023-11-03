@@ -186,4 +186,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementState: 1
-  playerSpeed: 200
+  playerSpeed: 7000
