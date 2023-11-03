@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3753983366398072887}
   - component: {fileID: 1843639284260767505}
   m_Layer: 2
-  m_Name: Magnet
+  m_Name: MagneticField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
