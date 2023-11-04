@@ -15,8 +15,8 @@ TagManager:
   - Ground
   - Object
   - Bounds
-  - 
-  - 
+  - Player
+  - MagneticField
   - 
   - 
   - 

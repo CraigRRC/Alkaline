@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8728593186740418347}
   - component: {fileID: 6292983712489159980}
   - component: {fileID: 2340927682392517016}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Magnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 305702967504500131}
   - component: {fileID: 6506280892699851172}
-  m_Layer: 2
+  m_Layer: 11
   m_Name: MagnetVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 7660826804437755159}
   - component: {fileID: 3753983366398072887}
   - component: {fileID: 1843639284260767505}
-  m_Layer: 2
+  m_Layer: 11
   m_Name: MagneticField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ AreaEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 1527
   m_UseGlobalAngle: 0
   m_ForceAngle: 90
   m_ForceMagnitude: 10
