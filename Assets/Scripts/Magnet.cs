@@ -37,7 +37,7 @@ public class Magnet : MonoBehaviour
         magetVisual = GetComponentInChildren<SpriteRenderer>();
         magnetColour = GetComponentInParent<SpriteRenderer>();
         //Set Magnitude
-        magnitude = 20000f;
+        magnitude = 25000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
     }
@@ -66,13 +66,19 @@ public class Magnet : MonoBehaviour
             case Polarity.Positive:
                 areaEffector.forceAngle = 90;
                 areaEffector.forceMagnitude = magnitude;
-                magnetColour.color = Color.red;
+                if(magnetColour != null)
+                {
+                    magnetColour.color = Color.red;
+                }
                 magetVisual.enabled = true;
                 break;
             case Polarity.Negative:
                 areaEffector.forceAngle = -90;
                 areaEffector.forceMagnitude = magnitude;
-                magnetColour.color = Color.blue;
+                if (magnetColour != null)
+                {
+                    magnetColour.color = Color.blue;
+                }
                 magetVisual.enabled = true;
                 break;
             case Polarity.Off:

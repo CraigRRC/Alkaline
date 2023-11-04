@@ -19,7 +19,8 @@ public class Exit : MonoBehaviour
 
     private void Update()
     {
-        doorCollider.enabled = !spriteRenderer.enabled;
+        //if door is open, enable the collider.
+        doorCollider.enabled = spriteRenderer.color == Color.black;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
