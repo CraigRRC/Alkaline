@@ -37,7 +37,7 @@ public class Magnet : MonoBehaviour
         magetVisual = GetComponentInChildren<SpriteRenderer>();
         magnetColour = GetComponentInParent<SpriteRenderer>();
         //Set Magnitude
-        magnitude = 25000f;
+        magnitude = 30000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
     }
