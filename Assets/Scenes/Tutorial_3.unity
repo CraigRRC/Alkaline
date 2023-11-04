@@ -386,6 +386,14 @@ PrefabInstance:
       propertyPath: magnet
       value: 
       objectReference: {fileID: 9963411}
+    - target: {fileID: -4693111913960648777, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
+      propertyPath: magnetsInLvl.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4693111913960648777, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
+      propertyPath: magnetsInLvl.Array.data[0]
+      value: 
+      objectReference: {fileID: 9963411}
     - target: {fileID: 517833779303286730, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7273731
