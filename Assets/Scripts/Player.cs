@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Magnet magnet;
+    public Magnet[] magnetsInLvl;
 
     private void Awake()
     {
@@ -14,11 +14,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (magnet != null)
+        if (magnetsInLvl != null)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                magnet.FlipPolarity();
+                foreach (var magnet in magnetsInLvl)
+                {
+                    magnet.FlipPolarity();
+                }
+               
             }
         }
         

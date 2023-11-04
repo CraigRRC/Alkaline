@@ -39,13 +39,20 @@ public class PlayerMovement : MonoBehaviour
         //Check to see if the player is jumping or grounded.
         switch (playerMovementState)
         {
-            //If player is jumping, we change the aerial speed and perform
-            //a raycast to check when we hit the ground again.
-            //This raycast may need to be refactored using physics layers in the future.
             case PlayerMovementState.Jumping:
                 playerSpeed = jumpSpeed;
                 rb.drag = 1.5f;
-               
+                RaycastHit2D jumpHit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
+                Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
+                //If player is close enough to ground
+                if (jumpHit.collider != null)
+                {
+                    Debug.Log(jumpHit.collider.gameObject.layer);
+                    if (jumpHit.collider.gameObject.layer == 7 || jumpHit.collider.gameObject.layer == 8)
+                    {
+                        playerMovementState = PlayerMovementState.Grounded;
+                    }
+                }
                 break;
                 //When grounded, go back to normal speed.
             case PlayerMovementState.Grounded:
@@ -56,10 +63,9 @@ public class PlayerMovement : MonoBehaviour
                 rb.drag = 0;
                 playerSpeed = fallSpeed;
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
-                Debug.DrawRay(transform.position, Vector2.down * 1f, Color.red);
+                Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
                 //If player is close enough to ground
-                //This will also need to change when the player grows in size.
-                if(hit.collider != null)
+                if (hit.collider != null)
                 {
                     Debug.Log(hit.collider.gameObject.layer);
                     if (hit.collider.gameObject.layer == 7 || hit.collider.gameObject.layer == 8)
