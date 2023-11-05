@@ -10,14 +10,15 @@ public class PlayerMovement : MonoBehaviour
     //public to debug
     public PlayerMovementState playerMovementState = PlayerMovementState.Grounded;
     public float playerSpeed = 5000f;
-    private float fallSpeed = 2000f;
+    public float groundedDrag = 3.0f;
+    public float fallSpeed = 2000f;
     private float baseSpeed = 0f;
     private bool jump;
-    private float jumpPower = 5000f;
-    private float jumpSpeed = 3000f;
-    private float baseJumpPower = 0f;
+    public float jumpPower = 5000f;
+    public float jumpSpeed = 3000f;
     private SpriteRenderer playerSprite;
     private Animator playerAnimator;
+    private bool doOnce = true;
    
 
     private void Awake()
@@ -27,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         rb.freezeRotation = true;
         baseSpeed = playerSpeed;
-        baseJumpPower = jumpPower;
 
     }
 
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         {
             case PlayerMovementState.Jumping:
                 playerSpeed = jumpSpeed;
-                rb.drag = 1.5f;
+                rb.drag = 0f;
                 RaycastHit2D jumpHit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
                 Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
                 //If player is close enough to ground
@@ -57,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
                 //When grounded, go back to normal speed.
             case PlayerMovementState.Grounded:
                 playerSpeed = baseSpeed;
-                rb.drag = 1.5f;
+                rb.drag = groundedDrag;
+                doOnce = true;
                 break;
             case PlayerMovementState.Falling:
                 rb.drag = 0;
@@ -74,17 +75,27 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
                 break;
+
+            case PlayerMovementState.inMagnet:
+                rb.drag = 0;
+                playerSpeed = jumpSpeed;
+                break;
+
             default:
                 break;
         }
 
-        if (rb.velocity.y < -1)
+        if (rb.velocity.y < -0.2f)
         {
             playerMovementState = PlayerMovementState.Falling;
         }
         else if (rb.velocity.y == 0f)
         {
             playerMovementState = PlayerMovementState.Grounded;
+        }
+        else if (!jump && rb.velocity.y > 0.1f && playerMovementState == PlayerMovementState.Grounded)
+        {
+            playerMovementState = PlayerMovementState.inMagnet;
         }
     }
 
@@ -112,10 +123,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Added a jump
-        if (jump && playerMovementState == PlayerMovementState.Grounded)
+        if (jump && doOnce && playerMovementState == PlayerMovementState.Grounded)
         {
             rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
             playerMovementState = PlayerMovementState.Jumping;
+            doOnce = false;
         }
     }
 }
@@ -123,6 +135,7 @@ public class PlayerMovement : MonoBehaviour
 //States for movement.
 public enum PlayerMovementState
 {
+    inMagnet,
     Jumping,
     Grounded,
     Falling,

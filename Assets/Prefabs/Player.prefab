@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872a985d2091da94f84210ac75e2a548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnet: {fileID: 0}
+  magnetsInLvl: []
 --- !u!114 &8170528996844661832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +187,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementState: 1
-  playerSpeed: 7000
+  playerSpeed: 25000
+  groundedDrag: 10
+  fallSpeed: 6000
+  jumpPower: 2500
+  jumpSpeed: 1000
 --- !u!95 &-455935275463590334
 Animator:
   serializedVersion: 5
