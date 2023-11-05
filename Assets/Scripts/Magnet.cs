@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 
@@ -29,7 +31,9 @@ public class Magnet : MonoBehaviour
     private SpriteRenderer magetVisual;
     private SpriteRenderer magnetColour;
     public LayerMask currentMask;
-    public LayerMask tempMask; 
+    public LayerMask tempMask;
+
+  
 
     public void Awake()
     {
@@ -42,21 +46,19 @@ public class Magnet : MonoBehaviour
         currentMask = areaEffector.colliderMask;
     }
 
+    //Set the layermask dynamically.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == 8)
         {
             areaEffector.colliderMask = tempMask;
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         areaEffector.colliderMask = currentMask;
     }
-
-
 
     private void Update()
     {
