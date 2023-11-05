@@ -104,11 +104,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Processing the horizontal movement.
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetButton("Horizontal"))
         {
-            rb.AddForce(horizonalInput * playerSpeed);
+            rb.AddForce(horizonalInput.normalized * playerSpeed);
             playerAnimator.SetBool("IsWalking", true);
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                playerSprite.flipX = true;
             }
