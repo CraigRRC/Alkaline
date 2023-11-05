@@ -189,7 +189,7 @@ MonoBehaviour:
   playerMovementState: 1
   playerSpeed: 25000
   groundedDrag: 10
-  fallSpeed: 6000
+  fallSpeed: 5000
   jumpPower: 2500
   jumpSpeed: 1000
 --- !u!95 &-455935275463590334
