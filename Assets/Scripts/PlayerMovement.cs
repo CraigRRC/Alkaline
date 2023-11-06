@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer playerSprite;
     private Animator playerAnimator;
     private bool doOnce = true;
+    private Transform groundCheck;
+    [SerializeField] LayerMask groundLayer;
    
 
     private void Awake()
@@ -28,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         rb.freezeRotation = true;
         baseSpeed = playerSpeed;
-
+        groundCheck = this.gameObject.transform.GetChild(0);
     }
 
     void Update()
@@ -84,11 +87,11 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-        if (rb.velocity.y < -0.2f)
+        if (rb.velocity.y < -0.2f && !IsGrounded())
         {
             playerMovementState = PlayerMovementState.Falling;
         }
-        else if (rb.velocity.y == 0f)
+        else if (IsGrounded())
         {
             playerMovementState = PlayerMovementState.Grounded;
         }
@@ -130,6 +133,11 @@ public class PlayerMovement : MonoBehaviour
             playerMovementState = PlayerMovementState.Jumping;
             doOnce = false;
         }
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 }
 
