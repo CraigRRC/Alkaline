@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundedDrag = 3.0f;
     public float fallSpeed = 3000f;
     private float baseSpeed = 0f;
+    private float maxSpeed = 10f;
     private bool jump;
     public float jumpPower = 5000f;
     public float jumpSpeed = 3000f;
@@ -98,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-        if (rb.velocity.y < -0.2f && !IsGrounded())
+        if (rb.velocity.y < -0.2f)
         {
             playerMovementState = PlayerMovementState.Falling;
         }
@@ -131,10 +132,13 @@ public class PlayerMovement : MonoBehaviour
                 playerSprite.flipX = false;
             }
         }
-
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
 
         //Animation processing
-        if(rb.velocity.x != 0 && IsGrounded())
+        if (rb.velocity.x != 0 && IsGrounded())
         {
             playerAnimator.SetBool("IsWalking", true);
         }
