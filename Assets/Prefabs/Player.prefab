@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementState: 1
-  playerSpeed: 25000
+  playerSpeed: 23000
   groundedDrag: 10
   fallSpeed: 5000
   jumpPower: 2500

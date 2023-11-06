@@ -76,11 +76,10 @@ public class PlayerMovement : MonoBehaviour
                 }
                 break;
 
-            case PlayerMovementState.inMagnet:
-                rb.drag = 0;
-                playerSpeed = jumpSpeed;
-                break;
-
+            //case PlayerMovementState.inMagnet:
+            //    rb.drag = 0;
+            //    playerSpeed = jumpSpeed;
+            //    break;
             default:
                 break;
         }
@@ -93,10 +92,12 @@ public class PlayerMovement : MonoBehaviour
         {
             playerMovementState = PlayerMovementState.Grounded;
         }
-        else if (!jump && rb.velocity.y > 0.1f && playerMovementState == PlayerMovementState.Grounded)
-        {
-            playerMovementState = PlayerMovementState.inMagnet;
-        }
+        //Bugged when player jumps on an object within a magnet, or walks into a magnet.
+        //Trade off is that magnets need to be jumped into to properly get the right drag. 
+        //else if (!jump && rb.velocity.y > 0.1f && playerMovementState == PlayerMovementState.Grounded)
+        //{
+        //    playerMovementState = PlayerMovementState.inMagnet;
+        //}
     }
 
 
@@ -135,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
 //States for movement.
 public enum PlayerMovementState
 {
-    inMagnet,
+    //inMagnet,
     Jumping,
     Grounded,
     Falling,
