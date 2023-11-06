@@ -152,6 +152,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<< Updated upstream:Assets/Art/PlaceHolder.png.meta
       name: 9-Sliced
       rect:
         serializedVersion: 2
@@ -188,6 +189,45 @@ TextureImporter:
       bones: []
       spriteID: a99410b1f783628b0800000000000000
       internalID: -5177388603050735206
+=======
+      name: PressPlate-xxxxxxxxxxxxxxx_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6
+        width: 59
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a097561c971b5946a451a6f8651cd61
+      internalID: 663657335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PressPlate-xxxxxxxxxxxxxxx_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d2ee39aaab2444bbea17fbbe040b3e
+      internalID: -777415449
+>>>>>>> Stashed changes:Assets/Art/PressPlate-xxxxxxxxxxxxxxx.png.meta
       vertices: []
       indices: 
       edges: []
@@ -223,7 +263,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< Updated upstream:Assets/Art/PlaceHolder.png.meta
       9-Sliced: -5177388603050735206
+=======
+      PressPlate-xxxxxxxxxxxxxxx_0: -777415449
+      PressPlate-xxxxxxxxxxxxxxx_1: 663657335
+>>>>>>> Stashed changes:Assets/Art/PressPlate-xxxxxxxxxxxxxxx.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
