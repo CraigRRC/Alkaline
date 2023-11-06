@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8728593186740418347}
   - component: {fileID: 6292983712489159980}
   - component: {fileID: 2340927682392517016}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Magnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.2350006, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2016621043246460521}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9622642, g: 0.022694906, b: 0.022694906, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e29dc9f6153313845bf015469e129dec, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -146,18 +146,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.008595467, y: -0.111741185}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.962693, y: 0.7765176}
   m_EdgeRadius: 0
 --- !u!1 &5378438059299456488
 GameObject:
@@ -185,8 +185,8 @@ Transform:
   m_GameObject: {fileID: 5378438059299456488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.00648106, z: 0.13353959}
-  m_LocalScale: {x: 5.032617, y: 9.940463, z: 1}
+  m_LocalPosition: {x: 0.0000000023728, y: 0.47, z: 0}
+  m_LocalScale: {x: 4.7233386, y: 10.742912, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2016621043246460521}
@@ -232,8 +232,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5033176, g: 0.8773585, b: 0.1779548, a: 0.43137255}
+  m_Sprite: {fileID: 21300000, guid: 2867147dd2a454b49b648f4a42ff76f9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3753983366398072887}
   - component: {fileID: 1843639284260767505}
   m_Layer: 2
-  m_Name: Magnet
+  m_Name: MagneticField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,8 +271,8 @@ Transform:
   m_GameObject: {fileID: 8616384546242235028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0064153904, y: -9.17, z: -0.13353959}
-  m_LocalScale: {x: 0.16038491, y: 1.7360508, z: 1}
+  m_LocalPosition: {x: -0.0064154, y: -2.66, z: -0.13353959}
+  m_LocalScale: {x: 0.3925, y: 0.43775466, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 305702967504500131}
@@ -310,7 +310,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.032848954, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -321,7 +321,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 10}
+  m_Size: {x: 4.102128, y: 10}
   m_EdgeRadius: 0
 --- !u!249 &3753983366398072887
 AreaEffector2D:
@@ -335,7 +335,7 @@ AreaEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 1527
   m_UseGlobalAngle: 0
   m_ForceAngle: 90
   m_ForceMagnitude: 10

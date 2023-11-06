@@ -5,31 +5,51 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public SpriteRenderer door;
-    public BoxCollider2D baseCollider;
     public ButtonType buttonType;
-   
+
+    private void Awake()
+    {
+        door.color = Color.red;
+        Debug.Log("here?");
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        baseCollider.enabled = false;
+        if (collision.gameObject.layer == 7) return;
+        
+        if (door != null)
+        {
+            door.color = Color.black;
+        }
+        
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 7) return;
+
+        if (door != null)
+        {
+            door.color = Color.black;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        baseCollider.enabled = true;
+        if (door != null && buttonType == ButtonType.Hold)
+        {
+            door.color = Color.red;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        door.enabled = false;
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(buttonType == ButtonType.Hold)
-        {
-            door.enabled = true;
-        }
+        
        
     }
 }

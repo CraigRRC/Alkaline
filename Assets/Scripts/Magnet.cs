@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -26,27 +27,31 @@ public class Magnet : MonoBehaviour
     public Polarity polarityState;
     private float magnitude;
     private AreaEffector2D areaEffector;
-    private BoxCollider2D boxCollider;
+    private SpriteRenderer magetVisual;
+    private SpriteRenderer magnetColour;
     public LayerMask currentMask;
-    public LayerMask tempMask; 
+    public LayerMask tempMask;
+
+  
 
     public void Awake()
     {
         areaEffector = GetComponent<AreaEffector2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        magetVisual = GetComponentInChildren<SpriteRenderer>();
+        magnetColour = GetComponentInParent<SpriteRenderer>();
         //Set Magnitude
-        magnitude = 40000;
+        magnitude = 25000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
     }
 
+    //Set the layermask dynamically.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == 8)
         {
             areaEffector.colliderMask = tempMask;
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -54,26 +59,33 @@ public class Magnet : MonoBehaviour
         areaEffector.colliderMask = currentMask;
     }
 
-
-
     private void Update()
     {
-
-        
-
         //Check polarity of magnet and act accordingly.
         switch (polarityState)
         {
             case Polarity.Positive:
                 areaEffector.forceAngle = 90;
                 areaEffector.forceMagnitude = magnitude;
+                if(magnetColour != null)
+                {
+                    magnetColour.color = Color.red;
+                }
+                magetVisual.enabled = true;
                 break;
             case Polarity.Negative:
                 areaEffector.forceAngle = -90;
                 areaEffector.forceMagnitude = magnitude;
+                if (magnetColour != null)
+                {
+                    magnetColour.color = Color.blue;
+                }
+                magetVisual.enabled = true;
                 break;
             case Polarity.Off:
                 areaEffector.forceMagnitude = 0;
+                magnetColour.color = Color.black;
+                magetVisual.enabled = false;
                 break;
             default:
                 break;
