@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerMovementState playerMovementState = PlayerMovementState.Grounded;
     public float playerSpeed = 5000f;
     public float groundedDrag = 3.0f;
-    public float fallSpeed = 2000f;
+    public float fallSpeed = 3000f;
     private float baseSpeed = 0f;
     private bool jump;
     public float jumpPower = 5000f;
@@ -45,9 +45,13 @@ public class PlayerMovement : MonoBehaviour
             case PlayerMovementState.Jumping:
                 playerSpeed = jumpSpeed;
                 rb.drag = 0f;
+
+                /* First Code for jumping currently commented out for testing other coding samples
+                
                 RaycastHit2D jumpHit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
                 Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
                 //If player is close enough to ground
+                
                 if (jumpHit.collider != null)
                 {
                     Debug.Log(jumpHit.collider.gameObject.layer);
@@ -56,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
                         playerMovementState = PlayerMovementState.Grounded;
                     }
                 }
+                
+                */
                 break;
                 //When grounded, go back to normal speed.
             case PlayerMovementState.Grounded:
@@ -64,8 +70,11 @@ public class PlayerMovement : MonoBehaviour
                 doOnce = true;
                 break;
             case PlayerMovementState.Falling:
-                rb.drag = 0;
                 playerSpeed = fallSpeed;
+                rb.drag = 0f;
+
+                /* First Code for jumping currently commented out for testing other coding samples
+                
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
                 Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
                 //If player is close enough to ground
@@ -77,6 +86,8 @@ public class PlayerMovement : MonoBehaviour
                         playerMovementState = PlayerMovementState.Grounded;
                     }
                 }
+                */
+
                 break;
 
             //case PlayerMovementState.inMagnet:
@@ -111,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Horizontal"))
         {
             rb.AddForce(horizonalInput.normalized * playerSpeed);
-            playerAnimator.SetBool("IsWalking", true);
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                playerSprite.flipX = true;
@@ -121,11 +131,17 @@ public class PlayerMovement : MonoBehaviour
                 playerSprite.flipX = false;
             }
         }
+
+
+        //Animation processing
+        if(rb.velocity.x != 0 && IsGrounded())
+        {
+            playerAnimator.SetBool("IsWalking", true);
+        }
         else
         {
             playerAnimator.SetBool("IsWalking", false);
         }
-
         //Added a jump
         if (jump && doOnce && playerMovementState == PlayerMovementState.Grounded)
         {

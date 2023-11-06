@@ -226,7 +226,7 @@ MonoBehaviour:
   jumpSpeed: 1000
   groundLayer:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 896
 --- !u!95 &-455935275463590334
 Animator:
   serializedVersion: 5
