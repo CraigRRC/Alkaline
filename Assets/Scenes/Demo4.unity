@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3268857939601290731, guid: cc89f2c946773a14e86380b30e287341, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 3268857939601290731, guid: cc89f2c946773a14e86380b30e287341, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18125069
+      value: -1.22
       objectReference: {fileID: 0}
     - target: {fileID: 3268857939601290731, guid: cc89f2c946773a14e86380b30e287341, type: 3}
       propertyPath: m_LocalPosition.z
@@ -421,12 +421,16 @@ PrefabInstance:
       value: MagneticField
       objectReference: {fileID: 0}
     - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1187464
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.996632
       objectReference: {fileID: 0}
     - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1135757
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 8364664031205275892, guid: 08439ecf5d1b5234fbe81835e25ff9e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -540,11 +544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517833779303286730, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 517833779303286730, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.77
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 517833779303286730, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
       propertyPath: m_LocalPosition.z
