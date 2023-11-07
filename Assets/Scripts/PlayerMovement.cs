@@ -12,15 +12,16 @@ public class PlayerMovement : MonoBehaviour
     public PlayerMovementState playerMovementState = PlayerMovementState.Grounded;
     public float playerSpeed = 5000f;
     public float groundedDrag = 3.0f;
-    public float fallSpeed = 3000f;
+    //public float fallSpeed = 3000f;
     private float baseSpeed = 0f;
     private float maxSpeed = 10f;
     private bool jump;
     public float jumpPower = 5000f;
-    public float jumpSpeed = 3000f;
+    //public float jumpSpeed = 3000f;
     private SpriteRenderer playerSprite;
     private Animator playerAnimator;
     private bool doOnce = true;
+    public float xJumpConstraint = 1.5f;
     private Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
    
@@ -37,15 +38,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(IsGrounded());
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
         jump = Input.GetKey(KeyCode.Space);
 
         //Check to see if the player is jumping or grounded.
         switch (playerMovementState)
         {
-            case PlayerMovementState.Jumping:
-                playerSpeed = jumpSpeed;
+            case PlayerMovementState.Airborne:
                 rb.drag = 0f;
+                float test = Mathf.Clamp(rb.velocity.x, -xJumpConstraint, xJumpConstraint);
+                rb.velocity = new Vector2(test, rb.velocity.y);
 
                 /* First Code for jumping currently commented out for testing other coding samples
                 
@@ -70,9 +73,6 @@ public class PlayerMovement : MonoBehaviour
                 rb.drag = groundedDrag;
                 doOnce = true;
                 break;
-            case PlayerMovementState.Falling:
-                playerSpeed = fallSpeed;
-                rb.drag = 0f;
 
                 /* First Code for jumping currently commented out for testing other coding samples
                 
@@ -89,8 +89,6 @@ public class PlayerMovement : MonoBehaviour
                 }
                 */
 
-                break;
-
             //case PlayerMovementState.inMagnet:
             //    rb.drag = 0;
             //    playerSpeed = jumpSpeed;
@@ -99,23 +97,24 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-        if (rb.velocity.y < -0.2f)
-        {
-            playerMovementState = PlayerMovementState.Falling;
-        }
-        else if (IsGrounded())
+        if (IsGrounded())
         {
             playerMovementState = PlayerMovementState.Grounded;
         }
+        else if(!IsGrounded())
+        {
+            playerMovementState = PlayerMovementState.Airborne;
+        }
+
         //Bugged when player jumps on an object within a magnet, or walks into a magnet.
         //Trade off is that magnets need to be jumped into to properly get the right drag. 
         //else if (!jump && rb.velocity.y > 0.1f && playerMovementState == PlayerMovementState.Grounded)
         //{
         //    playerMovementState = PlayerMovementState.inMagnet;
         //}
+
+        
     }
-
-
 
     private void FixedUpdate()
     {
@@ -150,14 +149,15 @@ public class PlayerMovement : MonoBehaviour
         if (jump && doOnce && playerMovementState == PlayerMovementState.Grounded)
         {
             rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
-            playerMovementState = PlayerMovementState.Jumping;
+            playerMovementState = PlayerMovementState.Airborne;
             doOnce = false;
         }
     }
 
+    
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); 
     }
 }
 
@@ -165,7 +165,6 @@ public class PlayerMovement : MonoBehaviour
 public enum PlayerMovementState
 {
     //inMagnet,
-    Jumping,
+    Airborne,
     Grounded,
-    Falling,
 }
