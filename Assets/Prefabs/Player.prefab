@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnetsInLvl: []
+  deathSprite: {fileID: 21300000, guid: 25b7ef8937031b84983b916d4ec3b355, type: 3}
 --- !u!114 &8170528996844661832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,10 +222,7 @@ MonoBehaviour:
   playerMovementState: 1
   playerSpeed: 23000
   groundedDrag: 10
-  fallSpeed: 5000
   jumpPower: 2500
-  jumpSpeed: 1000
-  setGroundedOnce: 1
   xJumpConstraint: 1.5
   groundLayer:
     serializedVersion: 2
