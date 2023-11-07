@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
         if(playerState == PlayerState.Dead)
         {
+            magnetsInLvl = null;
             Destroy(gameObject, 1f);
         }
     }
