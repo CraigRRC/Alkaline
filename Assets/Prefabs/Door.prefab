@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorClosed: {fileID: -406120523, guid: 048af734c81a6ec40a3261097a924a44, type: 3}
   doorOpen: {fileID: 731450375, guid: 048af734c81a6ec40a3261097a924a44, type: 3}
-  sceneIndex: 0
+  sceneIndex: 4
 --- !u!61 &4874475238176108453
 BoxCollider2D:
   m_ObjectHideFlags: 0
