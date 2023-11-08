@@ -9,7 +9,11 @@ public class Button : MonoBehaviour
 
     private void Awake()
     {
-        doorCollider.enabled = false;
+        if(doorCollider != null)
+        {
+            doorCollider.enabled = false;
+        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

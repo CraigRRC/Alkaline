@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     public Sprite deathSprite;
     private Animator playerAnimator;
     private PlayerState playerState = PlayerState.Alive;
+    public int maxPolaritySwitches;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                maxPolaritySwitches--;
                 foreach (var magnet in magnetsInLvl)
                 {
                     magnet.FlipPolarity();
@@ -45,16 +48,25 @@ public class Player : MonoBehaviour
             //die
             if(deathSprite != null)
             {
-                playerAnimator.SetBool("isDead", true);
-                playerState = PlayerState.Dead;
-                movementScript.enabled = false;
+                PlayerDead();
             }
-            
+
         }
         
     }
 
+    private void PlayerDead()
+    {
+        playerAnimator.SetBool("isDead", true);
+        playerState = PlayerState.Dead;
+        movementScript.enabled = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public PlayerState GetPlayerState() { return playerState; }
+    public void CallPlayerDead() { PlayerDead(); }
+    public void SetMaxPolaritySwitches(int max) { maxPolaritySwitches = max; }
+    public int GetMaxPolaritySwitches() {  return maxPolaritySwitches; }
 
 }
 

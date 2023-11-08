@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808805150686175326}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -335,7 +335,7 @@ AreaEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 1527
+    m_Bits: 3575
   m_UseGlobalAngle: 0
   m_ForceAngle: 90
   m_ForceMagnitude: 10
@@ -358,7 +358,7 @@ MonoBehaviour:
   polarityState: 0
   currentMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   tempMask:
     serializedVersion: 2
     m_Bits: 256

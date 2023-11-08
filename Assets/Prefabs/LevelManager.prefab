@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8824135614684766028}
   - component: {fileID: -6693065476897954114}
   m_Layer: 0
-  m_Name: PlayerSpawner
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: -4693111913960648777, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
+  magnetsInLvl: []
