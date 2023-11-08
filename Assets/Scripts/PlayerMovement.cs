@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.drag = 0f;
                 float test = Mathf.Clamp(rb.velocity.x, -xJumpConstraint, xJumpConstraint);
                 rb.velocity = new Vector2(test, rb.velocity.y);
-
+                playerAnimator.SetBool("IsAirborne", true);
                 /* First Code for jumping currently commented out for testing other coding samples
                 
                 RaycastHit2D jumpHit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
                 playerSpeed = baseSpeed;
                 rb.drag = groundedDrag;
                 doOnce = true;
+                playerAnimator.SetBool("IsAirborne", false);
                 break;
 
                 /* First Code for jumping currently commented out for testing other coding samples
