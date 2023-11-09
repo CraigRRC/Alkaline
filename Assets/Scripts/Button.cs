@@ -4,26 +4,44 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public SpriteRenderer door;
+    public BoxCollider2D doorCollider;
     public ButtonType buttonType;
-   
+
+    private void Awake()
+    {
+        if(doorCollider != null)
+        {
+            doorCollider.enabled = false;
+        }
+        
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Player")
+        if (collision.gameObject.layer == 7) return;
+        
+        if (doorCollider != null)
         {
-            if (door != null)
-            {
-                door.enabled = false;
-            }
+            doorCollider.enabled = true;
+        }
+        
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 7) return;
+
+        if (doorCollider != null)
+        {
+            doorCollider.enabled = true;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (door != null && buttonType == ButtonType.Hold)
+        if (doorCollider != null && buttonType == ButtonType.Hold)
         {
-            door.enabled = true;
+            doorCollider.enabled = false;
         }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -29,7 +30,9 @@ public class Magnet : MonoBehaviour
     private SpriteRenderer magetVisual;
     private SpriteRenderer magnetColour;
     public LayerMask currentMask;
-    public LayerMask tempMask; 
+    public LayerMask tempMask;
+
+  
 
     public void Awake()
     {
@@ -37,26 +40,24 @@ public class Magnet : MonoBehaviour
         magetVisual = GetComponentInChildren<SpriteRenderer>();
         magnetColour = GetComponentInParent<SpriteRenderer>();
         //Set Magnitude
-        magnitude = 20000f;
+        magnitude = 25000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
     }
 
+    //Set the layermask dynamically.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == 8)
         {
             areaEffector.colliderMask = tempMask;
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         areaEffector.colliderMask = currentMask;
     }
-
-
 
     private void Update()
     {
@@ -66,13 +67,19 @@ public class Magnet : MonoBehaviour
             case Polarity.Positive:
                 areaEffector.forceAngle = 90;
                 areaEffector.forceMagnitude = magnitude;
-                magnetColour.color = Color.red;
+                if(magnetColour != null)
+                {
+                    magnetColour.color = Color.red;
+                }
                 magetVisual.enabled = true;
                 break;
             case Polarity.Negative:
                 areaEffector.forceAngle = -90;
                 areaEffector.forceMagnitude = magnitude;
-                magnetColour.color = Color.blue;
+                if (magnetColour != null)
+                {
+                    magnetColour.color = Color.blue;
+                }
                 magetVisual.enabled = true;
                 break;
             case Polarity.Off:
