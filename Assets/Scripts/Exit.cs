@@ -7,17 +7,14 @@ using UnityEngine.SceneManagement;
 public class Exit : MonoBehaviour
 {
     private BoxCollider2D doorCollider;
-    //This is temporary until the animation comes in.
-    public Sprite doorClosed;
-    public Sprite doorOpen;
-    private SpriteRenderer spriteRenderer;
+    private Animator doorAnimator;
     //Needs to be refactored to not be manual.
     public int sceneIndex;
    
     private void Awake()
     {
         doorCollider = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        doorAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -25,11 +22,11 @@ public class Exit : MonoBehaviour
         //if door is open, enable the collider.
         if (doorCollider.enabled)
         {
-            spriteRenderer.sprite = doorOpen;
+            doorAnimator.SetBool("DoorOpen", true);
         }
         else
         {
-            spriteRenderer.sprite = doorClosed;
+            doorAnimator.SetBool("DoorOpen", false);
         }
     }
 
