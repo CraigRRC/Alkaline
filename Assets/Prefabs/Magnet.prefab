@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3728843272524694520}
   - component: {fileID: 3126035897223545977}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5902497784365813803}
   - component: {fileID: 7235233968318858575}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: Mid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 4053211124922380275}
   - component: {fileID: 7402108092403870445}
   - component: {fileID: 5408342391424475941}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: MagneticField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ AreaEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 2551
   m_UseGlobalAngle: 0
   m_ForceAngle: 90
   m_ForceMagnitude: 10
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3477611833183873903}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: MagnetArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6888100787341534828}
   - component: {fileID: 6745449805562864603}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959302124144733938}
   - component: {fileID: 2340406618589246224}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: Mid (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3008107107994121198}
   - component: {fileID: 7460367592465078882}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 7444172072023737750}
   - component: {fileID: 4918634745773531673}
   - component: {fileID: 6805394593394661246}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: Magnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

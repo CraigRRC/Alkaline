@@ -43,6 +43,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.layer);
+        //Hazard
         if(collision.gameObject.layer == 10)
         {
             //die
@@ -52,7 +54,29 @@ public class Player : MonoBehaviour
             }
 
         }
+
         
+        
+    }
+
+   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Magnet 
+        if (collision.gameObject.layer == 12)
+        {
+            playerAnimator.SetBool("InMagnet", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //Magnet 
+        if (collision.gameObject.layer == 12)
+        {
+            playerAnimator.SetBool("InMagnet", false);
+        }
     }
 
     private void PlayerDead()
