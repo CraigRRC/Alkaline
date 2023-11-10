@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5828971758000023836}
   - component: {fileID: 7271756569629158481}
-  - component: {fileID: 2335518235033154889}
   m_Layer: 7
   m_Name: Spring Press Plate
   m_TagString: Untagged
@@ -86,27 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2335518235033154889
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4380462746563393216}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 97b7859f78c5295489169c021d9d15d5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5155508879031655184
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +98,7 @@ GameObject:
   - component: {fileID: 4665513969652517599}
   - component: {fileID: 4086393658696213557}
   - component: {fileID: 9158278796411737860}
+  - component: {fileID: 2084226172860446612}
   m_Layer: 3
   m_Name: Button
   m_TagString: Untagged
@@ -287,3 +266,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.002622, y: 0.24977845}
   m_EdgeRadius: 0
+--- !u!95 &2084226172860446612
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155508879031655184}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97b7859f78c5295489169c021d9d15d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
