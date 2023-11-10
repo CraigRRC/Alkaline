@@ -8,9 +8,12 @@ public class Exit : MonoBehaviour
 {
     private BoxCollider2D doorCollider;
     //This is temporary until the animation comes in.
+    public Sprite doorClosed;
+    public Sprite doorOpen;
     private SpriteRenderer spriteRenderer;
     //Needs to be refactored to not be manual.
     public int sceneIndex;
+   
     private void Awake()
     {
         doorCollider = GetComponent<BoxCollider2D>();
@@ -20,12 +23,19 @@ public class Exit : MonoBehaviour
     private void Update()
     {
         //if door is open, enable the collider.
-        doorCollider.enabled = spriteRenderer.color == Color.black;
+        if (doorCollider.enabled)
+        {
+            spriteRenderer.sprite = doorOpen;
+        }
+        else
+        {
+            spriteRenderer.sprite = doorClosed;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Player")
+        if(collision.gameObject.layer == 11)
         {
             //first play animation, then load scene.
             SceneManager.LoadScene(sceneIndex);

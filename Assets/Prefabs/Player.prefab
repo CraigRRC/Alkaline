@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: -4693111913960648777}
   - component: {fileID: 8170528996844661832}
   - component: {fileID: -455935275463590334}
-  m_Layer: 2
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015396677, y: -0.053028107}
+  m_Offset: {x: 0.0073272586, y: -0.089340456}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -191,7 +191,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14213805, y: 0.7415309}
+  m_Size: {x: 0.23090154, y: 0.67294097}
   m_EdgeRadius: 0
 --- !u!114 &-4693111913960648777
 MonoBehaviour:
@@ -206,6 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnetsInLvl: []
+  deathSprite: {fileID: 21300000, guid: 25b7ef8937031b84983b916d4ec3b355, type: 3}
+  maxPolaritySwitches: 0
 --- !u!114 &8170528996844661832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,9 +223,8 @@ MonoBehaviour:
   playerMovementState: 1
   playerSpeed: 23000
   groundedDrag: 10
-  fallSpeed: 5000
   jumpPower: 2500
-  jumpSpeed: 1000
+  xJumpConstraint: 1.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 896
