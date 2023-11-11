@@ -163,14 +163,7 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); 
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if(collision.gameObject.layer == 8)
-        {
-            collision.rigidbody.AddForce(horizonalInput.normalized * 3750f);
-        }
-        
-    }
+    public Vector2 GetHorizontalInput() { return horizonalInput; }
 
 }
 
