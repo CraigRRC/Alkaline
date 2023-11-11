@@ -10,7 +10,9 @@ public class Player : MonoBehaviour
     public Sprite deathSprite;
     private Animator playerAnimator;
     private PlayerState playerState = PlayerState.Alive;
-    public int maxPolaritySwitches;
+    public int currentPolaritySwitches;
+    public BoxCollider2D playerDeathBox;
+    public float lethalImpactForce = 11f;
 
     private void Awake()
     {
@@ -25,10 +27,11 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                maxPolaritySwitches--;
+                currentPolaritySwitches++;
                 foreach (var magnet in magnetsInLvl)
                 {
-                    magnet.FlipPolarity();
+                    if(magnet != null)
+                        magnet.FlipPolarity();
                 }
                
             }
@@ -43,7 +46,6 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.layer);
         //Hazard
         if(collision.gameObject.layer == 10)
         {
@@ -55,8 +57,10 @@ public class Player : MonoBehaviour
 
         }
 
-        
-        
+        if (collision.relativeVelocity.magnitude > lethalImpactForce)
+        {
+            PlayerDead();
+        }
     }
 
    
@@ -83,14 +87,15 @@ public class Player : MonoBehaviour
     {
         playerAnimator.SetBool("isDead", true);
         playerState = PlayerState.Dead;
+        GetComponent<BoxCollider2D>().enabled = false;
+        playerDeathBox.enabled = true;
         movementScript.enabled = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public PlayerState GetPlayerState() { return playerState; }
     public void CallPlayerDead() { PlayerDead(); }
-    public void SetMaxPolaritySwitches(int max) { maxPolaritySwitches = max; }
-    public int GetMaxPolaritySwitches() {  return maxPolaritySwitches; }
+    public void SetMaxPolaritySwitches(int current) { currentPolaritySwitches = current; }
+    public int GetMaxPolaritySwitches() {  return currentPolaritySwitches; }
 
 }
 
