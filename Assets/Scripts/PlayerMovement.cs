@@ -165,8 +165,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
-        collision.rigidbody.AddForce(horizonalInput.normalized * 1500000000f, ForceMode2D.Impulse);
+        if(collision.gameObject.layer == 8)
+        {
+            collision.rigidbody.AddForce(horizonalInput.normalized * 3750f);
+        }
+        
     }
 
 }
