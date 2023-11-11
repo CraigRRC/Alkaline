@@ -162,6 +162,13 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); 
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        collision.rigidbody.AddForce(horizonalInput.normalized * 1500000000f, ForceMode2D.Impulse);
+    }
+
 }
 
 //States for movement.
