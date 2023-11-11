@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public int currentPolaritySwitches;
     public BoxCollider2D playerDeathBox;
     public float lethalImpactForce = 11f;
+    public float pushingForce = 3750f;
 
     private void Awake()
     {
@@ -63,7 +64,17 @@ public class Player : MonoBehaviour
         }
     }
 
-   
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            //Gives the player just a little more oomph.
+            collision.rigidbody.AddForce(movementScript.GetHorizontalInput().normalized * pushingForce);
+        }
+
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

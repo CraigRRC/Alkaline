@@ -162,6 +162,9 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); 
     }
+
+    public Vector2 GetHorizontalInput() { return horizonalInput; }
+
 }
 
 //States for movement.
