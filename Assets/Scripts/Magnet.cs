@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -27,7 +28,7 @@ public class Magnet : MonoBehaviour
     public Polarity polarityState;
     private float magnitude;
     private AreaEffector2D areaEffector;
-    private SpriteRenderer magetVisual;
+    public SpriteRenderer[] magetVisual;
     private SpriteRenderer magnetColour;
     public LayerMask currentMask;
     public LayerMask tempMask;
@@ -38,12 +39,12 @@ public class Magnet : MonoBehaviour
     public void Awake()
     {
         areaEffector = GetComponent<AreaEffector2D>();
-        magetVisual = GetComponentInChildren<SpriteRenderer>();
         magnetColour = GetComponentInParent<SpriteRenderer>();
         //Set Magnitude
         magnitude = 25000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
+
     }
 
     //Set the layermask dynamically.
@@ -72,7 +73,7 @@ public class Magnet : MonoBehaviour
                 {
                     magnetColour.color = Color.red;
                 }
-                magetVisual.enabled = true;
+                //magetVisual.enabled = true;
                 break;
             case Polarity.Negative:
                 areaEffector.forceAngle = -90;
@@ -81,12 +82,12 @@ public class Magnet : MonoBehaviour
                 {
                     magnetColour.color = Color.blue;
                 }
-                magetVisual.enabled = true;
+                //magetVisual.enabled = true;
                 break;
             case Polarity.Off:
                 areaEffector.forceMagnitude = 0;
                 magnetColour.color = Color.black;
-                magetVisual.enabled = false;
+                //magetVisual.enabled = false;
                 break;
             default:
                 break;
