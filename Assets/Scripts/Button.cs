@@ -49,13 +49,10 @@ public class Button : Unlock
             {
                 doorCollider.enabled = true;
             }
-<<<<<<< Updated upstream
-=======
             */
             activate();
             //New anaimation to hold the last keyframe
             //buttonAnimator.SetBool("IsButtonDown", true);
->>>>>>> Stashed changes
         }
     }
 
