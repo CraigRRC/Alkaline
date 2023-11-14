@@ -6,6 +6,7 @@ public class Button : MonoBehaviour
 {
     public BoxCollider2D doorCollider;
     public ButtonType buttonType;
+    public ButtonState buttonState;
     private Animator buttonAnimator;
     private BoxCollider2D buttonCollider;
 
@@ -44,8 +45,6 @@ public class Button : MonoBehaviour
             {
                 doorCollider.enabled = true;
             }
-            //New anaimation to hold the last keyframe
-            //buttonAnimator.SetBool("IsButtonDown", true);
         }
     }
 
@@ -80,4 +79,10 @@ public enum ButtonType
 {
     OnePress,
     Hold,
+}
+
+public enum ButtonState
+{
+    Standby,
+    Activated,
 }

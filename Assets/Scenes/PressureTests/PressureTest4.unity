@@ -311,6 +311,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 148579116125198185, guid: 5769afd407619a3429f7255529506567, type: 3}
+      propertyPath: doorCollider
+      value: 
+      objectReference: {fileID: 587371690}
     - target: {fileID: 4086393658696213557, guid: 5769afd407619a3429f7255529506567, type: 3}
       propertyPath: m_BreakForce
       value: 50000
