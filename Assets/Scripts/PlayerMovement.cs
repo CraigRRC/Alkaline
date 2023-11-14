@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(playerAnimator.GetBool("IsAirborne"));
+        //Debug.Log(playerAnimator.GetBool("IsAirborne"));
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
         jump = Input.GetKey(KeyCode.Space);
 

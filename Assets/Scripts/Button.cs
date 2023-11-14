@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class Button : Unlock
 {
     public BoxCollider2D doorCollider;
     public ButtonType buttonType;
@@ -12,11 +12,12 @@ public class Button : MonoBehaviour
 
     private void Awake()
     {
+        /*
         if(doorCollider != null)
         {
             doorCollider.enabled = false;
         }
-        
+        */
         buttonAnimator = GetComponent<Animator>();
         buttonCollider = GetComponentInChildren<BoxCollider2D>();
         
@@ -28,11 +29,13 @@ public class Button : MonoBehaviour
 
         if (collision.otherCollider.name == "ButtonHitBox")
         {
+            /*
             if (doorCollider != null)
             {
                 doorCollider.enabled = true;
             }
-
+            */
+            activate();
             buttonAnimator.SetBool("IsButtonDown", true);
         }
     }
@@ -41,10 +44,18 @@ public class Button : MonoBehaviour
     {
         if (collision.otherCollider.name == "ButtonHitBox")
         {
+            /*
             if (doorCollider != null)
             {
                 doorCollider.enabled = true;
             }
+<<<<<<< Updated upstream
+=======
+            */
+            activate();
+            //New anaimation to hold the last keyframe
+            //buttonAnimator.SetBool("IsButtonDown", true);
+>>>>>>> Stashed changes
         }
     }
 
@@ -52,11 +63,13 @@ public class Button : MonoBehaviour
     {
         if(collision.otherCollider.name == "ButtonHitBox")
         {
+            /*
             if (doorCollider != null && buttonType == ButtonType.Hold)
             {
                 doorCollider.enabled = false;
             }
-
+            */
+            deactivate();
             buttonAnimator.SetBool("IsButtonDown", false);
         }
         
