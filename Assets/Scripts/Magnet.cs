@@ -34,6 +34,7 @@ public class Magnet : MonoBehaviour
     public LayerMask currentMask;
     public LayerMask tempMask;
     private Polarity cachedPolarity;
+    private int count = 0;
 
   
 
@@ -75,18 +76,23 @@ public class Magnet : MonoBehaviour
                 areaEffector.forceMagnitude = magnitude;
                 if(magnetVisual.Length > 0)
                 {
-                    foreach (SpriteRenderer bar in magnetVisual)
+                    for (int i = 0; i < magnetVisual.Length; i++)
                     {
-                        Debug.Log(bar.gameObject);
-                        bar.enabled = true;
-                        bar.color = Color.red;
+
+                        magnetVisual[i].enabled = true;
+                        magnetVisual[i].color = Color.red;
+                        if (i != 0 && i != magnetVisual.Length - 1)
+                        {
+                            Quaternion rotation = Quaternion.Euler(0f, 0f, 0f);
+                            magnetVisual[i].transform.rotation = rotation;
+                        }
                     }
                 }
                 if(magnetColour != null)
                 {
                     magnetColour.color = Color.red;
                 }
-                //magetVisual.enabled = true;
+                
                 break;
             case Polarity.Negative:
                 areaEffector.enabled = true;
@@ -95,17 +101,24 @@ public class Magnet : MonoBehaviour
                 areaEffector.forceMagnitude = magnitude;
                 if (magnetVisual.Length > 0)
                 {
-                    foreach (SpriteRenderer bar in magnetVisual)
+                    for (int i = 0; i < magnetVisual.Length; i++)
                     {
-                        bar.enabled = true;
-                        bar.color = Color.blue;
+
+                        magnetVisual[i].enabled = true;
+                        magnetVisual[i].color = Color.blue;
+                        if(i != 0 && i != magnetVisual.Length - 1)
+                        {
+                            Quaternion rotation = Quaternion.Euler(0f, 0f, 180f);
+                            magnetVisual[i].transform.rotation = rotation;
+                        }
                     }
                 }
+
                 if (magnetColour != null)
                 {
                     magnetColour.color = Color.blue;
                 }
-                //magetVisual.enabled = true;
+               
                 break;
             case Polarity.Off:
                 areaEffector.enabled = false;
@@ -118,7 +131,7 @@ public class Magnet : MonoBehaviour
                         bar.enabled = false;
                     }
                 }
-                //magetVisual.enabled = false;
+               
                 break;
             default:
                 break;
