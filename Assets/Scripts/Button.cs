@@ -6,6 +6,8 @@ public class Button : MonoBehaviour
 {
     public BoxCollider2D doorCollider;
     public ButtonType buttonType;
+    private Animator buttonAnimator;
+    private BoxCollider2D buttonCollider;
 
     private void Awake()
     {
@@ -14,35 +16,51 @@ public class Button : MonoBehaviour
             doorCollider.enabled = false;
         }
         
+        buttonAnimator = GetComponent<Animator>();
+        buttonCollider = GetComponentInChildren<BoxCollider2D>();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 7) return;
-        
-        if (doorCollider != null)
+
+        if (collision.otherCollider.name == "ButtonHitBox")
         {
-            doorCollider.enabled = true;
+            if (doorCollider != null)
+            {
+                doorCollider.enabled = true;
+            }
+
+            buttonAnimator.SetBool("IsButtonDown", true);
         }
-        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 7) return;
-
-        if (doorCollider != null)
+        if (collision.otherCollider.name == "ButtonHitBox")
         {
-            doorCollider.enabled = true;
+            if (doorCollider != null)
+            {
+                doorCollider.enabled = true;
+            }
+            //New anaimation to hold the last keyframe
+            //buttonAnimator.SetBool("IsButtonDown", true);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (doorCollider != null && buttonType == ButtonType.Hold)
+        if(collision.otherCollider.name == "ButtonHitBox")
         {
-            doorCollider.enabled = false;
+            if (doorCollider != null && buttonType == ButtonType.Hold)
+            {
+                doorCollider.enabled = false;
+            }
+
+            buttonAnimator.SetBool("IsButtonDown", false);
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,6 +73,7 @@ public class Button : MonoBehaviour
         
        
     }
+
 }
 
 public enum ButtonType

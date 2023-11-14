@@ -9,7 +9,6 @@ public class PlayerSpawner : MonoBehaviour
     public Player playerPrefab;
     private Player playerSpawned;
     public int numOfPolaritySwitches;
-    public NumOfPolaritySwitches polaritySwitchState;
     public TextMeshProUGUI powerCellCount;
     //can be refactored later to be dynamic.
     public List<Magnet> magnetsInLvl;
@@ -17,11 +16,10 @@ public class PlayerSpawner : MonoBehaviour
     {
         playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
-        if (polaritySwitchState == NumOfPolaritySwitches.Finite)
-        {
+        if(powerCellCount != null )
             powerCellCount.text = numOfPolaritySwitches.ToString();
-            playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
-        }
+        playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
+        
     }
 
     private void Update()
@@ -33,24 +31,11 @@ public class PlayerSpawner : MonoBehaviour
         }
         else
         {
-            if(polaritySwitchState == NumOfPolaritySwitches.Finite)
+            if(powerCellCount != null)
             {
-                if (playerSpawned.GetMaxPolaritySwitches() < 0)
-                {
-                    powerCellCount.text = numOfPolaritySwitches.ToString();
-                    playerSpawned.CallPlayerDead();
-                }
-                else
-                {
-                    powerCellCount.text = playerSpawned.GetMaxPolaritySwitches().ToString();
-                }
+                powerCellCount.text = playerSpawned.GetMaxPolaritySwitches().ToString();
             }
+            //Do something in relation to score
         }
-    }
-
-    public enum NumOfPolaritySwitches
-    {
-        Infinite,
-        Finite,
     }
 }
