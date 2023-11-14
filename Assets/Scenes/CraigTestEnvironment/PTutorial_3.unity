@@ -261,6 +261,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: doorCollider
+      value: 
+      objectReference: {fileID: 966790868}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: magnetsInLvl.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -268,6 +272,14 @@ PrefabInstance:
       propertyPath: magnetsInLvl.Array.data[0]
       value: 
       objectReference: {fileID: 1006858473}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: keysToActivateDoor.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: keysToActivateDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 1612570890}
     - target: {fileID: 3310975213283633378, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: m_Name
       value: PlayerSpawner
@@ -878,6 +890,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d36933c697920d4fb79f5d5b4551bfa, type: 3}
+--- !u!114 &1612570890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8434303190582115914, guid: 6d36933c697920d4fb79f5d5b4551bfa, type: 3}
+  m_PrefabInstance: {fileID: 1612570889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0965b34dc388adf4cac905e9df1f7e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

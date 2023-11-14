@@ -473,17 +473,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a00ee0f5fa99f904da5a326e86186468, type: 3}
---- !u!114 &377170158 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1843639284260767505, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
-  m_PrefabInstance: {fileID: 724538609}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4785095d1824ad4891665d3315e7dd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &428104872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1216,17 +1205,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a00ee0f5fa99f904da5a326e86186468, type: 3}
---- !u!114 &1464378747 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1843639284260767505, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
-  m_PrefabInstance: {fileID: 806456056}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4785095d1824ad4891665d3315e7dd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1556155852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1520,6 +1498,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d36933c697920d4fb79f5d5b4551bfa, type: 3}
+--- !u!114 &1591562512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8434303190582115914, guid: 6d36933c697920d4fb79f5d5b4551bfa, type: 3}
+  m_PrefabInstance: {fileID: 1591562511}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0965b34dc388adf4cac905e9df1f7e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1684816121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1814,6 +1803,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: doorCollider
+      value: 
+      objectReference: {fileID: 453026788}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: powerCellCount
       value: 
       objectReference: {fileID: 547404093}
@@ -1832,11 +1825,19 @@ PrefabInstance:
     - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: magnetsInLvl.Array.data[0]
       value: 
-      objectReference: {fileID: 377170158}
+      objectReference: {fileID: 0}
     - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: magnetsInLvl.Array.data[1]
       value: 
-      objectReference: {fileID: 1464378747}
+      objectReference: {fileID: 0}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: keysToActivateDoor.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: keysToActivateDoor.Array.data[0]
+      value: 
+      objectReference: {fileID: 1591562512}
     - target: {fileID: 3310975213283633378, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: m_Name
       value: LevelManager
