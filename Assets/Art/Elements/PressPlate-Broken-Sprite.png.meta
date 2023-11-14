@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PressPlate-Broken-Sprite_0
+      name: PressPlate-Broken-Sprite_idle
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PressPlate-Broken-Sprite_1
+      name: PressPlate-Broken-Sprite_on
       rect:
         serializedVersion: 2
         x: 64
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PressPlate-Broken-Sprite_0: 173716962
-      PressPlate-Broken-Sprite_1: 833998387
       PressPlate-Broken-Sprite_2: -1443975084
       PressPlate-Broken-Sprite_3: -690346703
       PressPlate-Broken-Sprite_4: 2012051385
+      PressPlate-Broken-Sprite_idle: 173716962
+      PressPlate-Broken-Sprite_on: 833998387
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

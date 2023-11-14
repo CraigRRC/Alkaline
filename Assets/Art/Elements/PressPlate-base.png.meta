@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4a5d63adfcc571747ac193c286d90e0b
+guid: 2ba1a4a0101b3c24a9ea9ec3d49fbb3f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,11 +43,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -121,133 +121,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: PressPlateTop_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 69
-        width: 64
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48f0a26f7a7b6b24fa82214d33f166e6
-      internalID: 270964939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PressPlateTop_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 69
-        width: 64
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69eafe5d04d286f42b20f0f85c9f3c55
-      internalID: -1780868447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PressPlateTop_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 69
-        width: 64
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f19fdc8b43a5e04bbfefc50c15dbc98
-      internalID: 57380770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PressPlateTop_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5
-        width: 64
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfb748cf03ee73b4a8c21c4e65b59270
-      internalID: -1058925597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PressPlateTop_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 5
-        width: 64
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf36fed848a5ac64fbfa642b2048e204
-      internalID: -202665815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      PressPlate-Broken-Sprite_0: 173716962
-      PressPlate-Broken-Sprite_1: 833998387
-      PressPlate-Broken-Sprite_2: -1443975084
-      PressPlate-Broken-Sprite_3: -690346703
-      PressPlate-Broken-Sprite_4: 2012051385
-      PressPlateTop_0: 270964939
-      PressPlateTop_1: -1780868447
-      PressPlateTop_2: 57380770
-      PressPlateTop_3: -1058925597
-      PressPlateTop_4: -202665815
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
