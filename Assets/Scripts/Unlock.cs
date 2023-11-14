@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unlock : MonoBehaviour
+public abstract class Unlock : MonoBehaviour
 {
-    static bool active = false;
+    private bool active = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +18,12 @@ public class Unlock : MonoBehaviour
         
     }
 
-    public static void activate()
+    public void activate()
     {
         active = true;
     }
 
-    public static void deactivate()
+    public void deactivate()
     {
         active = false;
     }

@@ -54,6 +54,8 @@ public class PlayerSpawner : MonoBehaviour
             {
                 activeKeys--;
             }
+            Debug.Log("temp  " + temp);
+            Debug.Log("active  " + temp.isActive());
         }
         Debug.Log("active keys " + activeKeys);
         Debug.Log("max keys " + maxKeys);
