@@ -54,11 +54,11 @@ public class PlayerSpawner : MonoBehaviour
             {
                 activeKeys--;
             }
-            Debug.Log("temp  " + temp);
-            Debug.Log("active  " + temp.IsActive());
+            //Debug.Log("temp  " + temp);
+            //Debug.Log("active  " + temp.IsActive());
         }
-        Debug.Log("active keys " + activeKeys);
-        Debug.Log("max keys " + maxKeys);
+        //Debug.Log("active keys " + activeKeys);
+        //Debug.Log("max keys " + maxKeys);
         if (activeKeys == maxKeys)
         {
             doorCollider.enabled = true;
