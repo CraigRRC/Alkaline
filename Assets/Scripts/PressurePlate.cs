@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class PressurePlate : Unlock
 {
     public BoxCollider2D doorCollider;
     private Animator plateAnimator;
@@ -14,10 +14,12 @@ public class PressurePlate : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        /*
         if (doorCollider != null)
         {
             doorCollider.enabled = false;
         }
+        */
         plateAnimator = GetComponentInChildren<Animator>();
         plateCollider = GetComponent<BoxCollider2D>();
         activeCheck = this.gameObject.transform.GetChild(0);
@@ -28,15 +30,11 @@ public class PressurePlate : MonoBehaviour
     {
         if (IsOn())
         {
-            if (doorCollider != null)
-            {
-                doorCollider.enabled = true;
-            }
-            
+            Activate();
         }
         else
         {
-            doorCollider.enabled = false;
+            Deactivate();
         }
     }
 
