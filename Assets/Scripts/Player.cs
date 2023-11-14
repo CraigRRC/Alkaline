@@ -70,6 +70,12 @@ public class Player : MonoBehaviour
         {
             //Gives the player just a little more oomph.
             collision.rigidbody.AddForce(movementScript.GetHorizontalInput().normalized * pushingForce);
+            //Need to figure out how to do this only when we are on the sides of the box.
+            playerAnimator.SetBool("IsPushing", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("IsPushing", false);
         }
 
     }
