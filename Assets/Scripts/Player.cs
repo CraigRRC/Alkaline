@@ -10,7 +10,10 @@ public class Player : MonoBehaviour
     public Sprite deathSprite;
     private Animator playerAnimator;
     private PlayerState playerState = PlayerState.Alive;
-    public int maxPolaritySwitches;
+    public int currentPolaritySwitches;
+    public BoxCollider2D playerDeathBox;
+    public float lethalImpactForce = 11f;
+    public float pushingForce = 3750f;
 
     private void Awake()
     {
@@ -25,10 +28,11 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                maxPolaritySwitches--;
+                currentPolaritySwitches++;
                 foreach (var magnet in magnetsInLvl)
                 {
-                    magnet.FlipPolarity();
+                    if(magnet != null)
+                        magnet.FlipPolarity();
                 }
                
             }
@@ -43,6 +47,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Hazard
         if(collision.gameObject.layer == 10)
         {
             //die
@@ -52,21 +57,56 @@ public class Player : MonoBehaviour
             }
 
         }
-        
+
+        if (collision.relativeVelocity.magnitude > lethalImpactForce)
+        {
+            PlayerDead();
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            //Gives the player just a little more oomph.
+            collision.rigidbody.AddForce(movementScript.GetHorizontalInput().normalized * pushingForce);
+        }
+
+    }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Magnet 
+        if (collision.gameObject.layer == 12)
+        {
+            playerAnimator.SetBool("InMagnet", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //Magnet 
+        if (collision.gameObject.layer == 12)
+        {
+            playerAnimator.SetBool("InMagnet", false);
+        }
     }
 
     private void PlayerDead()
     {
         playerAnimator.SetBool("isDead", true);
         playerState = PlayerState.Dead;
+        GetComponent<BoxCollider2D>().enabled = false;
+        playerDeathBox.enabled = true;
         movementScript.enabled = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public PlayerState GetPlayerState() { return playerState; }
     public void CallPlayerDead() { PlayerDead(); }
-    public void SetMaxPolaritySwitches(int max) { maxPolaritySwitches = max; }
-    public int GetMaxPolaritySwitches() {  return maxPolaritySwitches; }
+    public void SetMaxPolaritySwitches(int current) { currentPolaritySwitches = current; }
+    public int GetMaxPolaritySwitches() {  return currentPolaritySwitches; }
 
 }
 

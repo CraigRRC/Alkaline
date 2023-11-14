@@ -31,6 +31,7 @@ public class Magnet : MonoBehaviour
     private SpriteRenderer magnetColour;
     public LayerMask currentMask;
     public LayerMask tempMask;
+    private Polarity cachedPolarity;
 
   
 
@@ -112,7 +113,13 @@ public class Magnet : MonoBehaviour
         }
     }
 
-    public void TurnMagnetOff() { polarityState = Polarity.Off; }
+    public void TurnMagnetOff()
+    {
+        cachedPolarity = polarityState;
+        polarityState = Polarity.Off;
+    }
+
+    public void TurnMagnetOn() { polarityState = cachedPolarity; }
 }
 
 //Enum that will control the flow of the magnet.
