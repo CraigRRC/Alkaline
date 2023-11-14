@@ -28,7 +28,8 @@ public class Magnet : MonoBehaviour
     public Polarity polarityState;
     private float magnitude;
     private AreaEffector2D areaEffector;
-    public SpriteRenderer[] magetVisual;
+    private BoxCollider2D boxCollider;
+    public SpriteRenderer[] magnetVisual;
     private SpriteRenderer magnetColour;
     public LayerMask currentMask;
     public LayerMask tempMask;
@@ -40,6 +41,7 @@ public class Magnet : MonoBehaviour
     {
         areaEffector = GetComponent<AreaEffector2D>();
         magnetColour = GetComponentInParent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
         //Set Magnitude
         magnitude = 25000f;
         areaEffector.forceMagnitude = magnitude;
@@ -67,8 +69,19 @@ public class Magnet : MonoBehaviour
         switch (polarityState)
         {
             case Polarity.Positive:
+                areaEffector.enabled = true;
+                boxCollider.enabled = true;
                 areaEffector.forceAngle = 90;
                 areaEffector.forceMagnitude = magnitude;
+                if(magnetVisual.Length > 0)
+                {
+                    foreach (SpriteRenderer bar in magnetVisual)
+                    {
+                        Debug.Log(bar.gameObject);
+                        bar.enabled = true;
+                        bar.color = Color.red;
+                    }
+                }
                 if(magnetColour != null)
                 {
                     magnetColour.color = Color.red;
@@ -76,8 +89,18 @@ public class Magnet : MonoBehaviour
                 //magetVisual.enabled = true;
                 break;
             case Polarity.Negative:
+                areaEffector.enabled = true;
+                boxCollider.enabled = true;
                 areaEffector.forceAngle = -90;
                 areaEffector.forceMagnitude = magnitude;
+                if (magnetVisual.Length > 0)
+                {
+                    foreach (SpriteRenderer bar in magnetVisual)
+                    {
+                        bar.enabled = true;
+                        bar.color = Color.blue;
+                    }
+                }
                 if (magnetColour != null)
                 {
                     magnetColour.color = Color.blue;
@@ -85,8 +108,16 @@ public class Magnet : MonoBehaviour
                 //magetVisual.enabled = true;
                 break;
             case Polarity.Off:
-                areaEffector.forceMagnitude = 0;
+                areaEffector.enabled = false;
+                boxCollider.enabled = false;
                 magnetColour.color = Color.black;
+                if (magnetVisual.Length > 0)
+                {
+                    foreach (SpriteRenderer bar in magnetVisual)
+                    {
+                        bar.enabled = false;
+                    }
+                }
                 //magetVisual.enabled = false;
                 break;
             default:
