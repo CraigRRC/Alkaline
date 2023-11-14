@@ -34,9 +34,6 @@ public class Magnet : MonoBehaviour
     public LayerMask currentMask;
     public LayerMask tempMask;
     private Polarity cachedPolarity;
-    private int count = 0;
-
-  
 
     public void Awake()
     {
