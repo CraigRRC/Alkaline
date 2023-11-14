@@ -281,6 +281,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   polarityState: 0
+  magnetVisual:
+  - {fileID: 3126035897223545977}
+  - {fileID: 6745449805562864603}
+  - {fileID: 7235233968318858575}
+  - {fileID: 2340406618589246224}
+  - {fileID: 7460367592465078882}
   currentMask:
     serializedVersion: 2
     m_Bits: 0

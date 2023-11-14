@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: magnetsInLvl.Array.data[0]
       value: 
-      objectReference: {fileID: 753313192}
+      objectReference: {fileID: 1006858473}
     - target: {fileID: 3310975213283633378, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: m_Name
       value: PlayerSpawner
@@ -325,6 +325,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 461540522446390376, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 461540522446390376, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.15
+      objectReference: {fileID: 0}
     - target: {fileID: 1808805150686175326, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
       propertyPath: m_Name
       value: Magnet
@@ -386,9 +394,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
---- !u!114 &753313192 stripped
+--- !u!61 &966790868 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4874475238176108453, guid: ce7472f30be773542a666508fd79552d, type: 3}
+  m_PrefabInstance: {fileID: 253050390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1006858473 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1843639284260767505, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5408342391424475941, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
   m_PrefabInstance: {fileID: 573112477}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -397,11 +410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4785095d1824ad4891665d3315e7dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &966790868 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 4874475238176108453, guid: ce7472f30be773542a666508fd79552d, type: 3}
-  m_PrefabInstance: {fileID: 253050390}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1252356238
 PrefabInstance:
   m_ObjectHideFlags: 0
