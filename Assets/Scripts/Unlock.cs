@@ -18,16 +18,16 @@ public abstract class Unlock : MonoBehaviour
         
     }
 
-    public void activate()
+    public void Activate()
     {
         active = true;
     }
 
-    public void deactivate()
+    public void Deactivate()
     {
         active = false;
     }
-    public bool isActive()
+    public bool IsActive()
     {
         return active;
     }

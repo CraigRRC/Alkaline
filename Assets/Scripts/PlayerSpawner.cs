@@ -46,7 +46,7 @@ public class PlayerSpawner : MonoBehaviour
         int activeKeys = 0;
         foreach (Unlock temp in keysToActivateDoor)
         {
-            if (temp.isActive())
+            if (temp.IsActive())
             {
                 activeKeys++;
             }
@@ -55,7 +55,7 @@ public class PlayerSpawner : MonoBehaviour
                 activeKeys--;
             }
             Debug.Log("temp  " + temp);
-            Debug.Log("active  " + temp.isActive());
+            Debug.Log("active  " + temp.IsActive());
         }
         Debug.Log("active keys " + activeKeys);
         Debug.Log("max keys " + maxKeys);

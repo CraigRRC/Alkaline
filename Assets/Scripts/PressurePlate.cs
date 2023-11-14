@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.WSA;
 
 public class PressurePlate : Unlock
 {
@@ -31,11 +30,11 @@ public class PressurePlate : Unlock
     {
         if (IsOn())
         {
-            activate();
+            Activate();
         }
         else
         {
-            deactivate();
+            Deactivate();
         }
     }
 

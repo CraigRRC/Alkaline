@@ -35,7 +35,7 @@ public class Button : Unlock
                 doorCollider.enabled = true;
             }
             */
-            activate();
+            Activate();
             buttonAnimator.SetBool("IsButtonDown", true);
         }
     }
@@ -50,7 +50,7 @@ public class Button : Unlock
                 doorCollider.enabled = true;
             }
             */
-            activate();
+            Activate();
             //New anaimation to hold the last keyframe
             //buttonAnimator.SetBool("IsButtonDown", true);
         }
@@ -66,7 +66,7 @@ public class Button : Unlock
                 doorCollider.enabled = false;
             }
             */
-            deactivate();
+            Deactivate();
             buttonAnimator.SetBool("IsButtonDown", false);
         }
         
