@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(IsGrounded());
+        Debug.Log(playerAnimator.GetBool("IsAirborne"));
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
         jump = Input.GetKey(KeyCode.Space);
 
@@ -47,9 +47,10 @@ public class PlayerMovement : MonoBehaviour
         {
             case PlayerMovementState.Airborne:
                 rb.drag = 0f;
-                float test = Mathf.Clamp(rb.velocity.x, -xJumpConstraint, xJumpConstraint);
-                rb.velocity = new Vector2(test, rb.velocity.y);
-
+                float clampedX = Mathf.Clamp(rb.velocity.x, -xJumpConstraint, xJumpConstraint);
+                rb.velocity = new Vector2(clampedX, rb.velocity.y);
+                playerAnimator.SetBool("IsAirborne", true);
+                
                 /* First Code for jumping currently commented out for testing other coding samples
                 
                 RaycastHit2D jumpHit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
@@ -72,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
                 playerSpeed = baseSpeed;
                 rb.drag = groundedDrag;
                 doOnce = true;
+                playerAnimator.SetBool("IsAirborne", false);
                 break;
 
                 /* First Code for jumping currently commented out for testing other coding samples
@@ -148,9 +150,10 @@ public class PlayerMovement : MonoBehaviour
         //Added a jump
         if (jump && doOnce && playerMovementState == PlayerMovementState.Grounded)
         {
+            doOnce = false;
             rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
             playerMovementState = PlayerMovementState.Airborne;
-            doOnce = false;
+            
         }
     }
 
@@ -159,6 +162,9 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); 
     }
+
+    public Vector2 GetHorizontalInput() { return horizonalInput; }
+
 }
 
 //States for movement.
