@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
                     if(magnet != null)
                         magnet.FlipPolarity();
                 }
-               
             }
         }
 
@@ -68,24 +67,18 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
+            //Need to figure out how to do this only when we are on the sides of the box.
+            playerAnimator.SetBool("IsPushing", true);
             //Gives the player just a little more oomph.
             collision.rigidbody.AddForce(movementScript.GetHorizontalInput().normalized * pushingForce);
-            //Need to figure out how to do this only when we are on the sides of the box.
-            if(movementScript.GetPlayerMovementState() == PlayerMovementState.Grounded)
-            {
-                playerAnimator.SetBool("IsPushing", true);
-            }
-                
+
             Debug.Log(collision.GetContact(0).point.magnitude);
         }
         else
         {
             playerAnimator.SetBool("IsPushing", false);
         }
-
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
