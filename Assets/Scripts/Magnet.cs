@@ -78,11 +78,18 @@ public class Magnet : MonoBehaviour
 
                         magnetVisual[i].enabled = true;
                         magnetVisual[i].color = Color.red;
-                        if (i != 0 && i != magnetVisual.Length - 1)
+
+                        if(areaEffector.forceAngle == 90)
                         {
-                            Quaternion rotation = Quaternion.Euler(0f, 0f, 0f);
-                            magnetVisual[i].transform.rotation = rotation;
+                            if (i != 0 && i != magnetVisual.Length - 1)
+                            {
+                                Quaternion rotation = Quaternion.Euler(0f, 0f, 0f);
+                                magnetVisual[i].transform.rotation = rotation;
+                            }
+
                         }
+
+                        
                     }
                 }
                 if(magnetColour != null)
@@ -103,11 +110,15 @@ public class Magnet : MonoBehaviour
 
                         magnetVisual[i].enabled = true;
                         magnetVisual[i].color = Color.blue;
-                        if(i != 0 && i != magnetVisual.Length - 1)
+
+                        
+                        if (i != 0 && i != magnetVisual.Length - 1)
                         {
                             Quaternion rotation = Quaternion.Euler(0f, 0f, 180f);
                             magnetVisual[i].transform.rotation = rotation;
                         }
+
+                        
                     }
                 }
 
