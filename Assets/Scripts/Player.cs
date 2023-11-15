@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
         {
             magnetsInLvl = null;
             Destroy(gameObject, 1f);
+            //Added for Level 433, to soft reset level each time
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

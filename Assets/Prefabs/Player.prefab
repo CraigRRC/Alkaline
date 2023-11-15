@@ -308,7 +308,7 @@ MonoBehaviour:
   xJumpConstraint: 1.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 9088
+    m_Bits: 25472
 --- !u!95 &-455935275463590334
 Animator:
   serializedVersion: 5
