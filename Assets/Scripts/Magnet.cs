@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -27,23 +28,23 @@ public class Magnet : MonoBehaviour
     public Polarity polarityState;
     private float magnitude;
     private AreaEffector2D areaEffector;
-    private SpriteRenderer magetVisual;
+    private BoxCollider2D boxCollider;
+    public SpriteRenderer[] magnetVisual;
     private SpriteRenderer magnetColour;
     public LayerMask currentMask;
     public LayerMask tempMask;
     private Polarity cachedPolarity;
 
-  
-
     public void Awake()
     {
         areaEffector = GetComponent<AreaEffector2D>();
-        magetVisual = GetComponentInChildren<SpriteRenderer>();
         magnetColour = GetComponentInParent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
         //Set Magnitude
         magnitude = 25000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
+
     }
 
     //Set the layermask dynamically.
@@ -66,27 +67,68 @@ public class Magnet : MonoBehaviour
         switch (polarityState)
         {
             case Polarity.Positive:
+                areaEffector.enabled = true;
+                boxCollider.enabled = true;
                 areaEffector.forceAngle = 90;
                 areaEffector.forceMagnitude = magnitude;
+                if(magnetVisual.Length > 0)
+                {
+                    for (int i = 0; i < magnetVisual.Length; i++)
+                    {
+
+                        magnetVisual[i].enabled = true;
+                        magnetVisual[i].color = Color.red;
+                        if (i != 0 && i != magnetVisual.Length - 1)
+                        {
+                            Quaternion rotation = Quaternion.Euler(0f, 0f, 0f);
+                            magnetVisual[i].transform.rotation = rotation;
+                        }
+                    }
+                }
                 if(magnetColour != null)
                 {
                     magnetColour.color = Color.red;
                 }
-                magetVisual.enabled = true;
+                
                 break;
             case Polarity.Negative:
+                areaEffector.enabled = true;
+                boxCollider.enabled = true;
                 areaEffector.forceAngle = -90;
                 areaEffector.forceMagnitude = magnitude;
+                if (magnetVisual.Length > 0)
+                {
+                    for (int i = 0; i < magnetVisual.Length; i++)
+                    {
+
+                        magnetVisual[i].enabled = true;
+                        magnetVisual[i].color = Color.blue;
+                        if(i != 0 && i != magnetVisual.Length - 1)
+                        {
+                            Quaternion rotation = Quaternion.Euler(0f, 0f, 180f);
+                            magnetVisual[i].transform.rotation = rotation;
+                        }
+                    }
+                }
+
                 if (magnetColour != null)
                 {
                     magnetColour.color = Color.blue;
                 }
-                magetVisual.enabled = true;
+               
                 break;
             case Polarity.Off:
-                areaEffector.forceMagnitude = 0;
+                areaEffector.enabled = false;
+                boxCollider.enabled = false;
                 magnetColour.color = Color.black;
-                magetVisual.enabled = false;
+                if (magnetVisual.Length > 0)
+                {
+                    foreach (SpriteRenderer bar in magnetVisual)
+                    {
+                        bar.enabled = false;
+                    }
+                }
+               
                 break;
             default:
                 break;
