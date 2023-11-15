@@ -164,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public Vector2 GetHorizontalInput() { return horizonalInput; }
+    public PlayerMovementState GetPlayerMovementState() { return playerMovementState; }
 
 }
 

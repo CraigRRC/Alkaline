@@ -50,15 +50,15 @@ public class Magnet : MonoBehaviour
     //Set the layermask dynamically.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 8)
-        {
-            areaEffector.colliderMask = tempMask;
-        }
+        //if(collision.gameObject.layer == 8)
+        //{
+        //    areaEffector.colliderMask = tempMask;
+        //}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        areaEffector.colliderMask = currentMask;
+        //areaEffector.colliderMask = currentMask;
     }
 
     private void Update()
