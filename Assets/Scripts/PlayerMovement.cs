@@ -40,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
     {
         //Debug.Log(playerAnimator.GetBool("IsAirborne"));
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
+
         jump = Input.GetKey(KeyCode.Space);
+
 
         //Check to see if the player is jumping or grounded.
         switch (playerMovementState)
@@ -160,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
     
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); 
+        return Physics2D.OverlapCircle(groundCheck.position, 0.03f, groundLayer); 
     }
 
     public Vector2 GetHorizontalInput() { return horizonalInput; }
