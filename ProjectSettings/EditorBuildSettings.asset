@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CraigTestEnvironment/Level_1.unity
+    path: Assets/Scenes/Levels/Level_1.unity
     guid: 967f25a45a8d86b4893d1ff79c6d7905
   - enabled: 1
-    path: Assets/Scenes/CraigTestEnvironment/Level_2.unity
+    path: Assets/Scenes/Levels/Level_2.unity
     guid: 03826d7a7f068f949889425960ab0921
   - enabled: 1
-    path: Assets/Scenes/CraigTestEnvironment/Level_3.unity
+    path: Assets/Scenes/Levels/Level_3.unity
     guid: 879736560114b0345a26018ed2f6f43b
   - enabled: 1
-    path: Assets/Scenes/CraigTestEnvironment/Level_4.unity
+    path: Assets/Scenes/Levels/Level_4.unity
     guid: 864f456fe2a91c84ebf204ec0cc3466d
   m_configObjects: {}
