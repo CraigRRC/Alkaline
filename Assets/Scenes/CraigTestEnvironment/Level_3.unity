@@ -239,6 +239,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8196679334230720972, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196679334230720972, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 8678118018506386983, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
       propertyPath: m_Name
       value: Magnet (1)
@@ -776,6 +784,14 @@ PrefabInstance:
     - target: {fileID: 5408342391424475941, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
       propertyPath: polarityState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196679334230720972, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2085938
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196679334230720972, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8678118018506386983, guid: 41cb37ea44ee5a84cbf0621929517bea, type: 3}
       propertyPath: m_Name
