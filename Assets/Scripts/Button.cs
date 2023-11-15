@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : Unlock
 {
-    public BoxCollider2D doorCollider;
+    //public BoxCollider2D doorCollider;
     public ButtonType buttonType;
     public ButtonState buttonState;
     private Animator buttonAnimator;
@@ -60,13 +60,11 @@ public class Button : Unlock
     {
         if(collision.otherCollider.name == "ButtonHitBox")
         {
-            /*
-            if (doorCollider != null && buttonType == ButtonType.Hold)
+            
+            if (buttonType == ButtonType.Hold)
             {
-                doorCollider.enabled = false;
+                Deactivate();
             }
-            */
-            Deactivate();
             buttonAnimator.SetBool("IsButtonDown", false);
         }
         
