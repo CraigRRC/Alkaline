@@ -60,13 +60,11 @@ public class Button : Unlock
     {
         if(collision.otherCollider.name == "ButtonHitBox")
         {
-            /*
-            if (doorCollider != null && buttonType == ButtonType.Hold)
+            
+            if (buttonType == ButtonType.Hold)
             {
-                doorCollider.enabled = false;
+                Deactivate();
             }
-            */
-            Deactivate();
             buttonAnimator.SetBool("IsButtonDown", false);
         }
         
