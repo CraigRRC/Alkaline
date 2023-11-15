@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PressurePlate : Unlock
 {
-    public BoxCollider2D doorCollider;
     private Animator plateAnimator;
     private BoxCollider2D plateCollider;
     private BoxCollider2D plateDetector;

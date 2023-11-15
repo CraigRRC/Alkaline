@@ -26,7 +26,7 @@ public class Magnet : MonoBehaviour
 {
     //State
     public Polarity polarityState;
-    private float magnitude;
+    [SerializeField]private float magnitude = 25000f;
     private AreaEffector2D areaEffector;
     private BoxCollider2D boxCollider;
     public SpriteRenderer[] magnetVisual;
@@ -41,7 +41,6 @@ public class Magnet : MonoBehaviour
         magnetColour = GetComponentInParent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
         //Set Magnitude
-        magnitude = 25000f;
         areaEffector.forceMagnitude = magnitude;
         currentMask = areaEffector.colliderMask;
 
