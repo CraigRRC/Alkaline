@@ -12,29 +12,35 @@ public class SwitchTheMagnet : MonoBehaviour
     public int maxSwitches;
     private int switchedCount;
 
+    //the magnets
     public Magnet[] magnets;
 
+    [Header("Art of switch for animator")]
+    public GameObject switchArt;
     private Animator switchAnimator;
 
 
     private void Awake()
     {
-        switchAnimator = GetComponent<Animator>();
+        switchAnimator = switchArt.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       switchAnimator.enabled = true;
+        //play animation
+        switchAnimator.SetTrigger("isActivated");
 
+        //check if switch has magnets in magnet array
         if (magnets.Length <= 0) Debug.LogWarning("Nothing in Magnet array!!");
 
+        //check if max amount of switches has been reached
         if(switchedCount < maxSwitches)
         {
             for (int i = 0; i < magnets.Length; i++)
             {
-                if (OnOff) 
+                if (OnOff) //check if it will be turning on/off the magnets
                 {
-                    if (isOn)
+                    if (isOn) //check if teh magnets are on or not 
                     {
                         magnets[i].TurnMagnetOff();
                         isOn = false;
@@ -50,15 +56,13 @@ public class SwitchTheMagnet : MonoBehaviour
                 else magnets[i].FlipPolarity();
                 Debug.Log("Magnet/s flipped polarity");
             }
-            /*if (OnOff) Debug.Log("Magnet/s turned off");
-            else Debug.Log("Magnet/s flipped");*/
             switchedCount++;
         }
         else Debug.Log("Hit max amount on switch");
     }
 
     private void Start()
-    {
+    {   //check if there is no magnets in the array at start
         if (magnets.Length <= 0) Debug.LogWarning("Nothing in Magnet array!!");
     }
 }
