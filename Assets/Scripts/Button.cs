@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : Unlock
 {
-    public BoxCollider2D doorCollider;
+    //public BoxCollider2D doorCollider;
     public ButtonType buttonType;
     public ButtonState buttonState;
     private Animator buttonAnimator;
