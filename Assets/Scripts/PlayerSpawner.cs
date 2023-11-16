@@ -10,7 +10,7 @@ public class PlayerSpawner : MonoBehaviour
     public Player playerPrefab;
     private Player playerSpawned;
     public int numOfPolaritySwitches;
-    public TextMeshProUGUI powerCellCount;
+    public SpriteRenderer[] powerCells;
     //can be refactored later to be dynamic.
     public List<Magnet> magnetsInLvl;
     public BoxCollider2D doorCollider;
@@ -21,10 +21,20 @@ public class PlayerSpawner : MonoBehaviour
     {
         playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
-        if(powerCellCount != null )
-            powerCellCount.text = numOfPolaritySwitches.ToString();
         playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
         maxKeys = keysToActivateDoor.Length;
+    }
+
+    private void Start()
+    {
+        playerSpawned.OnSwitchPolarity += PowerDrain;
+    }
+
+    private void PowerDrain()
+    {
+        //Power off a tic
+        //Check how many tics remain
+        //Do something when no tics remain.
     }
 
     private void Update()
@@ -37,10 +47,6 @@ public class PlayerSpawner : MonoBehaviour
         }
         else
         {
-            if(powerCellCount != null)
-            {
-                powerCellCount.text = playerSpawned.GetMaxPolaritySwitches().ToString();
-            }
             //Do something in relation to score
         }
         int activeKeys = 0;
