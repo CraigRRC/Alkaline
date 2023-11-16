@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerSpawner : MonoBehaviour
 {
@@ -19,12 +20,17 @@ public class PlayerSpawner : MonoBehaviour
     private int maxKeys = 0;
     private int batteryCounter = 0;
     public int liveTics;
+    public Text levelNumber;
+
+
     private void Awake()
     {
         playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
         playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
         maxKeys = keysToActivateDoor.Length;
+        if(levelNumber != null )
+            levelNumber.text = SceneManager.GetActiveScene().buildIndex.ToString();
     }
 
     private void Start()
