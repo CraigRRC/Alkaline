@@ -30,7 +30,6 @@ public class PlayerSpawner : MonoBehaviour
     private void Start()
     {
         playerSpawned.OnSwitchPolarity += PowerDrain;
-        Debug.Log(powerCells);
     }
 
     private void OnDisable()
@@ -40,6 +39,12 @@ public class PlayerSpawner : MonoBehaviour
 
     private void PowerDrain()
     {
+        //Check if the array is null
+        if(powerCells == null)
+        {
+            Debug.LogWarning("Powercells is null");
+            return;
+        }
         //Check if the array is blank.
         foreach (var tic in powerCells)
         {
@@ -48,7 +53,6 @@ public class PlayerSpawner : MonoBehaviour
                 Debug.LogWarning("PowerCells Array Empty.");
                 return;
             }
-                
         }
 
         //Power off a tic
