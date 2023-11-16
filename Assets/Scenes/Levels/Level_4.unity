@@ -427,6 +427,41 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+--- !u!212 &1144778991 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6608077164235574273, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1144778992 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 278989388113015821, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1144778993 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1503657663147579039, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1144778994 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8658476174345958567, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1144778995 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2470753704214918437, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1144778996 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5477901709619985050, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1144778997 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4866921935710323768, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1164858229 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8434303190582115914, guid: 6d36933c697920d4fb79f5d5b4551bfa, type: 3}
@@ -454,6 +489,34 @@ PrefabInstance:
       propertyPath: magnetsInLvl.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: powerCells.Array.data[0]
+      value: 
+      objectReference: {fileID: 1144778997}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: powerCells.Array.data[1]
+      value: 
+      objectReference: {fileID: 1144778996}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: powerCells.Array.data[2]
+      value: 
+      objectReference: {fileID: 1144778995}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: powerCells.Array.data[3]
+      value: 
+      objectReference: {fileID: 1144778994}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: powerCells.Array.data[4]
+      value: 
+      objectReference: {fileID: 1144778993}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: powerCells.Array.data[5]
+      value: 
+      objectReference: {fileID: 1144778992}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: powerCells.Array.data[6]
+      value: 
+      objectReference: {fileID: 1144778991}
     - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: magnetsInLvl.Array.data[0]
       value: 
@@ -529,7 +592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 993597260812547741, guid: ce7472f30be773542a666508fd79552d, type: 3}
       propertyPath: sceneIndex
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3707561187633031952, guid: ce7472f30be773542a666508fd79552d, type: 3}
       propertyPath: m_LocalPosition.x

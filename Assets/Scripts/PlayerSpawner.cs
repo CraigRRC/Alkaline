@@ -66,8 +66,11 @@ public class PlayerSpawner : MonoBehaviour
         }
         if(liveTics == 0)
         {
-            //Do something when no tics remain.
-            Debug.Log("Dead");
+            //I dunno man.
+            foreach (var magnet in playerSpawned.magnetsInLvl)
+            {
+                magnet.TurnMagnetOff();
+            }
         }
         else
         {
