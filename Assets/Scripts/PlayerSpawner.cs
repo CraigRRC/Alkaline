@@ -44,8 +44,11 @@ public class PlayerSpawner : MonoBehaviour
         foreach (var tic in powerCells)
         {
             if (tic == null)
+            {
                 Debug.LogWarning("PowerCells Array Empty.");
                 return;
+            }
+                
         }
 
         //Power off a tic
