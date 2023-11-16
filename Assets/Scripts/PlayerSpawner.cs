@@ -17,6 +17,8 @@ public class PlayerSpawner : MonoBehaviour
     public Unlock[] keysToActivateDoor;
     private bool doorUnlocker = false;
     private int maxKeys = 0;
+    private int batteryCounter = 0;
+    public int liveTics;
     private void Awake()
     {
         playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
@@ -28,13 +30,41 @@ public class PlayerSpawner : MonoBehaviour
     private void Start()
     {
         playerSpawned.OnSwitchPolarity += PowerDrain;
+        Debug.Log(powerCells);
+    }
+
+    private void OnDisable()
+    {
+        playerSpawned.OnSwitchPolarity -= PowerDrain;
     }
 
     private void PowerDrain()
     {
+        //Check if the array is blank.
+        foreach (var tic in powerCells)
+        {
+            if (tic == null)
+                return;
+        }
+
         //Power off a tic
+        powerCells[batteryCounter].enabled = false;
+        //Reset tic counter.
+        liveTics = 0;
         //Check how many tics remain
-        //Do something when no tics remain.
+        foreach (var tic in powerCells)
+        {
+            liveTics += tic.enabled ? 1 : 0;
+        }
+        if(liveTics == 0)
+        {
+            //Do something when no tics remain.
+            Debug.Log("Dead");
+        }
+        else
+        {
+            batteryCounter++;
+        }
     }
 
     private void Update()
@@ -45,10 +75,7 @@ public class PlayerSpawner : MonoBehaviour
             playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
             playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
         }
-        else
-        {
-            //Do something in relation to score
-        }
+
         int activeKeys = 0;
         foreach (Unlock temp in keysToActivateDoor)
         {
