@@ -94,29 +94,31 @@ public class PlayerSpawner : MonoBehaviour
         }
 
         int activeKeys = 0;
-        foreach (Unlock temp in keysToActivateDoor)
+        if (keysToActivateDoor != null)
         {
-            if (temp.IsActive())
+            foreach (Unlock temp in keysToActivateDoor)
             {
-                activeKeys++;
+                if (temp == null) return;
+                if (temp.IsActive())
+                {
+                    activeKeys++;
+                }
+                else
+                {
+                    activeKeys--;
+                }
+                //Debug.Log("temp  " + temp);
+                //Debug.Log("active  " + temp.IsActive());
             }
-            else
-            {
-                activeKeys--;
-            }
-            //Debug.Log("temp  " + temp);
-            //Debug.Log("active  " + temp.IsActive());
+            //Debug.Log("active keys " + activeKeys);
+            //Debug.Log("max keys " + maxKeys);
         }
-        //Debug.Log("active keys " + activeKeys);
-        //Debug.Log("max keys " + maxKeys);
-        if (activeKeys == maxKeys)
+
+        if (doorCollider != null)
         {
-            doorCollider.enabled = true;
+            doorCollider.enabled = activeKeys == maxKeys;
         }
-        else
-        {
-            doorCollider.enabled = false;
-        }
+        
     }
 
 
