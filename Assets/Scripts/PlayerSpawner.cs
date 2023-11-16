@@ -98,6 +98,7 @@ public class PlayerSpawner : MonoBehaviour
         {
             foreach (Unlock temp in keysToActivateDoor)
             {
+                if (temp == null) return;
                 if (temp.IsActive())
                 {
                     activeKeys++;
