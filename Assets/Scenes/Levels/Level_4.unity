@@ -482,6 +482,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
+      propertyPath: levelNumber
+      value: 
+      objectReference: {fileID: 1845162513}
+    - target: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
       propertyPath: doorCollider
       value: 
       objectReference: {fileID: 1829256211}
@@ -705,6 +709,17 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 4874475238176108453, guid: ce7472f30be773542a666508fd79552d, type: 3}
   m_PrefabInstance: {fileID: 1547566208}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1845162513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 914096697521037666, guid: 5baa13ffd10ec4b46a848547844f4854, type: 3}
+  m_PrefabInstance: {fileID: 1144778990}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
