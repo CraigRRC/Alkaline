@@ -396,7 +396,7 @@ MonoBehaviour:
   playerMovementState: 1
   playerSpeed: 23000
   groundedDrag: 10
-  jumpPower: 3500
+  jumpPower: 6500
   xJumpConstraint: 1.5
   groundLayer:
     serializedVersion: 2
