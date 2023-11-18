@@ -465,21 +465,9 @@ PrefabInstance:
       propertyPath: magnets.Array.data[0]
       value: 
       objectReference: {fileID: 1122240032}
-    - target: {fileID: 4094239527434124304, guid: 85bf141b98b42d249b75383d60dc68b0, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6997608457993599896, guid: 85bf141b98b42d249b75383d60dc68b0, type: 3}
       propertyPath: m_Name
       value: Switch
-      objectReference: {fileID: 0}
-    - target: {fileID: 7847689901432653980, guid: 85bf141b98b42d249b75383d60dc68b0, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8130919
-      objectReference: {fileID: 0}
-    - target: {fileID: 7847689901432653980, guid: 85bf141b98b42d249b75383d60dc68b0, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0074815154
       objectReference: {fileID: 0}
     - target: {fileID: 8446184892463091861, guid: 85bf141b98b42d249b75383d60dc68b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -521,8 +509,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2317120805838605532, guid: 85bf141b98b42d249b75383d60dc68b0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
