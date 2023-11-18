@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public BoxCollider2D playerDeathBox;
     public float lethalImpactForce = 11f;
     public float pushingForce = 3750f;
+    public delegate void SwitchPolarity();
+    public event SwitchPolarity OnSwitchPolarity;
 
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 currentPolaritySwitches++;
+                OnSwitchPolarity?.Invoke();
                 foreach (var magnet in magnetsInLvl)
                 {
                     if(magnet != null)
@@ -69,12 +72,16 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            //Need to figure out how to do this only when we are on the sides of the box.
-            playerAnimator.SetBool("IsPushing", true);
-            //Gives the player just a little more oomph.
-            collision.rigidbody.AddForce(movementScript.GetHorizontalInput().normalized * pushingForce);
-
-            Debug.Log(collision.GetContact(0).point.magnitude);
+            //Super hacked together probably... But, it works!
+            //When messing around with the contact I found that the magnitude was consistantly 2 when on either side of the box.
+            if(Vector2.Distance(collision.GetContact(0).normal, transform.right) == 2 || 
+                Vector2.Distance(collision.GetContact(0).normal, transform.right * -1) == 2)
+            {
+                playerAnimator.SetBool("IsPushing", true);
+                //Gives the player just a little more oomph.
+                collision.rigidbody.AddForce(movementScript.GetHorizontalInput().normalized * pushingForce);
+            }
+           
         }
         else
         {

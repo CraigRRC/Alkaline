@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5537034009437938668}
   - component: {fileID: 8747129506187971207}
-  - component: {fileID: 4397726197458754703}
+  - component: {fileID: 6535506337863130457}
   m_Layer: 0
   m_Name: Art
   m_TagString: Untagged
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 355528633, guid: 0759c14705f458248af3d3d87f699ce3, type: 3}
-  m_Color: {r: 0.31007475, g: 0.61722237, b: 0.9811321, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4397726197458754703
+--- !u!95 &6535506337863130457
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -116,9 +116,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8446184892463091861}
   - component: {fileID: 7847689901432653980}
-  - component: {fileID: 3856672214845125232}
+  - component: {fileID: 4094239527434124304}
   - component: {fileID: 3505985371131474343}
-  - component: {fileID: 2317120805838605532}
+  - component: {fileID: 1038235595368801345}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -135,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 6997608457993599896}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.84, y: -16.52, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -174,7 +174,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.486986}
+  m_Offset: {x: -0.0074815154, y: 0.486986}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -185,9 +185,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1774309, y: 0.74860805}
+  m_Size: {x: 0.8130919, y: 0.74860805}
   m_EdgeRadius: 0
---- !u!50 &3856672214845125232
+--- !u!50 &4094239527434124304
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   magnets:
   - {fileID: 0}
   switchArt: {fileID: 3603514179201723257}
---- !u!61 &2317120805838605532
+--- !u!61 &1038235595368801345
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
