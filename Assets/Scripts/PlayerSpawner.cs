@@ -22,6 +22,13 @@ public class PlayerSpawner : MonoBehaviour
     public int liveTics;
     public Text levelNumber;
 
+    //Temp UI stuff
+    public Animator keysAnimator;
+    public bool keyDisplay_WASD = false;
+    public bool keyDisplay_SPACE = false;
+    public bool keyDisplay_E = false;
+    public bool keyDisplay_R = false;
+
 
     private void Awake()
     {
@@ -119,8 +126,36 @@ public class PlayerSpawner : MonoBehaviour
         {
             doorCollider.enabled = activeKeys == maxKeys;
         }
+
+
+
+        //Temp UI controller
+        if(keysAnimator != null)
+        {
+            if (keyDisplay_WASD)
+            {
+                keysAnimator.SetBool("Move", true);
+            }
+            else if (keyDisplay_SPACE)
+            {
+                keysAnimator.SetBool("Jump", true);
+            }
+            else if (keyDisplay_E)
+            {
+                keysAnimator.SetBool("Polarity", true);
+            }
+            else if(keyDisplay_R)
+            {
+                keysAnimator.SetBool("Reset", true);
+            }
+        }
         
+
     }
+
+
+
+
 
 
 }
