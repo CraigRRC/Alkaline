@@ -26,6 +26,7 @@ public class PlayerSpawner : MonoBehaviour
     private void Awake()
     {
         playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        playerSpawned.transform.localScale = this.transform.localScale;
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
         playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
         maxKeys = keysToActivateDoor.Length;
