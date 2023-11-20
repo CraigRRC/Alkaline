@@ -11,6 +11,7 @@ public class SwitchTheMagnet : MonoBehaviour
     //for only a certain amount of switches
     public int maxSwitches;
     private int switchedCount;
+    private bool collideOnce = true;
 
     //the magnets
     public Magnet[] magnets;
@@ -27,6 +28,8 @@ public class SwitchTheMagnet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!collideOnce) return;
+        collideOnce = false;
         //play animation
         switchAnimator.SetTrigger("isActivated");
 
@@ -59,6 +62,11 @@ public class SwitchTheMagnet : MonoBehaviour
             switchedCount++;
         }
         else Debug.Log("Hit max amount on switch");
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collideOnce = true;
     }
 
     private void Start()
