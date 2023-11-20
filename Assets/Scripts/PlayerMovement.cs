@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -166,6 +167,16 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 GetHorizontalInput() { return horizonalInput; }
     public PlayerMovementState GetPlayerMovementState() { return playerMovementState; }
 
+    public void setPlayerMovement(float denominator)
+    {
+        playerSpeed *= denominator;
+        Debug.Log(playerSpeed);
+        maxSpeed *= denominator;
+        jumpPower *= denominator;
+        rb.gravityScale *= denominator;
+        xJumpConstraint *= denominator;
+        baseSpeed = playerSpeed;
+    }
 }
 
 //States for movement.
