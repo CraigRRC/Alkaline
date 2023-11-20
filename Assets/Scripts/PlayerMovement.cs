@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -166,6 +167,19 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 GetHorizontalInput() { return horizonalInput; }
     public PlayerMovementState GetPlayerMovementState() { return playerMovementState; }
 
+    //Set Scaling of playermovement variables to match localscaling of playerSpawner
+    //ONLY USED IN PLAYERSPAWNER INSTANTIATION
+    public void setPlayerMovement(float multiplier)
+    {
+        GetComponent<Player>().lethalImpactForce *= multiplier; 
+        playerSpeed *= multiplier;
+        Debug.Log(playerSpeed);
+        maxSpeed *= multiplier;
+        jumpPower *= multiplier;
+        rb.gravityScale *= multiplier;
+        xJumpConstraint *= multiplier;
+        baseSpeed = playerSpeed;
+    }
 }
 
 //States for movement.
