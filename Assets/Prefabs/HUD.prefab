@@ -1277,6 +1277,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5483905507599163163}
     m_Modifications:
+    - target: {fileID: 59747033056096098, guid: 0e3ecfd64ddb4ae478255766d1f6a209, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 59747033056096098, guid: 0e3ecfd64ddb4ae478255766d1f6a209, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7315894188658004052, guid: 0e3ecfd64ddb4ae478255766d1f6a209, type: 3}
       propertyPath: m_Name
       value: controlsdisplay
