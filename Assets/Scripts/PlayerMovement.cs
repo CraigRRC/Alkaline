@@ -167,14 +167,17 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 GetHorizontalInput() { return horizonalInput; }
     public PlayerMovementState GetPlayerMovementState() { return playerMovementState; }
 
-    public void setPlayerMovement(float denominator)
+    //Set Scaling of playermovement variables to match localscaling of playerSpawner
+    //ONLY USED IN PLAYERSPAWNER INSTANTIATION
+    public void setPlayerMovement(float multiplier)
     {
-        playerSpeed *= denominator;
+        GetComponent<Player>().lethalImpactForce *= multiplier; 
+        playerSpeed *= multiplier;
         Debug.Log(playerSpeed);
-        maxSpeed *= denominator;
-        jumpPower *= denominator;
-        rb.gravityScale *= denominator;
-        xJumpConstraint *= denominator;
+        maxSpeed *= multiplier;
+        jumpPower *= multiplier;
+        rb.gravityScale *= multiplier;
+        xJumpConstraint *= multiplier;
         baseSpeed = playerSpeed;
     }
 }
