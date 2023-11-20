@@ -34,6 +34,7 @@ public class PlayerSpawner : MonoBehaviour
     {
         playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         playerSpawned.transform.localScale = this.transform.localScale;
+        playerSpawned.GetComponent<PlayerMovement>().setPlayerMovement(transform.localScale.x);
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
         playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
         maxKeys = keysToActivateDoor.Length;
