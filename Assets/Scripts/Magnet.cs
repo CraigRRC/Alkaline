@@ -76,7 +76,7 @@ public class Magnet : MonoBehaviour
                     {
 
                         magnetVisual[i].enabled = true;
-                        magnetVisual[i].color = Color.red;
+                        magnetVisual[i].color = new Color(1,0,0,.5f);
                         if (i != 0 && i != magnetVisual.Length - 1)
                         {
                             /*
@@ -90,7 +90,7 @@ public class Magnet : MonoBehaviour
                 }
                 if(magnetColour != null)
                 {
-                    magnetColour.color = Color.red;
+                    magnetColour.color = new Color(1, 0, 0, 1f);
                 }
                 
                 break;
@@ -105,7 +105,7 @@ public class Magnet : MonoBehaviour
                     {
 
                         magnetVisual[i].enabled = true;
-                        magnetVisual[i].color = Color.blue;
+                        magnetVisual[i].color = new Color(0, 0, 1, .5f);
                         
                         if(i != 0 && i != magnetVisual.Length - 1)
                         {
@@ -121,7 +121,7 @@ public class Magnet : MonoBehaviour
 
                 if (magnetColour != null)
                 {
-                    magnetColour.color = Color.blue;
+                    magnetColour.color = new Color(0, 0, 1, 1f);
                 }
                
                 break;
