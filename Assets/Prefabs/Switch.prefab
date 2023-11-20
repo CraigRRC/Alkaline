@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5537034009437938668}
   - component: {fileID: 8747129506187971207}
   - component: {fileID: 6535506337863130457}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4094239527434124304}
   - component: {fileID: 3505985371131474343}
   - component: {fileID: 1038235595368801345}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnOff: 1
-  maxSwitches: 5
+  maxSwitches: 1000
   magnets:
   - {fileID: 0}
   switchArt: {fileID: 3603514179201723257}
