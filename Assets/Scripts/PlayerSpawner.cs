@@ -28,6 +28,7 @@ public class PlayerSpawner : MonoBehaviour
     public bool keyDisplay_SPACE = false;
     public bool keyDisplay_E = false;
     public bool keyDisplay_R = false;
+    public GameObject logs;
 
 
     private void Awake()
@@ -95,6 +96,11 @@ public class PlayerSpawner : MonoBehaviour
 
     private void Update()
     {
+
+        if(logs != null)
+        {
+            logs.SetActive(Input.GetKey(KeyCode.L));
+        }
 
         if (playerSpawned.GetPlayerState() == PlayerState.Dead)
         {
