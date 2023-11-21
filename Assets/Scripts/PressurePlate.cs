@@ -37,6 +37,7 @@ public class PressurePlate : Unlock
         {
             Activate();
             plateAnimator.SetBool("IsPressingDown", true);
+
         }
         else
         {
