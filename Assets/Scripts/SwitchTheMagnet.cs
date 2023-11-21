@@ -27,6 +27,7 @@ public class SwitchTheMagnet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer == 12) return;
         //play animation
         switchAnimator.SetTrigger("isActivated");
 
