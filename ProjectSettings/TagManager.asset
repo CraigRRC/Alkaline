@@ -17,11 +17,11 @@ TagManager:
   - Bounds
   - Hazard
   - Player
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Magnet
+  - PressurePlate
+  - PassThrough
+  - Lever
+  - PressureBase
   - 
   - 
   - 

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -406120523, guid: 048af734c81a6ec40a3261097a924a44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,8 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf9e5ce1fdc824408423a6bab607d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorClosed: {fileID: -406120523, guid: 048af734c81a6ec40a3261097a924a44, type: 3}
-  doorOpen: {fileID: 731450375, guid: 048af734c81a6ec40a3261097a924a44, type: 3}
   sceneIndex: 4
 --- !u!61 &4874475238176108453
 BoxCollider2D:

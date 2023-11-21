@@ -45,4 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: -4693111913960648777, guid: 6430d95bbf3c0604f8781ae776033333, type: 3}
-  magnetsInLvl: []
+  numOfPolaritySwitches: 0
+  powerCells:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  magnetsInLvl:
+  - {fileID: 0}
+  doorCollider: {fileID: 0}
+  keysToActivateDoor:
+  - {fileID: 0}

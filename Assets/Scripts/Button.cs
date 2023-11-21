@@ -2,47 +2,72 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class Button : Unlock
 {
-    public BoxCollider2D doorCollider;
+    //public BoxCollider2D doorCollider;
     public ButtonType buttonType;
+    public ButtonState buttonState;
+    private Animator buttonAnimator;
+    private BoxCollider2D buttonCollider;
 
     private void Awake()
     {
+        /*
         if(doorCollider != null)
         {
             doorCollider.enabled = false;
         }
+        */
+        buttonAnimator = GetComponent<Animator>();
+        buttonCollider = GetComponentInChildren<BoxCollider2D>();
         
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 7) return;
-        
-        if (doorCollider != null)
+
+        if (collision.otherCollider.name == "ButtonHitBox")
         {
-            doorCollider.enabled = true;
+            /*
+            if (doorCollider != null)
+            {
+                doorCollider.enabled = true;
+            }
+            */
+            Activate();
+            buttonAnimator.SetBool("IsButtonDown", true);
         }
-        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 7) return;
-
-        if (doorCollider != null)
+        if (collision.otherCollider.name == "ButtonHitBox")
         {
-            doorCollider.enabled = true;
+            /*
+            if (doorCollider != null)
+            {
+                doorCollider.enabled = true;
+            }
+            */
+            Activate();
+            //New anaimation to hold the last keyframe
+            //buttonAnimator.SetBool("IsButtonDown", true);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (doorCollider != null && buttonType == ButtonType.Hold)
+        if(collision.otherCollider.name == "ButtonHitBox")
         {
-            doorCollider.enabled = false;
+            
+            if (buttonType == ButtonType.Hold)
+            {
+                Deactivate();
+            }
+            buttonAnimator.SetBool("IsButtonDown", false);
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,10 +80,17 @@ public class Button : MonoBehaviour
         
        
     }
+
 }
 
 public enum ButtonType
 {
     OnePress,
     Hold,
+}
+
+public enum ButtonState
+{
+    Standby,
+    Activated,
 }

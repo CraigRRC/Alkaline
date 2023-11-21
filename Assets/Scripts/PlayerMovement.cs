@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -38,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(IsGrounded());
+        //Debug.Log(playerAnimator.GetBool("IsAirborne"));
         horizonalInput = new Vector2(Input.GetAxis("Horizontal"), 0f);
         jump = Input.GetKey(KeyCode.Space);
 
@@ -47,9 +48,10 @@ public class PlayerMovement : MonoBehaviour
         {
             case PlayerMovementState.Airborne:
                 rb.drag = 0f;
-                float test = Mathf.Clamp(rb.velocity.x, -xJumpConstraint, xJumpConstraint);
-                rb.velocity = new Vector2(test, rb.velocity.y);
+                float clampedX = Mathf.Clamp(rb.velocity.x, -xJumpConstraint, xJumpConstraint);
+                rb.velocity = new Vector2(clampedX, rb.velocity.y);
                 playerAnimator.SetBool("IsAirborne", true);
+                
                 /* First Code for jumping currently commented out for testing other coding samples
                 
                 RaycastHit2D jumpHit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
@@ -149,16 +151,34 @@ public class PlayerMovement : MonoBehaviour
         //Added a jump
         if (jump && doOnce && playerMovementState == PlayerMovementState.Grounded)
         {
+            doOnce = false;
             rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
             playerMovementState = PlayerMovementState.Airborne;
-            doOnce = false;
+            
         }
     }
 
     
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); 
+        return Physics2D.OverlapCircle(groundCheck.position, 0.05f, groundLayer); 
+    }
+
+    public Vector2 GetHorizontalInput() { return horizonalInput; }
+    public PlayerMovementState GetPlayerMovementState() { return playerMovementState; }
+
+    //Set Scaling of playermovement variables to match localscaling of playerSpawner
+    //ONLY USED IN PLAYERSPAWNER INSTANTIATION
+    public void setPlayerMovement(float multiplier)
+    {
+        GetComponent<Player>().lethalImpactForce *= multiplier; 
+        playerSpeed *= multiplier;
+        Debug.Log(playerSpeed);
+        maxSpeed *= multiplier;
+        jumpPower *= multiplier;
+        rb.gravityScale *= multiplier;
+        xJumpConstraint *= multiplier;
+        baseSpeed = playerSpeed;
     }
 }
 
