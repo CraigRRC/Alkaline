@@ -447,6 +447,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6364561271469970073, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 207.32932
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364561271469970073, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 207.32932
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364561271469970073, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 207.32932
+      objectReference: {fileID: 0}
     - target: {fileID: 7548492599126568229, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: m_Name
       value: HUDCanvas
