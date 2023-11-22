@@ -380,7 +380,7 @@ MonoBehaviour:
   currentPolaritySwitches: 0
   playerDeathBox: {fileID: 1854186081509541827}
   lethalImpactForce: 11
-  pushingForce: 3750
+  pushingForce: 6000
 --- !u!114 &8170528996844661832
 MonoBehaviour:
   m_ObjectHideFlags: 0
