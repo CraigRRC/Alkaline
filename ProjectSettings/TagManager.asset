@@ -50,14 +50,17 @@ TagManager:
   - name: Background Details
     uniqueID: 2583039189
     locked: 0
-  - name: Magnets
-    uniqueID: 3088307329
-    locked: 0
   - name: Switches
     uniqueID: 3471094713
     locked: 0
+  - name: box
+    uniqueID: 1081819119
+    locked: 0
   - name: Player
     uniqueID: 1151967831
+    locked: 0
+  - name: Magnets
+    uniqueID: 3088307329
     locked: 0
   - name: UI
     uniqueID: 3975896387
