@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     public int currentPolaritySwitches;
     public BoxCollider2D playerDeathBox;
     public float lethalImpactForce = 11f;
-    public float pushingForce = 3750f;
     public delegate void SwitchPolarity();
     public event SwitchPolarity OnSwitchPolarity;
 
@@ -66,30 +65,45 @@ public class Player : MonoBehaviour
         {
             PlayerDead();
         }
-    }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
         if (collision.gameObject.layer == 8)
         {
             //Super hacked together probably... But, it works!
             //When messing around with the contact I found that the magnitude was consistantly 2 when on either side of the box.
-            if(Vector2.Distance(collision.GetContact(0).normal, transform.right) == 2 || 
+            if (Vector2.Distance(collision.GetContact(0).normal, transform.right) == 2 ||
                 Vector2.Distance(collision.GetContact(0).normal, transform.right * -1) == 2)
             {
                 playerAnimator.SetBool("IsPushing", true);
-                //Gives the player just a little more oomph.
-                collision.rigidbody.AddForce(movementScript.GetHorizontalInput().normalized * pushingForce);
             }
-           
+            else
+            {
+                //Prevents buggy behaviour.
+                playerAnimator.SetBool("IsPushing", false);
+            }
+
         }
-        else
+       
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 8)
         {
+            //Returns the player back to walk/jump.
             playerAnimator.SetBool("IsPushing", false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Magnet 
+        if (collision.gameObject.layer == 12)
+        {
+            playerAnimator.SetBool("InMagnet", true);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         //Magnet 
         if (collision.gameObject.layer == 12)

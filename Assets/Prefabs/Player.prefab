@@ -87,7 +87,7 @@ MonoBehaviour:
   - {x: -0.0753845, y: 0.013030194, z: 0.00000009848736}
   m_ShapePathHash: -90525098
   m_Mesh: {fileID: 0}
-  m_InstanceId: 51068
+  m_InstanceId: 51404
   m_LocalBounds:
     m_Center: {x: 0.00809747, y: 0.34457636, z: 0}
     m_Extent: {x: 0.1473262, y: 0.43578774, z: 0}
@@ -380,7 +380,6 @@ MonoBehaviour:
   currentPolaritySwitches: 0
   playerDeathBox: {fileID: 1854186081509541827}
   lethalImpactForce: 11
-  pushingForce: 3750
 --- !u!114 &8170528996844661832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,11 +395,13 @@ MonoBehaviour:
   playerMovementState: 1
   playerSpeed: 23000
   groundedDrag: 10
-  jumpPower: 6500
+  jumpPower: 12000
   xJumpConstraint: 1.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 25472
+  grav: 0
+  airGrav: 0
 --- !u!95 &-455935275463590334
 Animator:
   serializedVersion: 5
