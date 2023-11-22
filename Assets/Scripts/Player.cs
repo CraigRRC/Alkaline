@@ -103,6 +103,15 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Magnet 
+        if (collision.gameObject.layer == 12)
+        {
+            playerAnimator.SetBool("InMagnet", true);
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Magnet 
