@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 340
+        width: 626
         height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,9 +147,9 @@ TextureImporter:
       name: movecontrols_1
       rect:
         serializedVersion: 2
-        x: 340
+        x: 626
         y: 0
-        width: 340
+        width: 626
         height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,9 +168,9 @@ TextureImporter:
       name: movecontrols_2
       rect:
         serializedVersion: 2
-        x: 680
+        x: 1252
         y: 0
-        width: 340
+        width: 626
         height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,9 +189,9 @@ TextureImporter:
       name: movecontrols_3
       rect:
         serializedVersion: 2
-        x: 1020
+        x: 1878
         y: 0
-        width: 340
+        width: 626
         height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -210,9 +210,9 @@ TextureImporter:
       name: movecontrols_4
       rect:
         serializedVersion: 2
-        x: 1360
+        x: 2504
         y: 0
-        width: 340
+        width: 626
         height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,9 +231,9 @@ TextureImporter:
       name: movecontrols_5
       rect:
         serializedVersion: 2
-        x: 1700
+        x: 3130
         y: 0
-        width: 340
+        width: 626
         height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -252,9 +252,9 @@ TextureImporter:
       name: movecontrols_6
       rect:
         serializedVersion: 2
-        x: 2040
+        x: 3756
         y: 0
-        width: 340
+        width: 626
         height: 117
       alignment: 0
       pivot: {x: 0, y: 0}

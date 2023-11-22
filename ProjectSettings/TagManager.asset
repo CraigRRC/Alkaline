@@ -44,11 +44,11 @@ TagManager:
   - name: foreground
     uniqueID: 4077317665
     locked: 0
-  - name: stage
-    uniqueID: 3952764639
-    locked: 0
   - name: Background Details
     uniqueID: 2583039189
+    locked: 0
+  - name: Door
+    uniqueID: 4105956057
     locked: 0
   - name: Switches
     uniqueID: 3471094713
@@ -61,6 +61,9 @@ TagManager:
     locked: 0
   - name: Magnets
     uniqueID: 3088307329
+    locked: 0
+  - name: stage
+    uniqueID: 3952764639
     locked: 0
   - name: UI
     uniqueID: 3975896387
