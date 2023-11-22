@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: foreground
+    uniqueID: 4077317665
+    locked: 0
+  - name: stage
+    uniqueID: 3952764639
+    locked: 0
+  - name: Background Details
+    uniqueID: 2583039189
+    locked: 0
+  - name: Magnets
+    uniqueID: 3088307329
+    locked: 0
+  - name: Switches
+    uniqueID: 3471094713
+    locked: 0
+  - name: Player
+    uniqueID: 1151967831
+    locked: 0
