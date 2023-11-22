@@ -335,6 +335,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6927613845759852907}
     m_Modifications:
+    - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.57955
+      objectReference: {fileID: 0}
+    - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.57955
+      objectReference: {fileID: 0}
+    - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.57955
+      objectReference: {fileID: 0}
+    - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -785.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 406.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3742060741485652588, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -462,6 +490,10 @@ PrefabInstance:
     - target: {fileID: 7548492599126568229, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: m_Name
       value: HUDCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703296299721359438, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 190
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
