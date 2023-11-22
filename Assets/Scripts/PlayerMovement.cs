@@ -83,30 +83,36 @@ public class PlayerMovement : MonoBehaviour
                 rb.gravityScale = grav;
                 break;
 
-                /* First Code for jumping currently commented out for testing other coding samples
-                
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
-                Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
-                //If player is close enough to ground
-                if (hit.collider != null)
-                {
-                    Debug.Log(hit.collider.gameObject.layer);
-                    if (hit.collider.gameObject.layer == 7 || hit.collider.gameObject.layer == 8)
-                    {
-                        playerMovementState = PlayerMovementState.Grounded;
-                    }
-                }
-                */
+            /* First Code for jumping currently commented out for testing other coding samples
 
-            //case PlayerMovementState.inMagnet:
-            //    rb.drag = 0;
-            //    playerSpeed = jumpSpeed;
-            //    break;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
+            Debug.DrawRay(transform.position, Vector2.down * 0.5f, Color.red);
+            //If player is close enough to ground
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.collider.gameObject.layer);
+                if (hit.collider.gameObject.layer == 7 || hit.collider.gameObject.layer == 8)
+                {
+                    playerMovementState = PlayerMovementState.Grounded;
+                }
+            }
+            */
+
+            case PlayerMovementState.inMagnet:
+                rb.drag = 0f;
+                float magClampedX = Mathf.Clamp(rb.velocity.x, -xJumpConstraint, xJumpConstraint);
+                rb.velocity = new Vector2(magClampedX, rb.velocity.y);
+                rb.gravityScale = grav;
+                break;
             default:
                 break;
         }
-
-        if (IsGrounded())
+         
+        if (playerAnimator.GetBool("InMagnet"))
+        {
+            playerMovementState = PlayerMovementState.inMagnet;
+        }
+        else if (IsGrounded())
         {
             playerMovementState = PlayerMovementState.Grounded;
         }
@@ -117,10 +123,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Bugged when player jumps on an object within a magnet, or walks into a magnet.
         //Trade off is that magnets need to be jumped into to properly get the right drag. 
-        else if (!jump && rb.velocity.y > 0.1f && playerMovementState == PlayerMovementState.Grounded)
-        {
-            playerMovementState = PlayerMovementState.inMagnet;
-        }
+        
 
 
     }
