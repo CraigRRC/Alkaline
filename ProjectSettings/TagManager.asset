@@ -47,6 +47,9 @@ TagManager:
   - name: Background Details
     uniqueID: 2583039189
     locked: 0
+  - name: Door
+    uniqueID: 4105956057
+    locked: 0
   - name: Switches
     uniqueID: 3471094713
     locked: 0
