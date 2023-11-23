@@ -10,6 +10,7 @@ public class Exit : MonoBehaviour
     private Animator doorAnimator;
     //Needs to be refactored to not be manual.
     public int sceneIndex;
+    public bool safeToMoveToNextLevel = false;
    
     private void Awake()
     {
@@ -30,14 +31,22 @@ public class Exit : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 11)
         {
             //first play animation, then load scene.
-            SceneManager.LoadScene(sceneIndex);
-            
+            if (safeToMoveToNextLevel)
+            {
+                SceneManager.LoadScene(sceneIndex);
+            }
+
         }
+    }
+
+    public void MoveToNextLevel()
+    {
+        safeToMoveToNextLevel = true;
     }
 
 
