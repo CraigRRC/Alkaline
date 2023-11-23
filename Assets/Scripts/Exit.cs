@@ -8,8 +8,7 @@ public class Exit : MonoBehaviour
 {
     private BoxCollider2D doorCollider;
     private Animator doorAnimator;
-    //Needs to be refactored to not be manual.
-    public int sceneIndex;
+    private bool safeToMoveToNextLevel = false;
    
     private void Awake()
     {
@@ -30,14 +29,34 @@ public class Exit : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 11)
         {
             //first play animation, then load scene.
-            SceneManager.LoadScene(sceneIndex);
-            
+            if (safeToMoveToNextLevel)
+            {
+                int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+                
+                //This should work.. Just need to make a build to test it.
+                if(nextScene < SceneManager.sceneCount) 
+                {
+                    SceneManager.LoadScene(nextScene);
+                }
+                else
+                {
+                    SceneManager.LoadScene(0);
+                }
+               
+            }
+
         }
+    }
+
+    //Callback function for the door opening animation.
+    public void MoveToNextLevel()
+    {
+        safeToMoveToNextLevel = true;
     }
 
 
