@@ -8,14 +8,12 @@ public class Exit : MonoBehaviour
 {
     private BoxCollider2D doorCollider;
     private Animator doorAnimator;
-    //Needs to be refactored to not be manual.
-    public bool safeToMoveToNextLevel = false;
+    private bool safeToMoveToNextLevel = false;
    
     private void Awake()
     {
         doorCollider = GetComponent<BoxCollider2D>();
         doorAnimator = GetComponent<Animator>();
-        
     }
 
     private void Update()
@@ -55,6 +53,7 @@ public class Exit : MonoBehaviour
         }
     }
 
+    //Callback function for the door opening animation.
     public void MoveToNextLevel()
     {
         safeToMoveToNextLevel = true;
