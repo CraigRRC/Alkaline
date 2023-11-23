@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         baseSpeed = playerSpeed;
         groundCheck = this.gameObject.transform.GetChild(0);
         grav = rb.gravityScale;
-        airGrav = grav * 3;
+        airGrav = grav * 2;
     }
 
     void Update()

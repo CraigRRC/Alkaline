@@ -87,7 +87,7 @@ MonoBehaviour:
   - {x: -0.0753845, y: 0.013030194, z: 0.00000009848736}
   m_ShapePathHash: -90525098
   m_Mesh: {fileID: 0}
-  m_InstanceId: 51404
+  m_InstanceId: 94306
   m_LocalBounds:
     m_Center: {x: 0.00809747, y: 0.34457636, z: 0}
     m_Extent: {x: 0.1473262, y: 0.43578774, z: 0}
@@ -395,8 +395,8 @@ MonoBehaviour:
   playerMovementState: 1
   playerSpeed: 23000
   groundedDrag: 10
-  jumpPower: 12000
-  xJumpConstraint: 1.5
+  jumpPower: 9200
+  xJumpConstraint: 2.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 25472
