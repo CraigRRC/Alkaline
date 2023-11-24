@@ -19,9 +19,6 @@ public class UI : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-         
-        
-       
     }
 
     private void Start()
