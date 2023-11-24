@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -121,7 +121,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: interactcontrols_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c5a6fc9ade696419528d9e5506b884
+      internalID: 226619649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6181f37ff9b8b46449dce79e76c13b31
+      internalID: -1836259038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_2
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaff9779f37e5ba40a1f8db8d574d57c
+      internalID: 234458840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_3
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7280e1bb48b00ff4e9bda09f3422c91b
+      internalID: -741375286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_4
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dd05e1f4a4dbc4c97ec507e4e0f0f4
+      internalID: 427755444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_5
+      rect:
+        serializedVersion: 2
+        x: 3130
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938be48340f95674e809dfba7eaf20ef
+      internalID: -690073632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_6
+      rect:
+        serializedVersion: 2
+        x: 3756
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05b4b1f584f33640908d32b0f1a59f5
+      internalID: -951683157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_7
+      rect:
+        serializedVersion: 2
+        x: 4382
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d8c73d8af60124884d0e02f8a84ccf
+      internalID: -543220731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_8
+      rect:
+        serializedVersion: 2
+        x: 5008
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac7ce219e874b340b8bfa4aa87ac394
+      internalID: 1209750144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_9
+      rect:
+        serializedVersion: 2
+        x: 5634
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8336b0b728ad530479fe8ebe0c368a60
+      internalID: 922230529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: interactcontrols_10
+      rect:
+        serializedVersion: 2
+        x: 6260
+        y: 0
+        width: 626
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cdf24f0e7d488479ea63414ebc06af
+      internalID: 1977463716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +363,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      interactcontrols_0: 226619649
+      interactcontrols_1: -1836259038
+      interactcontrols_10: 1977463716
+      interactcontrols_2: 234458840
+      interactcontrols_3: -741375286
+      interactcontrols_4: 427755444
+      interactcontrols_5: -690073632
+      interactcontrols_6: -951683157
+      interactcontrols_7: -543220731
+      interactcontrols_8: 1209750144
+      interactcontrols_9: 922230529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
