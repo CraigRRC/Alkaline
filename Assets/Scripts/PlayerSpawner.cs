@@ -29,9 +29,18 @@ public class PlayerSpawner : MonoBehaviour
     public bool keyDisplay_E = false;
     public bool keyDisplay_R = false;
 
+    public delegate void PlayerSpawnedDelegate(Player spawnedPlayer);
+    public PlayerSpawnedDelegate OnPlayerSpawned;
+
+    public delegate void LevelManagerDelegate(PlayerSpawner levelManager);
+    public LevelManagerDelegate OnLevelManager;
+
 
     private void Awake()
     {
+        Debug.Log("invoke levelmanager");
+        OnLevelManager?.Invoke(this);
+        Debug.Log(this);
         playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         playerSpawned.transform.localScale = this.transform.localScale;
         playerSpawned.GetComponent<PlayerMovement>().setPlayerMovement(transform.localScale.x);
@@ -45,6 +54,10 @@ public class PlayerSpawner : MonoBehaviour
     private void Start()
     {
         playerSpawned.OnSwitchPolarity += PowerDrain;
+        Debug.Log("invoke Player");
+        OnPlayerSpawned?.Invoke(playerSpawned);
+        Debug.Log(playerSpawned.name);
+        
     }
 
     private void OnDisable()
