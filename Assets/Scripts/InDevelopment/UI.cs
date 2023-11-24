@@ -12,15 +12,16 @@ public class UI : MonoBehaviour
 {
     public Image[] powerCells;
     public PlayerSpawner levelManager;
-    private PlayerSpawner levelManagerReal;
     private Player playerSpawned;
     private int ticPosition = 0;
     private int liveTics = 0;
 
     private void Awake()
     {
-        //DontDestroyOnLoad(gameObject);
-        levelManager.OnLevelManager += LevelManagerRef;
+        DontDestroyOnLoad(gameObject);
+         
+        
+       
     }
 
     private void Start()
@@ -73,27 +74,17 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (levelManager == null)
+        {
+            levelManager = FindObjectOfType<PlayerSpawner>();
+            playerSpawned = FindObjectOfType<Player>();
+            playerSpawned.OnSwitchPolarity += PowerDrain;
+        }
     }
 
-    private void PlayerRef(Player player)
-    {
-        Debug.Log(player.name);
-        playerSpawned = player;
-        playerSpawned.OnSwitchPolarity += PowerDrain;
-    }
-
-    private void LevelManagerRef(PlayerSpawner levelManager)
-    {
-        Debug.Log(levelManager.name);
-        levelManagerReal = levelManager;
-        levelManagerReal.OnPlayerSpawned += PlayerRef;
-
-    }
 
     private void OnDisable()
     {
-        levelManagerReal.OnPlayerSpawned -= PlayerRef;
         playerSpawned.OnSwitchPolarity -= PowerDrain;
     }
 
