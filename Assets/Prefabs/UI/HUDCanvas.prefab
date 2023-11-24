@@ -1116,7 +1116,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff8de8900c58114088126f9bb71dc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerCells: []
+  powerCells:
+  - {fileID: 2262420375572265736}
+  - {fileID: 4255539653704633123}
+  - {fileID: 5496615743277809085}
+  - {fileID: 7558457125996510826}
+  - {fileID: 7643287113515577868}
+  - {fileID: 7026097041623007542}
+  - {fileID: 7361470398075776760}
   levelManager: {fileID: -6693065476897954114, guid: 7da5c8a2966159945a89cf06ede73729, type: 3}
 --- !u!1 &7816577078877103527
 GameObject:

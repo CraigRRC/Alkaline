@@ -16,16 +16,16 @@ public class UI : MonoBehaviour
     private Player playerSpawned;
     private int ticPosition = 0;
     private int liveTics = 0;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         levelManager.OnLevelManager += LevelManagerRef;
     }
 
     private void Start()
     {
-       
-        
+       // Initialize those cached objects?
     }
 
     private void PowerDrain()

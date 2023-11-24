@@ -70,7 +70,7 @@ public class PlayerSpawner : MonoBehaviour
         //Check if the array is null
         if(powerCells == null)
         {
-            Debug.LogWarning("Powercells is null");
+           // Debug.LogWarning("Powercells is null");
             return;
         }
         //Check if the array is blank.
@@ -78,7 +78,7 @@ public class PlayerSpawner : MonoBehaviour
         {
             if (tic == null)
             {
-                Debug.LogWarning("PowerCells Array Empty.");
+               // Debug.LogWarning("PowerCells Array Empty.");
                 return;
             }
         }
