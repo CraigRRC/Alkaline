@@ -1,0 +1,1658 @@
+fileFormatVersion: 2
+guid: 5a0cc93da16824553ada1c05f1d919cf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e066d204be92746a9ac355473b559f29
+      internalID: 459538659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_1
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5674df9a25b2349a4820b180d3114ae1
+      internalID: -678510710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_2
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e472e90bec7b4eef971cc089309457d
+      internalID: 1993036734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_3
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fae0b0db3ef484db119edbb2326468
+      internalID: -1965671174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_4
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc622c67743a44f43ac15ea7650523e3
+      internalID: 1169080893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_5
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd056ea6474ab46b29e5a21612267ee6
+      internalID: 748851614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_6
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1404c1b2956c94403b2e15f67793ab9d
+      internalID: 588502844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_7
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e8197975aa34a4bbf5984221b9e8b2
+      internalID: -1303934918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_8
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 553
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdb43f5f03214d9190159f1da9b5877
+      internalID: 1666430596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d774b8161b6418287492851f093073
+      internalID: 2009745307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_10
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8917a6cca00142cb907cbc61b3fd63d
+      internalID: -1764385245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_11
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41c90da335d148c496a6eafd9d7dfb2
+      internalID: 680355340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_12
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8f740cf330f4455abfa977024adccb
+      internalID: 2016572805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_13
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d10bedcdad75490d9b5cee5930b25da
+      internalID: -1729019206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_14
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0f0f3ec96394937a1ee2e308b01ff6
+      internalID: 295790358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_15
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e7226981dc9408eaf7f30d24f30b3e
+      internalID: 1468365977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_16
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adfde05988504ef2bcae2b772a2fe9f
+      internalID: 212482642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_17
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 474
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c79ac9dff7bd44a7bb5980b90dca483
+      internalID: -1524794864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b44c198e83b4f6682187feec5b3d54
+      internalID: 451005719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_19
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fabb1b8371848558ef52e00b02d0ca
+      internalID: -546491725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_20
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4de78f8b27d421485d52931405eade
+      internalID: -1599379678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_21
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e430ae8a617745d88b73103276094a3
+      internalID: 524926533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_22
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4642eb207234022b3a76e41ebadca7
+      internalID: 1462852482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_23
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c929b5aed39941adafce451346b790e
+      internalID: 59566801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_24
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a970ec3f7ed144f5bc4f805463bb82e
+      internalID: -1146464649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_25
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d8ebb593ff04c84a72471885d66b40
+      internalID: -565914191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_26
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 395
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a37d135cb1174c30a69bdae7d07fee1
+      internalID: 662534815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f59b37525ce42228a8e5bc3a43293d
+      internalID: -2127661533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_28
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6ecab6c64e04f06965f118cbe95c25
+      internalID: -1328018317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_29
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead7dde65b5e14810b479989244a21ad
+      internalID: -1896588023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_30
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42e1477ecc6f4868add89efc0818fa6
+      internalID: -1722864915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_31
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4432e829c5c9443daa24e78770534c75
+      internalID: -819599811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_32
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a5db529d0f445a2a50e3731147dccc
+      internalID: 1985954553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_33
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d807db85c93437b866a25406a47248
+      internalID: -2074751437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_34
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19e70dc54e7f4beab2c5df0d1b05fa8
+      internalID: 86156425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_35
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 316
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfde6cd60229c477fab3f3482d71f908
+      internalID: -376011952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51df420a213e34326969287677b9f491
+      internalID: -472008182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_37
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cad21bac3ec84bee93802290d78f7d3
+      internalID: -540477839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_38
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e49ce7338364fb5b3b5d7189906539
+      internalID: -291090124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_39
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8823d378d2854e6087bacc589444148
+      internalID: -994618382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_40
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd46acbffc5f48268492b0184f407e6
+      internalID: 1784638805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_41
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9c19ed85bb44ac0b830d67969c9fa6
+      internalID: 1775352951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_42
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fc17095ecb0415bae6697ac22703f2
+      internalID: -1048328152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_43
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfb3f196fb454ced875e2a8c3de0cb4
+      internalID: -781591587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_44
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 237
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b10d7643b39644628f2015955dc3b10
+      internalID: 1070863153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d41acff132c47a5befffc72de1c2a5
+      internalID: -323795941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_46
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239367a1b74f242348f345719fb12e6e
+      internalID: 1453948828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_47
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b842be8056604e179cb947925dca0bb
+      internalID: 1134715681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_48
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf88240d6b704b4bb36e4f627586e2a
+      internalID: 22425668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_49
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97868376e69f4bc3b9ff62b535419f3
+      internalID: -1614176661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_50
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a7bba9b4f164dd6a96eb87895e7c87
+      internalID: -1935597614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_51
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9b2dee5524e4632bef58d56f4c7495
+      internalID: -1721872174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_52
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8b54206e4da4dae918125f616ce2a8
+      internalID: 1649565869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_53
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 158
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791e5a639544d4ce081d2b7c1a8e4e47
+      internalID: 1791531107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d3eaf10ea864fdc840de88ec92637b
+      internalID: 212075382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_55
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecb9ec61eab549f5af3e8aeab0b89e1
+      internalID: 1439902154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_56
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dcf7b0add0e4fbf82f0c6ffc390f35
+      internalID: -852762815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_57
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9145f61e318fb44918f7ddff7936e0ae
+      internalID: 805549764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_58
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3083fbdfb06c74851bfb810d0b7ace62
+      internalID: -262685543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_59
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74efeb59ee394434aeb178bcd147560
+      internalID: -862029209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_60
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fed86d7bcc242f481cb496fb8558f7
+      internalID: 260166239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_61
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4462d972da04ad1831b905645e630e
+      internalID: 1542221246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_62
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 79
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9318f26f3b924cf09f3344e07748077
+      internalID: 594071477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f690a7a2fabcf4bb089bac75085d4991
+      internalID: -1743757716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_64
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 0
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80f8791535bf4fa89b0468fcafc6ae4
+      internalID: -169077729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_65
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 0
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09c317c337e84b69a01d43259917227
+      internalID: -1500723084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_66
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 0
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da30edd2cbffa4aeaa2fdf27bf47b845
+      internalID: 514726628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_67
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 0
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb6d763096c245ff9213018257f2771
+      internalID: -1688310459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generalcomputer-butterworthtext_68
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 0
+        width: 593
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877f09f539e9b45c59cceeae410877e9
+      internalID: 583703110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      generalcomputer-butterworthtext_0: 459538659
+      generalcomputer-butterworthtext_1: -678510710
+      generalcomputer-butterworthtext_10: -1764385245
+      generalcomputer-butterworthtext_11: 680355340
+      generalcomputer-butterworthtext_12: 2016572805
+      generalcomputer-butterworthtext_13: -1729019206
+      generalcomputer-butterworthtext_14: 295790358
+      generalcomputer-butterworthtext_15: 1468365977
+      generalcomputer-butterworthtext_16: 212482642
+      generalcomputer-butterworthtext_17: -1524794864
+      generalcomputer-butterworthtext_18: 451005719
+      generalcomputer-butterworthtext_19: -546491725
+      generalcomputer-butterworthtext_2: 1993036734
+      generalcomputer-butterworthtext_20: -1599379678
+      generalcomputer-butterworthtext_21: 524926533
+      generalcomputer-butterworthtext_22: 1462852482
+      generalcomputer-butterworthtext_23: 59566801
+      generalcomputer-butterworthtext_24: -1146464649
+      generalcomputer-butterworthtext_25: -565914191
+      generalcomputer-butterworthtext_26: 662534815
+      generalcomputer-butterworthtext_27: -2127661533
+      generalcomputer-butterworthtext_28: -1328018317
+      generalcomputer-butterworthtext_29: -1896588023
+      generalcomputer-butterworthtext_3: -1965671174
+      generalcomputer-butterworthtext_30: -1722864915
+      generalcomputer-butterworthtext_31: -819599811
+      generalcomputer-butterworthtext_32: 1985954553
+      generalcomputer-butterworthtext_33: -2074751437
+      generalcomputer-butterworthtext_34: 86156425
+      generalcomputer-butterworthtext_35: -376011952
+      generalcomputer-butterworthtext_36: -472008182
+      generalcomputer-butterworthtext_37: -540477839
+      generalcomputer-butterworthtext_38: -291090124
+      generalcomputer-butterworthtext_39: -994618382
+      generalcomputer-butterworthtext_4: 1169080893
+      generalcomputer-butterworthtext_40: 1784638805
+      generalcomputer-butterworthtext_41: 1775352951
+      generalcomputer-butterworthtext_42: -1048328152
+      generalcomputer-butterworthtext_43: -781591587
+      generalcomputer-butterworthtext_44: 1070863153
+      generalcomputer-butterworthtext_45: -323795941
+      generalcomputer-butterworthtext_46: 1453948828
+      generalcomputer-butterworthtext_47: 1134715681
+      generalcomputer-butterworthtext_48: 22425668
+      generalcomputer-butterworthtext_49: -1614176661
+      generalcomputer-butterworthtext_5: 748851614
+      generalcomputer-butterworthtext_50: -1935597614
+      generalcomputer-butterworthtext_51: -1721872174
+      generalcomputer-butterworthtext_52: 1649565869
+      generalcomputer-butterworthtext_53: 1791531107
+      generalcomputer-butterworthtext_54: 212075382
+      generalcomputer-butterworthtext_55: 1439902154
+      generalcomputer-butterworthtext_56: -852762815
+      generalcomputer-butterworthtext_57: 805549764
+      generalcomputer-butterworthtext_58: -262685543
+      generalcomputer-butterworthtext_59: -862029209
+      generalcomputer-butterworthtext_6: 588502844
+      generalcomputer-butterworthtext_60: 260166239
+      generalcomputer-butterworthtext_61: 1542221246
+      generalcomputer-butterworthtext_62: 594071477
+      generalcomputer-butterworthtext_63: -1743757716
+      generalcomputer-butterworthtext_64: -169077729
+      generalcomputer-butterworthtext_65: -1500723084
+      generalcomputer-butterworthtext_66: 514726628
+      generalcomputer-butterworthtext_67: -1688310459
+      generalcomputer-butterworthtext_68: 583703110
+      generalcomputer-butterworthtext_7: -1303934918
+      generalcomputer-butterworthtext_8: 1666430596
+      generalcomputer-butterworthtext_9: 2009745307
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
