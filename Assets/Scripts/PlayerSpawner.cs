@@ -44,12 +44,12 @@ public class PlayerSpawner : MonoBehaviour
 
     private void Start()
     {
-        playerSpawned.OnSwitchPolarity += PowerDrain;
+        //playerSpawned.OnSwitchPolarity += PowerDrain;
     }
 
     private void OnDisable()
     {
-        playerSpawned.OnSwitchPolarity -= PowerDrain;
+       // playerSpawned.OnSwitchPolarity -= PowerDrain;
     }
 
     private void PowerDrain()
