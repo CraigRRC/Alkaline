@@ -13,28 +13,45 @@ public class Interactable : MonoBehaviour
 {
 
     private BoxCollider2D trigger;
+    private GameObject fKeySprite;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         trigger = GetComponent<BoxCollider2D>();
         trigger.isTrigger = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         //Player
         if (collision.gameObject.layer == 11)
         {
-            //Display F key.
+            if(fKeySprite == null)
+            {
+                //Display F key.
+                var Temp = collision.GetComponentsInChildren<GameObject>(true);
+                foreach (var spriteRenderer in Temp)
+                {
+                    if (!spriteRenderer.activeSelf)
+                    {
+                        fKeySprite = spriteRenderer;
+                    }
+                }
+            }
+            else
+            {
+                fKeySprite.SetActive(true);
+            }
+            
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         //Player
         if (collision.gameObject.layer == 11)
         {
-            //Remove F key.
+            fKeySprite.SetActive(false);
         }
     }
 }
