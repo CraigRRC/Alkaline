@@ -53,6 +53,17 @@ public class UIData : MonoBehaviour
         if(depletedBatteryCount == maxDepletedBatteryCount)
         {
             //Turn off mags.
+            PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
+            if (levelManager != null)
+            {
+                foreach (var magnet in levelManager.magnetsInLvl)
+                {
+                    if (magnet != null)
+                    {
+                        magnet.TurnMagnetOff();
+                    }
+                }
+            }
         }
 
         foreach(var battery in PersistingBatteryCharges)
@@ -67,7 +78,32 @@ public class UIData : MonoBehaviour
                 return;
             }
         }
+    }
 
-
+    public void ChargeBattery()
+    {
+        if (depletedBatteryCount == maxDepletedBatteryCount)
+        {
+            //Turn off mags.
+            PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
+            if (levelManager != null)
+            {
+                foreach (var magnet in levelManager.magnetsInLvl)
+                {
+                    if (magnet != null)
+                    {
+                        magnet.TurnMagnetOn();
+                    }
+                }
+            }
+        }
+        depletedBatteryCount = 0;
+        foreach (var battery in PersistingBatteryCharges)
+        {
+            if (!battery.enabled)
+            {
+                battery.enabled = true;
+            }
+        }
     }
 }
