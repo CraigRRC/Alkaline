@@ -24,6 +24,8 @@ public class UIData : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
     }
 
     private void Update()
@@ -35,7 +37,6 @@ public class UIData : MonoBehaviour
             for (int i = 0; i < HUD.OriginalBatteryCharges.Length; i++)
             {
                 PersistingBatteryCharges[i] = HUD.OriginalBatteryCharges[i];
-                Debug.Log(PersistingBatteryCharges[i].name);
             }
             maxDepletedBatteryCount = PersistingBatteryCharges.Length;
             for (int i = 0; i < depletedBatteryCount; i++)
@@ -82,9 +83,12 @@ public class UIData : MonoBehaviour
 
     public void ChargeBattery()
     {
+        if (PersistingBatteryCharges == null) return;
+
         if (depletedBatteryCount == maxDepletedBatteryCount)
         {
-            //Turn off mags.
+            Debug.Log("Here"); 
+            //Turn on mags.
             PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
             if (levelManager != null)
             {

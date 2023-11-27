@@ -47,7 +47,6 @@ public abstract class Interactable : MonoBehaviour
         if (collision.gameObject.layer == 11)
         {
             inTrigger = false;
-            doOnce = true;
         }
     }
 
@@ -55,5 +54,12 @@ public abstract class Interactable : MonoBehaviour
     protected virtual void Activate()
     {
         doOnce = false;
+        StartCoroutine(CanInteract());
+    }
+
+    private IEnumerator CanInteract()
+    {
+        yield return new WaitForSeconds(1);
+        doOnce = true;
     }
 }
