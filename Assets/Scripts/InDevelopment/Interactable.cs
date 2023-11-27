@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -9,49 +10,50 @@ using UnityEngine;
 //2) F sprite appears above player.
 //3) If player is standing in the trigger and presses F. Do something.
 //Do something will be different for each interactable, therefore might be a good idea to make child classes.
-public class Interactable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
 
     private BoxCollider2D trigger;
-    private GameObject fKeySprite;
+    public bool inTrigger;
+    public bool doOnce;
 
     protected virtual void Awake()
     {
         trigger = GetComponent<BoxCollider2D>();
         trigger.isTrigger = true;
+        doOnce = true;
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         //Player
         if (collision.gameObject.layer == 11)
         {
-            if(fKeySprite == null)
-            {
-                //Display F key.
-                var Temp = collision.GetComponentsInChildren<GameObject>(true);
-                foreach (var spriteRenderer in Temp)
-                {
-                    if (!spriteRenderer.activeSelf)
-                    {
-                        fKeySprite = spriteRenderer;
-                    }
-                }
-            }
-            else
-            {
-                fKeySprite.SetActive(true);
-            }
-            
+            inTrigger = true;
         }
     }
 
-    protected virtual void OnTriggerExit2D(Collider2D collision)
+    protected virtual void Update()
+    {
+        if (doOnce && inTrigger && Input.GetKey(KeyCode.F))
+        {
+            Activate();
+        }
+    }
+
+    protected void OnTriggerExit2D(Collider2D collision)
     {
         //Player
         if (collision.gameObject.layer == 11)
         {
-            fKeySprite.SetActive(false);
+            inTrigger = false;
+            doOnce = true;
         }
+    }
+
+
+    protected virtual void Activate()
+    {
+        doOnce = false;
     }
 }
