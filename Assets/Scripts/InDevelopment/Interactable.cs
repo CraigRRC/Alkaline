@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[RequireComponent(typeof(BoxCollider2D))]
 //Potentally a parent class for all interactable objects in the story maps.
 //Base functionality:
 //1) On trigger enter
@@ -11,15 +11,30 @@ using UnityEngine;
 //Do something will be different for each interactable, therefore might be a good idea to make child classes.
 public class Interactable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private BoxCollider2D trigger;
+
+    private void Awake()
     {
-        
+        trigger = GetComponent<BoxCollider2D>();
+        trigger.isTrigger = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        //Player
+        if (collision.gameObject.layer == 11)
+        {
+            //Display F key.
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //Player
+        if (collision.gameObject.layer == 11)
+        {
+            //Remove F key.
+        }
     }
 }
