@@ -13,8 +13,8 @@ public class Player : MonoBehaviour
     public int currentPolaritySwitches;
     public BoxCollider2D playerDeathBox;
     public float lethalImpactForce = 11f;
-    public delegate void SwitchPolarity();
-    public event SwitchPolarity OnSwitchPolarity;
+    //public delegate void SwitchPolarity();
+    //public event SwitchPolarity OnSwitchPolarity;
 
     private void Awake()
     {
@@ -30,7 +30,9 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 currentPolaritySwitches++;
-                OnSwitchPolarity?.Invoke();
+                //OnSwitchPolarity?.Invoke();
+                if(UIData.Instance != null)
+                    UIData.Instance.ReduceBattery();
                 foreach (var magnet in magnetsInLvl)
                 {
                     if(magnet != null)

@@ -1007,9 +1007,10 @@ GameObject:
   - component: {fileID: 2010171580276443811}
   - component: {fileID: 6189532543275180110}
   - component: {fileID: 3930728676180985886}
+  - component: {fileID: 3591146502050873603}
   m_Layer: 5
   m_Name: HUDCanvas
-  m_TagString: Untagged
+  m_TagString: HUD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,6 +1104,26 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3591146502050873603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548492599126568229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff8de8900c58114088126f9bb71dc21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginalBatteryCharges:
+  - {fileID: 2262420375572265736}
+  - {fileID: 4255539653704633123}
+  - {fileID: 5496615743277809085}
+  - {fileID: 7558457125996510826}
+  - {fileID: 7643287113515577868}
+  - {fileID: 7026097041623007542}
+  - {fileID: 7361470398075776760}
 --- !u!1 &7816577078877103527
 GameObject:
   m_ObjectHideFlags: 0
