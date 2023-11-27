@@ -31,7 +31,8 @@ public class Player : MonoBehaviour
             {
                 currentPolaritySwitches++;
                 //OnSwitchPolarity?.Invoke();
-                UIData.Instance.ReduceBattery();
+                if(UIData.Instance != null)
+                    UIData.Instance.ReduceBattery();
                 foreach (var magnet in magnetsInLvl)
                 {
                     if(magnet != null)
