@@ -95,7 +95,6 @@ public class PlayerSpawner : MonoBehaviour
 
     private void Update()
     {
-
         if (playerSpawned.GetPlayerState() == PlayerState.Dead)
         {
             playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
@@ -153,10 +152,4 @@ public class PlayerSpawner : MonoBehaviour
         
 
     }
-
-
-
-
-
-
 }

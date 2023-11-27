@@ -64,8 +64,9 @@ public class Button : Unlock
             if (buttonType == ButtonType.Hold)
             {
                 Deactivate();
+                buttonAnimator.SetBool("IsButtonDown", false);
             }
-            buttonAnimator.SetBool("IsButtonDown", false);
+           
         }
         
     }
