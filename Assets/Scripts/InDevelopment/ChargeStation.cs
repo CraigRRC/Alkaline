@@ -6,6 +6,19 @@ using UnityEngine;
 public class ChargeStation : Interactable
 {
     private Animator animator;
+    public ChargingStationState chargingState;
+    
+    public enum ChargingStationState
+    {
+        charge,
+        levelOne,
+        levelTwo,
+        levelThree,
+        levelFour,
+        levelFive,
+        levelSix,
+        levelSeven,
+    }
 
     protected override void Awake()
     {
@@ -22,9 +35,16 @@ public class ChargeStation : Interactable
             animator.SetTrigger("Charge");
         }
         //Increase number of battery cells in hud.
-        if(UIData.Instance != null)
+        if(UIData.Instance != null && chargingState == ChargingStationState.charge)
         {
             UIData.Instance.ChargeBattery();
+        }
+
+        switch (chargingState)
+        {
+            case ChargingStationState.levelOne:
+                UIData.Instance.AddLog("robot protocol 001");
+                break;
         }
     }
 }
