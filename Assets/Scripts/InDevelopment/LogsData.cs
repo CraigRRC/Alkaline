@@ -12,6 +12,5 @@ public class LogsData : MonoBehaviour
     {
         logs = GetComponentsInChildren<Text>();
         logImages = GetComponentsInChildren<Image>();
-        
     }
 }

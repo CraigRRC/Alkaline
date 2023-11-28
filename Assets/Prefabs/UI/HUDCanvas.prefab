@@ -1124,6 +1124,7 @@ MonoBehaviour:
   - {fileID: 7643287113515577868}
   - {fileID: 7026097041623007542}
   - {fileID: 7361470398075776760}
+  viewLogsObject: {fileID: 7244901474657539661}
 --- !u!1 &7816577078877103527
 GameObject:
   m_ObjectHideFlags: 0

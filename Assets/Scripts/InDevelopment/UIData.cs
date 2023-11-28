@@ -51,12 +51,13 @@ public class UIData : MonoBehaviour
             }
             
         }
-
+       
 
         if (logData == null)
         {
             if(logData = FindObjectOfType<LogsData>())
             {
+                logData.gameObject.SetActive(false);
                 persistingLogText = new Text[logData.logs.Length];
                 for (int i = 0; i < logData.logs.Length; i++)
                 {
@@ -65,6 +66,7 @@ public class UIData : MonoBehaviour
                 }
                 if (persistingLogText.Length != 0)
                 {
+                    Debug.Log("Cash");
                     //Load the cached values.
                     for (int i = 0; i < cachedLogs.Count; i++)
                     {
@@ -78,6 +80,7 @@ public class UIData : MonoBehaviour
                     }
                 }
 
+                //Might not need this...?
                 persistingLogImage = new Image[logData.logImages.Length];
                 for (int i = 0; i < logData.logImages.Length; i++)
                 {
@@ -98,8 +101,13 @@ public class UIData : MonoBehaviour
     public void AddLog(string log)
     {
         Debug.Log(log);
+        logData.gameObject.SetActive(true);
         if (persistingLogText.Length != 0)
         {
+            foreach (var text in persistingLogText)
+            {
+                if (text == null) return;
+            }
             //Add it directly.
             for (int i = 0; i < persistingLogText.Length; i++)
             {
@@ -108,32 +116,24 @@ public class UIData : MonoBehaviour
                 {
                     Debug.Log("Success!");
                     persistingLogText[i].enabled = true;
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("Here");
-            if(cachedLogs.Count == 0)
-            {
-                cachedLogs.Add(log);
-            }
-            else
-            {
-                foreach (var cachedLog in cachedLogs)
-                {
-                    if (cachedLog != log)
+                    if (cachedLogs.Count == 0)
                     {
                         cachedLogs.Add(log);
-                        return;
+                    }
+                    else
+                    {
+                        foreach (var cachedLog in cachedLogs)
+                        {
+                            if (cachedLog != log)
+                            {
+                                cachedLogs.Add(log);
+                                return;
+                            }
+                        }
                     }
                 }
             }
-           
-            
         }
-
-
     }
 
     public void ReduceBattery()
