@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5418947973903280487}
   - component: {fileID: 6027652539347885742}
+  - component: {fileID: 6662718617018764099}
   m_Layer: 0
   m_Name: AssistantBody_2
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6662718617018764099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704808407080224075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488284444e529ce438cd4527f9ea6d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
