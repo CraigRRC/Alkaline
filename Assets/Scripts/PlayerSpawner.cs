@@ -36,7 +36,7 @@ public class PlayerSpawner : MonoBehaviour
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
         playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
         maxKeys = keysToActivateDoor.Length;
-        if(levelNumber == null )
+        if(levelNumber != null )
             levelNumber.text = SceneManager.GetActiveScene().buildIndex.ToString();
     }
 
