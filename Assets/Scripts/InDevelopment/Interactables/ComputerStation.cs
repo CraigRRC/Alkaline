@@ -15,6 +15,7 @@ public class ComputerStation : Interactable
         levelFive,
         levelSix,
         levelSeven,
+        DontInteract,
     }
     protected override void Activate()
     {
@@ -27,7 +28,19 @@ public class ComputerStation : Interactable
             case ComputerState.levelTwo:
                 UIData.Instance.AddLog("computer screen");
                 break;
-
+            case ComputerState.levelThree:
+                break;
+            case ComputerState.levelFour:
+                UIData.Instance.AddLog("joe's video");
+                break;
+            case ComputerState.levelFive:
+                break;
+            case ComputerState.levelSix:
+                break;
+            case ComputerState.levelSeven:
+                break;
+            case ComputerState.DontInteract: 
+                break;
 
         }
            

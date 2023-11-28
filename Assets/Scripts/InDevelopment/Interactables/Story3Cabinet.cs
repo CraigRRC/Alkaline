@@ -12,6 +12,7 @@ public class Story3Cabinet : Interactable
     {
         open,
         closed,
+        dontinteract,
     }
 
     protected override void Activate()
@@ -27,6 +28,8 @@ public class Story3Cabinet : Interactable
             case DoorState.closed:
                 doorState = DoorState.open;
                 doorRenderer.sprite = doorOpen;
+                break;
+            case DoorState.dontinteract:
                 break;
 
 
