@@ -19,10 +19,19 @@ public class ComputerStation : Interactable
     protected override void Activate()
     {
         base.Activate();
-        if(state == ComputerState.levelOne)
+        switch (state)
         {
-            UIData.Instance.AddLog("keycard to general area");
+            case ComputerState.levelOne:
+                UIData.Instance.AddLog("keycard to general area");
+                break;
+            case ComputerState.levelTwo:
+                UIData.Instance.AddLog("computer screen");
+                break;
+
+
         }
+           
+        
 
     }
 }
