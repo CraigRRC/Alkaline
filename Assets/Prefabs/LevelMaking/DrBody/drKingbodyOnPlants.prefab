@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3959232384206413002}
   - component: {fileID: 137241219563844506}
+  - component: {fileID: 8692552207500826797}
   m_Layer: 0
   m_Name: drKingbodyOnPlants
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8692552207500826797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654017053083892038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b3ad292c5ad3a4091d202164b87d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

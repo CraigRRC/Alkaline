@@ -48,6 +48,10 @@ public class ChargeStation : Interactable
             case ChargingStationState.levelTwo:
                 UIData.Instance.AddLog("robot protocol 002");
                 break;
+            case ChargingStationState.levelThree:
+                UIData.Instance.AddLog("robot protocol 003");
+                break;
+
 
         }
     }
