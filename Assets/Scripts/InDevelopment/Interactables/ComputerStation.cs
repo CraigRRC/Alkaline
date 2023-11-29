@@ -5,7 +5,7 @@ using UnityEngine;
 public class ComputerStation : Interactable
 {
     public ComputerState state;
-    public bool hasLockerKey = false;
+    private bool hasLockerKey = false;
 
     public enum ComputerState
     {
@@ -18,13 +18,14 @@ public class ComputerStation : Interactable
         levelSeven,
         DontInteract,
     }
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         switch (state)
         {
             case ComputerState.levelOne:
                 UIData.Instance.AddLog("keycard to general area");
+                Activate();
                 break;
             case ComputerState.levelTwo:
                 UIData.Instance.AddLog("computer screen");
@@ -39,6 +40,8 @@ public class ComputerStation : Interactable
                 hasLockerKey = true;
                 break;
             case ComputerState.levelSix:
+                UIData.Instance.AddLog("butter's computer log");
+                Activate();
                 break;
             case ComputerState.levelSeven:
                 break;

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DrKing : Interactable
 {
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         UIData.Instance.AddLog("jameson's phone");
     }
 }

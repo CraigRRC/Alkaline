@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AssistantBody2 : Interactable
 {
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         UIData.Instance.AddLog("keycard of dr.john");
+        Activate();
     }
 }

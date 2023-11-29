@@ -15,9 +15,9 @@ public class Story3Cabinet : Interactable
         dontinteract,
     }
 
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
 
         switch (doorState)
         {
