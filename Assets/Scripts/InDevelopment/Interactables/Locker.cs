@@ -5,9 +5,9 @@ using UnityEngine;
 public class Locker : Interactable
 {
     public ComputerStation computerStation;
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         if (computerStation.HasKey())
         {
             UIData.Instance.AddLog("virus agis 0.9");

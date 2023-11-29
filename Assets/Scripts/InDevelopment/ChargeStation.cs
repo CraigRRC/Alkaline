@@ -26,9 +26,9 @@ public class ChargeStation : Interactable
         animator = GetComponent<Animator>();
     }
 
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         //Play charging animation
         if (animator != null)
         {

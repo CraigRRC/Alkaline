@@ -18,13 +18,14 @@ public class ComputerStation : Interactable
         levelSeven,
         DontInteract,
     }
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         switch (state)
         {
             case ComputerState.levelOne:
                 UIData.Instance.AddLog("keycard to general area");
+                Activate();
                 break;
             case ComputerState.levelTwo:
                 UIData.Instance.AddLog("computer screen");

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SusanPhone : Interactable
 {
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         UIData.Instance.AddLog("susan's phone");
     }
 }
