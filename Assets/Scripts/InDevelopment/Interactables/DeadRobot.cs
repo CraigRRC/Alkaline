@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DeadRobot : Interactable
 {
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
 
         UIData.Instance.AddLog("keycard to lab");
+        Activate();
     }
 }
