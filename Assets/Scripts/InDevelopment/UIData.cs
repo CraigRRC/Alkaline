@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
@@ -9,7 +11,11 @@ public class UIData : MonoBehaviour
 {
     public static UIData Instance;
     private Image[] PersistingBatteryCharges;
+    private List<string> cachedLogs;
     private UI HUD;
+    private LogsData logData;
+    public Text[] persistingLogText;
+    public Image[] persistingLogImage;
     public int depletedBatteryCount = 0;
     public int maxDepletedBatteryCount;
 
@@ -24,8 +30,8 @@ public class UIData : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
+        
+        cachedLogs = new List<string>();
     }
 
     private void Update()
@@ -44,6 +50,89 @@ public class UIData : MonoBehaviour
                 PersistingBatteryCharges[i].enabled = false;
             }
             
+        }
+       
+
+        if (logData == null)
+        {
+            if(logData = FindObjectOfType<LogsData>())
+            {
+                logData.gameObject.SetActive(false);
+                persistingLogText = new Text[logData.logs.Length];
+                for (int i = 0; i < logData.logs.Length; i++)
+                {
+                    persistingLogText[i] = logData.logs[i];
+                    persistingLogText[i].enabled = false;
+                }
+                if (persistingLogText.Length != 0)
+                {
+                    Debug.Log("Cash");
+                    //Load the cached values.
+                    for (int i = 0; i < cachedLogs.Count; i++)
+                    {
+                        for (int j = 0; j < persistingLogText.Length; j++)
+                        {
+                            if (cachedLogs[i] == persistingLogText[j].text)
+                            {
+                                persistingLogText[j].enabled = true;
+                            }
+                        }
+                    }
+                }
+
+                //Might not need this...?
+                persistingLogImage = new Image[logData.logImages.Length];
+                for (int i = 0; i < logData.logImages.Length; i++)
+                {
+                    if (logData.logImages[i].name == "close" ||
+                        logData.logImages[i].name == "dimBG" ||
+                        logData.logImages[i].name == "screen")
+                    {
+                        continue;
+                    }
+                    persistingLogImage[i] = logData.logImages[i];
+                    persistingLogImage[i].gameObject.SetActive(false);
+                }
+            }
+        }
+
+    }
+
+    public void AddLog(string log)
+    {
+        Debug.Log(log);
+        logData.gameObject.SetActive(true);
+        if (persistingLogText.Length != 0)
+        {
+            foreach (var text in persistingLogText)
+            {
+                if (text == null) return;
+            }
+            //Add it directly.
+            for (int i = 0; i < persistingLogText.Length; i++)
+            {
+
+                if (log == persistingLogText[i].text)
+                {
+                    Debug.Log("Success!");
+                    persistingLogText[i].enabled = true;
+                    if (cachedLogs.Count == 0)
+                    {
+                        cachedLogs.Add(log);
+                    }
+                    else
+                    {
+                        foreach (var cachedLog in cachedLogs)
+                        {
+                            if (cachedLog != log)
+                            {
+                                cachedLogs.Add(log);
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 

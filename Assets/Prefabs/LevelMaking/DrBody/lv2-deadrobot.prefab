@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2115042727451928752}
   - component: {fileID: 6745160311983629019}
+  - component: {fileID: 7482756071371830102}
   m_Layer: 0
   m_Name: lv2-deadrobot
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7482756071371830102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706188229838759164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a13d36de1295a4f83535513b3e72e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
