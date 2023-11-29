@@ -9,5 +9,6 @@ public class DeadRobot : Interactable
         base.ActivateInteractible();
 
         UIData.Instance.AddLog("keycard to lab");
+        Activate();
     }
 }
