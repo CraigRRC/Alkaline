@@ -8,5 +8,6 @@ public class AssistantBody2 : Interactable
     {
         base.ActivateInteractible();
         UIData.Instance.AddLog("keycard of dr.john");
+        Activate();
     }
 }
