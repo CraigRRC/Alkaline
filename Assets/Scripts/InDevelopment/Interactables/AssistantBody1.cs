@@ -8,5 +8,6 @@ public class AssistantBody1 : Interactable
     {
         base.ActivateInteractible();
         UIData.Instance.AddLog("keycard to hallway");
+        Activate();
     }
 }
