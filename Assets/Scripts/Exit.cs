@@ -9,11 +9,14 @@ public class Exit : MonoBehaviour
     private BoxCollider2D doorCollider;
     private Animator doorAnimator;
     private bool safeToMoveToNextLevel = false;
+    private AudioSource audioSource;
+    private bool playOnce = true;
    
     private void Awake()
     {
         doorCollider = GetComponent<BoxCollider2D>();
         doorAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -26,6 +29,7 @@ public class Exit : MonoBehaviour
         else
         {
             doorAnimator.SetBool("DoorOpen", false);
+            
         }
     }
 
@@ -37,15 +41,15 @@ public class Exit : MonoBehaviour
             if (safeToMoveToNextLevel)
             {
                 int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-                
+                SceneManager.LoadScene(1);
                 //This should work.. Just need to make a build to test it.
-                if(nextScene < SceneManager.sceneCount) 
+                if (nextScene < SceneManager.sceneCount) 
                 {
-                    SceneManager.LoadScene(nextScene);
+                    
                 }
                 else
                 {
-                    SceneManager.LoadScene(0);
+                    //SceneManager.LoadScene(0);
                 }
                
             }
@@ -59,5 +63,10 @@ public class Exit : MonoBehaviour
         safeToMoveToNextLevel = true;
     }
 
+
+    public void DoorSound()
+    {
+        audioSource.Play();
+    }
 
 }
