@@ -8,5 +8,6 @@ public class WorkstationKeycard : Interactable
     {
         base.ActivateInteractible();
         UIData.Instance.AddLog("keycard to work station");
+        Activate();
     }
 }
