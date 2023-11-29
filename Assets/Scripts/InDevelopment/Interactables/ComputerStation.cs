@@ -41,6 +41,7 @@ public class ComputerStation : Interactable
                 break;
             case ComputerState.levelSix:
                 UIData.Instance.AddLog("butter's computer log");
+                Activate();
                 break;
             case ComputerState.levelSeven:
                 break;
