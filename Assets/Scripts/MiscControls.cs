@@ -7,7 +7,7 @@ public class MiscControls : MonoBehaviour
 {
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this);   
     }
 
     private void Update()
@@ -18,6 +18,10 @@ public class MiscControls : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
+            if (this.gameObject != null)
+            {
+                Destroy(this.gameObject);
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
