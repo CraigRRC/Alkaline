@@ -5,7 +5,7 @@ using UnityEngine;
 public class ComputerStation : Interactable
 {
     public ComputerState state;
-    public bool hasLockerKey = false;
+    private bool hasLockerKey = false;
 
     public enum ComputerState
     {
@@ -39,6 +39,7 @@ public class ComputerStation : Interactable
                 hasLockerKey = true;
                 break;
             case ComputerState.levelSix:
+                UIData.Instance.AddLog("butter's computer log");
                 break;
             case ComputerState.levelSeven:
                 break;

@@ -8,7 +8,7 @@ public class Locker : Interactable
     protected override void Activate()
     {
         base.Activate();
-        if (computerStation.hasLockerKey)
+        if (computerStation.HasKey())
         {
             UIData.Instance.AddLog("virus agis 0.9");
         }
