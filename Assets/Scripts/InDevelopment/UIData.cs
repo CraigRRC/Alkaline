@@ -165,8 +165,6 @@ public class UIData : MonoBehaviour
             }
         }
 
-       
-
         foreach (var battery in PersistingBatteryCharges)
         {
             if (battery.enabled)
@@ -179,8 +177,6 @@ public class UIData : MonoBehaviour
                 return;
             }
         }
-
-
     }
 
     public void ChargeBattery()
