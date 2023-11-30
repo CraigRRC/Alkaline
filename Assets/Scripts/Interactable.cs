@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent (typeof(AudioSource))]
 //Potentally a parent class for all interactable objects in the story maps.
 //Base functionality:
 //1) On trigger enter
@@ -16,12 +17,15 @@ public abstract class Interactable : Unlock
     private BoxCollider2D trigger;
     public bool inTrigger;
     public bool doOnce;
+    private AudioSource audioSource;
 
     protected virtual void Awake()
     {
         trigger = GetComponent<BoxCollider2D>();
         trigger.isTrigger = true;
         doOnce = true;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
@@ -54,6 +58,7 @@ public abstract class Interactable : Unlock
     protected virtual void ActivateInteractible()
     {
         doOnce = false;
+        audioSource.Play();
         StartCoroutine(CanInteract());
     }
 
