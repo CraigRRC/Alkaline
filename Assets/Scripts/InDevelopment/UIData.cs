@@ -111,8 +111,9 @@ public class UIData : MonoBehaviour
             //Add it directly.
             for (int i = 0; i < persistingLogText.Length; i++)
             {
-
-                if (log == persistingLogText[i].text)
+                Debug.Log(log);
+                Debug.Log(persistingLogText[i].text);
+                if (log.Trim() == persistingLogText[i].text.Trim())
                 {
                     Debug.Log("Success!");
                     persistingLogText[i].enabled = true;
