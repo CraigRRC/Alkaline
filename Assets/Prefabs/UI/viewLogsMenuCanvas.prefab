@@ -2160,7 +2160,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: key of susan's locker
+  m_Text: key of dr susan smith's locker
 --- !u!114 &5055091619509956064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3322,7 +3322,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'joe''s video
+  m_Text: 'assistant joe''s video
 
 '
 --- !u!114 &4656286894011448365
@@ -3856,7 +3856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1197509828291667465
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4464,7 +4464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: butter's computer log
+  m_Text: dr butterworth john's log
 --- !u!114 &249001909426207030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8401,7 +8401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3959345369958297246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10680,7 +10680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &791313646292081259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13770,7 +13770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: susan's phone
+  m_Text: dr susan smith's phone
 --- !u!114 &6734447342490624436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14461,7 +14461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: jameson's phone
+  m_Text: dr jameson king's phone
 --- !u!114 &5160025857415768825
 MonoBehaviour:
   m_ObjectHideFlags: 0
