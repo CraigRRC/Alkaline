@@ -7,6 +7,15 @@ public class Story3Cabinet : Interactable
     public DoorState doorState;
     public Sprite doorOpen;
     public SpriteRenderer doorRenderer;
+    private AudioSource doorSound;
+    public AudioClip doorCreek;
+    public AudioClip uiBlip;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        doorSound = GetComponent<AudioSource>();
+    }
 
     public enum DoorState
     {
@@ -15,13 +24,14 @@ public class Story3Cabinet : Interactable
         dontinteract,
     }
 
-    protected override void ActivateInteractible()
+    protected override void ActivateInteractable()
     {
-        base.ActivateInteractible();
+        
 
         switch (doorState)
         {
             case DoorState.open:
+                doorSound.clip = uiBlip;
                 UIData.Instance.AddLog("virus agis 0.5");
                 UIData.Instance.AddLog("virus agis 1.2");
                 break;
@@ -34,5 +44,7 @@ public class Story3Cabinet : Interactable
 
 
         }
+
+        base.ActivateInteractable();
     }
 }

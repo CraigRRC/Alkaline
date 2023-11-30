@@ -41,7 +41,7 @@ public abstract class Interactable : Unlock
     {
         if (doOnce && inTrigger && Input.GetKey(KeyCode.F))
         {
-            ActivateInteractible();
+            ActivateInteractable();
         }
     }
 
@@ -55,7 +55,7 @@ public abstract class Interactable : Unlock
     }
 
 
-    protected virtual void ActivateInteractible()
+    protected virtual void ActivateInteractable()
     {
         doOnce = false;
         audioSource.Play();
@@ -64,7 +64,7 @@ public abstract class Interactable : Unlock
 
     private IEnumerator CanInteract()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         doOnce = true;
     }
 }

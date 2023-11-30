@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DrButter : Interactable
 {
-    protected override void ActivateInteractible()
+    protected override void ActivateInteractable()
     {
-        base.ActivateInteractible();
+        base.ActivateInteractable();
         UIData.Instance.AddLog("virus agis 0.8");
     }
 }

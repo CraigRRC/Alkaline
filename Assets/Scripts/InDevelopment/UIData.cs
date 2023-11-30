@@ -140,7 +140,16 @@ public class UIData : MonoBehaviour
     {
         if (PersistingBatteryCharges == null) return;
 
-        if(depletedBatteryCount == maxDepletedBatteryCount)
+        PlayerSpawner levelManager2 = FindAnyObjectByType<PlayerSpawner>();
+        if (levelManager2.magnetsInLvl != null || levelManager2.magnetsInLvl.Count != 0)
+        {
+            foreach (var magnet in levelManager2.magnetsInLvl)
+            {
+                if (magnet == null) return;
+            }
+        }
+
+        if (depletedBatteryCount == maxDepletedBatteryCount)
         {
             //Turn off mags.
             PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
@@ -156,12 +165,12 @@ public class UIData : MonoBehaviour
             }
         }
 
-        foreach(var battery in PersistingBatteryCharges)
+        foreach (var battery in PersistingBatteryCharges)
         {
             if (battery.enabled)
             {
                 battery.enabled = false;
-                if(depletedBatteryCount < maxDepletedBatteryCount)
+                if (depletedBatteryCount < maxDepletedBatteryCount)
                 {
                     depletedBatteryCount++;
                 }
