@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LoreWhiteboardLvl1 : Interactable
 {
-    protected override void ActivateInteractible()
+    protected override void ActivateInteractable()
     {
-        base.ActivateInteractible();
+        base.ActivateInteractable();
         //Acquire Log
         UIData.Instance.AddLog("whiteboard");
         //Ensure log persists.

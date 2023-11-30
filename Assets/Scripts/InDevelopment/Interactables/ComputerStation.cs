@@ -18,9 +18,9 @@ public class ComputerStation : Interactable
         levelSeven,
         DontInteract,
     }
-    protected override void ActivateInteractible()
+    protected override void ActivateInteractable()
     {
-        base.ActivateInteractible();
+        base.ActivateInteractable();
         switch (state)
         {
             case ComputerState.levelOne:
