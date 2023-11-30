@@ -18,9 +18,9 @@ public class MiscControls : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            if (this.gameObject != null)
+            if(SceneManager.GetActiveScene().buildIndex == 1)
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
