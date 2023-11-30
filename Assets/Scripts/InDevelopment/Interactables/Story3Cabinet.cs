@@ -36,6 +36,7 @@ public class Story3Cabinet : Interactable
                 UIData.Instance.AddLog("virus agis 1.2");
                 break;
             case DoorState.closed:
+                doorSound.clip = doorCreek;
                 doorState = DoorState.open;
                 doorRenderer.sprite = doorOpen;
                 break;
