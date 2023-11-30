@@ -37,17 +37,7 @@ public class Exit : MonoBehaviour
             if (safeToMoveToNextLevel)
             {
                 int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-                
-                //This should work.. Just need to make a build to test it.
-                if(nextScene < SceneManager.sceneCount) 
-                {
-                    SceneManager.LoadScene(nextScene);
-                }
-                else
-                {
-                    SceneManager.LoadScene(0);
-                }
-               
+                SceneManager.LoadScene(nextScene);
             }
 
         }
