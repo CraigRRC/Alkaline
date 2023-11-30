@@ -6,6 +6,19 @@ using UnityEngine;
 public class ChargeStation : Interactable
 {
     private Animator animator;
+    public ChargingStationState chargingState;
+    
+    public enum ChargingStationState
+    {
+        charge,
+        levelOne,
+        levelTwo,
+        levelThree,
+        levelFour,
+        levelFive,
+        levelSix,
+        levelSeven,
+    }
 
     protected override void Awake()
     {
@@ -13,18 +26,42 @@ public class ChargeStation : Interactable
         animator = GetComponent<Animator>();
     }
 
-    protected override void Activate()
+    protected override void ActivateInteractible()
     {
-        base.Activate();
+        base.ActivateInteractible();
         //Play charging animation
         if (animator != null)
         {
             animator.SetTrigger("Charge");
         }
         //Increase number of battery cells in hud.
-        if(UIData.Instance != null)
+        if(UIData.Instance != null && chargingState == ChargingStationState.charge)
         {
             UIData.Instance.ChargeBattery();
+        }
+
+        switch (chargingState)
+        {
+            case ChargingStationState.levelOne:
+                UIData.Instance.AddLog("robot protocol 001");
+                break;
+            case ChargingStationState.levelTwo:
+                UIData.Instance.AddLog("robot protocol 002");
+                break;
+            case ChargingStationState.levelThree:
+                UIData.Instance.AddLog("robot protocol 003");
+                break;
+            case ChargingStationState.levelFour:
+                UIData.Instance.AddLog("robot protocol 004");
+                break;
+            case ChargingStationState.levelFive:
+                UIData.Instance.AddLog("robot protocol 005");
+                break;
+            case ChargingStationState.levelSix:
+                UIData.Instance.AddLog("robot protocol 006");
+                break;
+
+
         }
     }
 }

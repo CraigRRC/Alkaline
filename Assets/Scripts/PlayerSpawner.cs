@@ -18,9 +18,7 @@ public class PlayerSpawner : MonoBehaviour
     public Unlock[] keysToActivateDoor;
     private bool doorUnlocker = false;
     private int maxKeys = 0;
-    private int batteryCounter = 0;
-    public int liveTics;
-    public Text levelNumber;
+    private Text levelNumber;
 
     //Temp UI stuff
     public Animator keysAnimator;
@@ -40,57 +38,6 @@ public class PlayerSpawner : MonoBehaviour
         maxKeys = keysToActivateDoor.Length;
         if(levelNumber != null )
             levelNumber.text = SceneManager.GetActiveScene().buildIndex.ToString();
-    }
-
-    private void Start()
-    {
-        //playerSpawned.OnSwitchPolarity += PowerDrain;
-    }
-
-    private void OnDisable()
-    {
-       // playerSpawned.OnSwitchPolarity -= PowerDrain;
-    }
-
-    private void PowerDrain()
-    {
-        //Check if the array is null
-        if(powerCells == null)
-        {
-            Debug.LogWarning("Powercells is null");
-            return;
-        }
-        //Check if the array is blank.
-        foreach (var tic in powerCells)
-        {
-            if (tic == null)
-            {
-                Debug.LogWarning("PowerCells Array Empty.");
-                return;
-            }
-        }
-
-        //Power off a tic
-        powerCells[batteryCounter].enabled = false;
-        //Reset tic counter.
-        liveTics = 0;
-        //Check how many tics remain
-        foreach (var tic in powerCells)
-        {
-            liveTics += tic.enabled ? 1 : 0;
-        }
-        if(liveTics == 0)
-        {
-            //I dunno man.
-            foreach (var magnet in playerSpawned.magnetsInLvl)
-            {
-                magnet.TurnMagnetOff();
-            }
-        }
-        else
-        {
-            batteryCounter++;
-        }
     }
 
     private void Update()

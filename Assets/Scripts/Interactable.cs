@@ -10,7 +10,7 @@ using UnityEngine;
 //2) F sprite appears above player.
 //3) If player is standing in the trigger and presses F. Do something.
 //Do something will be different for each interactable, therefore might be a good idea to make child classes.
-public abstract class Interactable : MonoBehaviour
+public abstract class Interactable : Unlock
 {
 
     private BoxCollider2D trigger;
@@ -37,7 +37,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (doOnce && inTrigger && Input.GetKey(KeyCode.F))
         {
-            Activate();
+            ActivateInteractible();
         }
     }
 
@@ -51,7 +51,7 @@ public abstract class Interactable : MonoBehaviour
     }
 
 
-    protected virtual void Activate()
+    protected virtual void ActivateInteractible()
     {
         doOnce = false;
         StartCoroutine(CanInteract());
