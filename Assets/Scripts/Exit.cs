@@ -9,11 +9,13 @@ public class Exit : MonoBehaviour
     private BoxCollider2D doorCollider;
     private Animator doorAnimator;
     private bool safeToMoveToNextLevel = false;
+    private AudioSource audioSource;
    
     private void Awake()
     {
         doorCollider = GetComponent<BoxCollider2D>();
         doorAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -49,5 +51,9 @@ public class Exit : MonoBehaviour
         safeToMoveToNextLevel = true;
     }
 
+    public void DoorSound()
+    {
+        audioSource.Play();
+    }
 
 }
