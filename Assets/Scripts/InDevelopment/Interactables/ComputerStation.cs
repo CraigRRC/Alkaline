@@ -6,7 +6,14 @@ public class ComputerStation : Interactable
 {
     public ComputerState state;
     private bool hasLockerKey = false;
+    private AudioSource audioSource;
 
+
+    protected override void Awake()
+    {
+        base.Awake();
+        audioSource = GetComponent<AudioSource>();
+    }
     public enum ComputerState
     {
         levelOne,
@@ -18,9 +25,9 @@ public class ComputerStation : Interactable
         levelSeven,
         DontInteract,
     }
-    protected override void ActivateInteractible()
+    protected override void ActivateInteractable()
     {
-        base.ActivateInteractible();
+        base.ActivateInteractable();
         switch (state)
         {
             case ComputerState.levelOne:
@@ -45,7 +52,8 @@ public class ComputerStation : Interactable
                 break;
             case ComputerState.levelSeven:
                 break;
-            case ComputerState.DontInteract: 
+            case ComputerState.DontInteract:
+                audioSource.Stop();
                 break;
         }
     }
