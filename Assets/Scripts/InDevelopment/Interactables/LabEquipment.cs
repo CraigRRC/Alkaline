@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LabEquipment : MonoBehaviour
+public class LabEquipment : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject screen;
+    protected override void Awake()
     {
-        
+        base.Awake();
+        screen.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void ActivateInteractable()
     {
-        
+        base.ActivateInteractable();
+        screen.SetActive(true);
+    }
+
+    protected override void OnTriggerExit2D(Collider2D collision)
+    {
+        base.OnTriggerExit2D(collision);
+        screen.SetActive(false);
     }
 }

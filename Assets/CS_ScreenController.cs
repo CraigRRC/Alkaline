@@ -30,15 +30,9 @@ public class CS_ScreenController : MonoBehaviour
             passwordSprite.SetActive(false);
             codeInputBox.SetActive(false);
             departButton.SetActive(true);
+            awakeButton.SetActive(correctPassword);
             //Show Depart Button
             //Remove Password decals
-            Debug.Log("Correct pass");
-        }
-        else if (correctPasswordEndingTwo)
-        {
-            //Show Depart button
-            //Show Awake Button
-            //Remove password decals
         }
 
         if(digitOne.text == "0" && digitTwo.text == "8" && digitThree.text == "1" && digitFour.text == "0")
@@ -46,4 +40,6 @@ public class CS_ScreenController : MonoBehaviour
             correctPassword = true;
         }
     }
+
+    public void SetEndingTwo() { correctPasswordEndingTwo = true; }
 }

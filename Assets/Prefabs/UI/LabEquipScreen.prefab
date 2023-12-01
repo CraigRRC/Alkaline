@@ -120,14 +120,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3323339284190904532}
   m_TextComponent: {fileID: 1094357130329468348}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 2
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 1
-  m_CharacterLimit: 1
+  m_CharacterValidation: 2
+  m_CharacterLimit: 3
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 0.8
+  m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0.5
+  m_Text: 
 --- !u!1 &252702090658121995
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,14 +429,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2127299746895135001}
   m_TextComponent: {fileID: 276987164565907624}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 2
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 1
-  m_CharacterLimit: 1
+  m_CharacterValidation: 2
+  m_CharacterLimit: 3
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 0.9
+  m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -720,7 +720,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0.9
+  m_Text: 
 --- !u!1 &6435145736108861605
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,14 +841,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5429169530111165888}
   m_TextComponent: {fileID: 2629331069805658840}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 2
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 1
-  m_CharacterLimit: 1
+  m_CharacterValidation: 2
+  m_CharacterLimit: 3
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 0.5
+  m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -878,6 +878,7 @@ GameObject:
   - component: {fileID: 1734544815942529842}
   - component: {fileID: 1666500904442281642}
   - component: {fileID: 3532034047765945649}
+  - component: {fileID: 7762747521780159909}
   m_Layer: 5
   m_Name: LabEquipScreen
   m_TagString: Untagged
@@ -972,6 +973,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7762747521780159909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7196621242569093890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a10e4f79a33dd4b98e96ca8cf0c965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  confirmButton: {fileID: 9008975967747902509}
+  successDescription: {fileID: 64891772976074545}
+  invertProcess: {fileID: 2688109765475369289}
+  codeInputBox: {fileID: 6031187017865798231}
+  inputOne: {fileID: 4515007289866365359}
+  inputTwo: {fileID: 7708396430899633924}
+  inputThree: {fileID: 5598898176568381995}
 --- !u!1 &7767915724894312959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1070,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0.8
+  m_Text: 
 --- !u!1 &8519700081499556718
 GameObject:
   m_ObjectHideFlags: 0
