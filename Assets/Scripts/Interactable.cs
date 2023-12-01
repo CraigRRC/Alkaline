@@ -45,7 +45,7 @@ public abstract class Interactable : Unlock
         }
     }
 
-    protected void OnTriggerExit2D(Collider2D collision)
+    protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         //Player
         if (collision.gameObject.layer == 11)

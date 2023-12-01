@@ -60,6 +60,9 @@ public class ChargeStation : Interactable
             case ChargingStationState.levelSix:
                 UIData.Instance.AddLog("robot protocol 006");
                 break;
+            case ChargingStationState.levelSeven:
+                UIData.Instance.AddLog("robot protocol 006 activating");
+                break;
 
 
         }
