@@ -10,8 +10,6 @@ public class PlayerSpawner : MonoBehaviour
 {
     public Player playerPrefab;
     private Player playerSpawned;
-    public int numOfPolaritySwitches;
-    public SpriteRenderer[] powerCells;
     //can be refactored later to be dynamic.
     public List<Magnet> magnetsInLvl;
     public BoxCollider2D doorCollider;
@@ -26,6 +24,7 @@ public class PlayerSpawner : MonoBehaviour
     public bool keyDisplay_SPACE = false;
     public bool keyDisplay_E = false;
     public bool keyDisplay_R = false;
+    public bool keyDisplay_F = false;
 
 
     private void Awake()
@@ -34,7 +33,6 @@ public class PlayerSpawner : MonoBehaviour
         playerSpawned.transform.localScale = this.transform.localScale;
         playerSpawned.GetComponent<PlayerMovement>().setPlayerMovement(transform.localScale.x);
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
-        playerSpawned.SetMaxPolaritySwitches(numOfPolaritySwitches);
         maxKeys = keysToActivateDoor.Length;
         if(levelNumber != null )
             levelNumber.text = SceneManager.GetActiveScene().buildIndex.ToString();
@@ -94,6 +92,10 @@ public class PlayerSpawner : MonoBehaviour
             else if(keyDisplay_R)
             {
                 keysAnimator.SetBool("Reset", true);
+            }
+            else if (keyDisplay_F)
+            {
+                keysAnimator.SetBool("Interact", true);
             }
         }
         
