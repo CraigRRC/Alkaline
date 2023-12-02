@@ -16,7 +16,7 @@ public class PlayerSpawner : MonoBehaviour
     public Unlock[] keysToActivateDoor;
     private bool doorUnlocker = false;
     private int maxKeys = 0;
-    private Text levelNumber;
+    public Text levelNumber;
 
     //Temp UI stuff
     public Animator keysAnimator;
