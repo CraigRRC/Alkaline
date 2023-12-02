@@ -47,7 +47,7 @@ public class ComputerStation : Interactable
                 hasLockerKey = true;
                 break;
             case ComputerState.levelSix:
-                UIData.Instance.AddLog("butter's computer log");
+                UIData.Instance.AddLog("dr butterworth john's log");
                 Activate();
                 break;
             case ComputerState.levelSeven:
