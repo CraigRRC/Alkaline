@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
             PlayerDead();
         }
 
+        //Box
         if (collision.gameObject.layer == 8)
         {
             //Super hacked together probably... But, it works!
