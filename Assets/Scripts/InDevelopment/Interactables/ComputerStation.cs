@@ -40,7 +40,7 @@ public class ComputerStation : Interactable
             case ComputerState.levelThree:
                 break;
             case ComputerState.levelFour:
-                UIData.Instance.AddLog("joe's video");
+                UIData.Instance.AddLog("assistant joe's video");
                 break;
             case ComputerState.levelFive:
                 UIData.Instance.AddLog("key of susan's locker");
