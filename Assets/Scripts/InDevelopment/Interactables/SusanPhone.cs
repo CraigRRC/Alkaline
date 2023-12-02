@@ -7,6 +7,6 @@ public class SusanPhone : Interactable
     protected override void ActivateInteractable()
     {
         base.ActivateInteractable();
-        UIData.Instance.AddLog("susan's phone");
+        UIData.Instance.AddLog("dr susan smith's phone");
     }
 }
