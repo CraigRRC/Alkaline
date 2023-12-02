@@ -87,7 +87,7 @@ MonoBehaviour:
   - {x: -0.0753845, y: 0.013030194, z: 0.00000009848736}
   m_ShapePathHash: -90525098
   m_Mesh: {fileID: 0}
-  m_InstanceId: 110752
+  m_InstanceId: 83294
   m_LocalBounds:
     m_Center: {x: 0.00809747, y: 0.34457636, z: 0}
     m_Extent: {x: 0.1473262, y: 0.43578774, z: 0}
@@ -377,6 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnetsInLvl: []
+  death: {fileID: 8300000, guid: e3dbaed3f39b97a47b9847baab7336ff, type: 3}
+  boxPush: {fileID: 8300000, guid: 4a9afc2bf95654042a59581a8c66648b, type: 3}
   deathSprite: {fileID: 21300000, guid: 25b7ef8937031b84983b916d4ec3b355, type: 3}
   currentPolaritySwitches: 0
   playerDeathBox: {fileID: 1854186081509541827}

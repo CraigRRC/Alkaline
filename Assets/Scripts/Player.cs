@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     public Magnet[] magnetsInLvl;
     private AudioSource audioSource;
+    public AudioClip death;
+    public AudioClip boxPush;
     private PlayerMovement movementScript;
     public Sprite deathSprite;
     private Animator playerAnimator;
@@ -49,6 +51,21 @@ public class Player : MonoBehaviour
             Destroy(gameObject, 3f);
             //Added for Level 433, to soft reset level each time
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        SetPushSound(playerAnimator.GetBool("IsPushing"));
+    }
+
+    private void SetPushSound(bool shouldPlay)
+    {
+        if (shouldPlay)
+        {
+            audioSource.clip = boxPush;
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+           
         }
     }
 
@@ -127,6 +144,7 @@ public class Player : MonoBehaviour
 
     private void PlayerDead()
     {
+        audioSource.clip = death;
         if (!audioSource.isPlaying)
         {
             audioSource.Play();
