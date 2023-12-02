@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CS_ScreenController : MonoBehaviour
@@ -14,8 +15,8 @@ public class CS_ScreenController : MonoBehaviour
     public GameObject passwordSprite;
     public GameObject codeInputBox;
 
-    private bool correctPassword;
-    private bool correctPasswordEndingTwo;
+    public bool correctPassword;
+    public bool correctPasswordEndingTwo;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class CS_ScreenController : MonoBehaviour
             passwordSprite.SetActive(false);
             codeInputBox.SetActive(false);
             departButton.SetActive(true);
-            awakeButton.SetActive(correctPassword);
+            awakeButton.SetActive(correctPasswordEndingTwo);
             //Show Depart Button
             //Remove Password decals
         }
@@ -42,4 +43,14 @@ public class CS_ScreenController : MonoBehaviour
     }
 
     public void SetEndingTwo() { correctPasswordEndingTwo = true; }
+
+    public void MoveToEnding1()
+    {
+        SceneManager.LoadScene("End_1_leave");
+    }
+
+    public void MoveToEnding2()
+    {
+        SceneManager.LoadScene("End_2_awake");
+    }
 }
