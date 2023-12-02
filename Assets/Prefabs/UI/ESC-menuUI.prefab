@@ -1651,7 +1651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 78.7, y: -18.46}
+  m_AnchoredPosition: {x: 80.6, y: -18.46}
   m_SizeDelta: {x: 80, y: -65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &433494802769457282
@@ -1695,4 +1695,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LORE, CLICK VIEW LOG
+  m_Text: LORE, CLICK VIEW LOGS
