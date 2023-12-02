@@ -13,7 +13,6 @@ public class UIData : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip batteryDrain;
-    public AudioClip batteryCharge;
     public AudioClip batteryTic;
     public static UIData Instance;
     private Image[] PersistingBatteryCharges;
@@ -193,7 +192,6 @@ public class UIData : MonoBehaviour
     public void ChargeBattery()
     {
         if (PersistingBatteryCharges == null) return;
-
         if (depletedBatteryCount == maxDepletedBatteryCount)
         {
             Debug.Log("Here"); 
