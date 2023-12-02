@@ -7,6 +7,6 @@ public class DrKing : Interactable
     protected override void ActivateInteractable()
     {
         base.ActivateInteractable();
-        UIData.Instance.AddLog("jameson's phone");
+        UIData.Instance.AddLog("dr jameson king's phone");
     }
 }
