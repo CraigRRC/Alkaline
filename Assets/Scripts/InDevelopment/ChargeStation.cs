@@ -7,6 +7,8 @@ public class ChargeStation : Interactable
 {
     private Animator animator;
     public ChargingStationState chargingState;
+    private AudioSource audioSource;
+    public AudioClip batteryCharge;
     
     public enum ChargingStationState
     {
@@ -24,6 +26,7 @@ public class ChargeStation : Interactable
     {
         base.Awake();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected override void ActivateInteractable()
@@ -33,11 +36,6 @@ public class ChargeStation : Interactable
         if (animator != null)
         {
             animator.SetTrigger("Charge");
-        }
-        //Increase number of battery cells in hud.
-        if(UIData.Instance != null && chargingState == ChargingStationState.charge)
-        {
-            UIData.Instance.ChargeBattery();
         }
 
         switch (chargingState)
@@ -62,6 +60,11 @@ public class ChargeStation : Interactable
                 break;
             case ChargingStationState.levelSeven:
                 UIData.Instance.AddLog("robot protocol 006 activating");
+                break;
+            case ChargingStationState.charge:
+                audioSource.clip = batteryCharge;
+                audioSource.Play();
+                UIData.Instance.ChargeBattery();
                 break;
 
 

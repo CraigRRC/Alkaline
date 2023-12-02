@@ -7,8 +7,13 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class UIData : MonoBehaviour
 {
+    private AudioSource audioSource;
+    public AudioClip batteryDrain;
+    public AudioClip batteryTic;
     public static UIData Instance;
     private Image[] PersistingBatteryCharges;
     private List<string> cachedLogs;
@@ -30,7 +35,8 @@ public class UIData : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
         cachedLogs = new List<string>();
     }
 
@@ -140,7 +146,8 @@ public class UIData : MonoBehaviour
     public void ReduceBattery()
     {
         if (PersistingBatteryCharges == null) return;
-
+        audioSource.clip = batteryTic;
+        audioSource.Play();
         PlayerSpawner levelManager2 = FindAnyObjectByType<PlayerSpawner>();
         if (levelManager2.magnetsInLvl != null || levelManager2.magnetsInLvl.Count != 0)
         {
@@ -152,6 +159,8 @@ public class UIData : MonoBehaviour
 
         if (depletedBatteryCount == maxDepletedBatteryCount)
         {
+            audioSource.clip = batteryDrain;
+            audioSource.Play();
             //Turn off mags.
             PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
             if (levelManager != null)
@@ -183,7 +192,6 @@ public class UIData : MonoBehaviour
     public void ChargeBattery()
     {
         if (PersistingBatteryCharges == null) return;
-
         if (depletedBatteryCount == maxDepletedBatteryCount)
         {
             Debug.Log("Here"); 

@@ -252,6 +252,7 @@ MonoBehaviour:
   inTrigger: 0
   doOnce: 0
   chargingState: 1
+  batteryCharge: {fileID: 8300000, guid: cc90cf86c97caa54cb0866dd089de1e8, type: 3}
 --- !u!82 &5328278628232354641
 AudioSource:
   m_ObjectHideFlags: 0
