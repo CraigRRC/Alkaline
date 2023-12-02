@@ -146,8 +146,7 @@ public class UIData : MonoBehaviour
     public void ReduceBattery()
     {
         if (PersistingBatteryCharges == null) return;
-        audioSource.clip = batteryTic;
-        audioSource.Play();
+        
         PlayerSpawner levelManager2 = FindAnyObjectByType<PlayerSpawner>();
         if (levelManager2.magnetsInLvl != null || levelManager2.magnetsInLvl.Count != 0)
         {
@@ -156,6 +155,9 @@ public class UIData : MonoBehaviour
                 if (magnet == null) return;
             }
         }
+
+        audioSource.clip = batteryTic;
+        audioSource.Play();
 
         if (depletedBatteryCount == maxDepletedBatteryCount)
         {

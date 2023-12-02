@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
         }
 
         timer += Time.deltaTime;
+
         if (movementScript.GetPlayerMovementState() == PlayerMovementState.Grounded)
         {
             SetPushSound(playerAnimator.GetBool("IsPushing"));
