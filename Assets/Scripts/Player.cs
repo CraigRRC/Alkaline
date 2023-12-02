@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     public Magnet[] magnetsInLvl;
     private AudioSource audioSource;
+    public AudioClip death;
+    public AudioClip boxPush;
     private PlayerMovement movementScript;
     public Sprite deathSprite;
     private Animator playerAnimator;
@@ -50,6 +52,21 @@ public class Player : MonoBehaviour
             //Added for Level 433, to soft reset level each time
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+        SetPushSound(playerAnimator.GetBool("IsPushing"));
+    }
+
+    private void SetPushSound(bool shouldPlay)
+    {
+        if (shouldPlay)
+        {
+            audioSource.clip = boxPush;
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+           
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -70,6 +87,7 @@ public class Player : MonoBehaviour
             PlayerDead();
         }
 
+        //Box
         if (collision.gameObject.layer == 8)
         {
             //Super hacked together probably... But, it works!
@@ -127,6 +145,7 @@ public class Player : MonoBehaviour
 
     private void PlayerDead()
     {
+        audioSource.clip = death;
         if (!audioSource.isPlaying)
         {
             audioSource.Play();
