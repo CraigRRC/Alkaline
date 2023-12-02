@@ -21,8 +21,8 @@ public class BoxSFX : MonoBehaviour
         {
            if(collision.relativeVelocity.magnitude > 2f)
             {
-               if(soundOn)
-                audioSource.Play(); 
+                if(soundOn)
+                    audioSource.Play(); 
             }
         }
     }
