@@ -40,14 +40,14 @@ public class ComputerStation : Interactable
             case ComputerState.levelThree:
                 break;
             case ComputerState.levelFour:
-                UIData.Instance.AddLog("joe's video");
+                UIData.Instance.AddLog("assistant joe's video");
                 break;
             case ComputerState.levelFive:
-                UIData.Instance.AddLog("key of susan's locker");
+                UIData.Instance.AddLog("key of dr susan smith's locker");
                 hasLockerKey = true;
                 break;
             case ComputerState.levelSix:
-                UIData.Instance.AddLog("butter's computer log");
+                UIData.Instance.AddLog("dr butterworth john's log");
                 Activate();
                 break;
             case ComputerState.levelSeven:
