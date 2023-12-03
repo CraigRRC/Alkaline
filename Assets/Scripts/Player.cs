@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public AudioClip boxPush;
     private PlayerMovement movementScript;
     public Sprite deathSprite;
+    public GameObject playerShadow;
     private Animator playerAnimator;
     private PlayerState playerState = PlayerState.Alive;
     public int currentPolaritySwitches;
@@ -169,6 +170,7 @@ public class Player : MonoBehaviour
         {
             audioSource.Play();
         }
+        playerShadow.SetActive(false);
         playerAnimator.SetBool("isDead", true);
         playerState = PlayerState.Dead;
         GetComponent<BoxCollider2D>().enabled = false;
