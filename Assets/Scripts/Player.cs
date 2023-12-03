@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public Magnet[] magnetsInLvl;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip death;
     public AudioClip boxPush;
     private PlayerMovement movementScript;
@@ -60,7 +60,8 @@ public class Player : MonoBehaviour
             magnetsInLvl = null;
             Destroy(gameObject, 3f);
             //Added for Level 433, to soft reset level each time
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (!audioSource.isPlaying)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         timer += Time.deltaTime;
