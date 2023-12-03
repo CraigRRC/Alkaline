@@ -92,7 +92,8 @@ public class UIData : MonoBehaviour
                 {
                     if (logData.logImages[i].name == "close" ||
                         logData.logImages[i].name == "dimBG" ||
-                        logData.logImages[i].name == "screen")
+                        logData.logImages[i].name == "screen" ||
+                        logData.logImages[i].name == "clickformoredetail")
                     {
                         continue;
                     }
