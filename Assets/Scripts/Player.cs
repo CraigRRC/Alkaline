@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public Magnet[] magnetsInLvl;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip death;
     public AudioClip boxPush;
     private PlayerMovement movementScript;
     public Sprite deathSprite;
+    public GameObject playerShadow;
     private Animator playerAnimator;
     private PlayerState playerState = PlayerState.Alive;
     public int currentPolaritySwitches;
@@ -60,7 +61,8 @@ public class Player : MonoBehaviour
             magnetsInLvl = null;
             Destroy(gameObject, 3f);
             //Added for Level 433, to soft reset level each time
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (!audioSource.isPlaying)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         timer += Time.deltaTime;
@@ -168,6 +170,7 @@ public class Player : MonoBehaviour
         {
             audioSource.Play();
         }
+        playerShadow.SetActive(false);
         playerAnimator.SetBool("isDead", true);
         playerState = PlayerState.Dead;
         GetComponent<BoxCollider2D>().enabled = false;

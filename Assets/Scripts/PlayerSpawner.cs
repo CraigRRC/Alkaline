@@ -42,8 +42,12 @@ public class PlayerSpawner : MonoBehaviour
     {
         if (playerSpawned.GetPlayerState() == PlayerState.Dead)
         {
-            playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
-            playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
+            if(!playerSpawned.audioSource.isPlaying)
+            {
+                playerSpawned = Instantiate(playerPrefab, transform.position, Quaternion.identity);
+                playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
+            }
+            
         }
 
         int activeKeys = 0;
