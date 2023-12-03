@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -11,4 +13,11 @@ using UnityEngine.UI;
 public class UI : MonoBehaviour
 {
     public Image[] OriginalBatteryCharges;
+    public Text levelNum;
+
+    private void Awake()
+    {
+        if (levelNum != null)
+            levelNum.text = SceneManager.GetActiveScene().buildIndex.ToString();
+    }
 }

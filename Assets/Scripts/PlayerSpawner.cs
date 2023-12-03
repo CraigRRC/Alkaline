@@ -16,7 +16,6 @@ public class PlayerSpawner : MonoBehaviour
     public Unlock[] keysToActivateDoor;
     private bool doorUnlocker = false;
     private int maxKeys = 0;
-    public Text levelNumber;
 
     //Temp UI stuff
     public Animator keysAnimator;
@@ -34,8 +33,6 @@ public class PlayerSpawner : MonoBehaviour
         playerSpawned.GetComponent<PlayerMovement>().setPlayerMovement(transform.localScale.x);
         playerSpawned.magnetsInLvl = magnetsInLvl.ToArray();
         maxKeys = keysToActivateDoor.Length;
-        if(levelNumber != null )
-            levelNumber.text = SceneManager.GetActiveScene().buildIndex.ToString();
     }
 
     private void Update()
