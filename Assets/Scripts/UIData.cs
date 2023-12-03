@@ -148,6 +148,8 @@ public class UIData : MonoBehaviour
         if (PersistingBatteryCharges == null) return;
         
         PlayerSpawner levelManager2 = FindAnyObjectByType<PlayerSpawner>();
+        if (levelManager2.magnetsInLvl.Count == 0)
+            return;
         if (levelManager2.magnetsInLvl != null || levelManager2.magnetsInLvl.Count != 0)
         {
             foreach (var magnet in levelManager2.magnetsInLvl)
@@ -156,6 +158,8 @@ public class UIData : MonoBehaviour
             }
         }
 
+        Debug.Log(levelManager2.magnetsInLvl == null);
+        Debug.Log(levelManager2.magnetsInLvl.Count);
         audioSource.clip = batteryTic;
         audioSource.Play();
 
