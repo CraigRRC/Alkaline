@@ -9,19 +9,22 @@ public class ControlStation : Interactable
     protected override void Awake()
     {
         base.Awake();
-        screen.SetActive(false);
+        if (screen != null )
+            screen.SetActive(false);
     }
 
     protected override void ActivateInteractable()
     {
         base.ActivateInteractable();
-        screen.SetActive(true);
+        if (screen != null)
+            screen.SetActive(true);
     }
 
     protected override void OnTriggerExit2D(Collider2D collision)
     {
         base.OnTriggerExit2D(collision);
-        screen.SetActive(false);
+        if(screen != null)
+            screen.SetActive(false);
     }
 
 
