@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class MiscControls : MonoBehaviour
 {
     private GameObject escMenu;
+    public UnityEngine.UI.Button closeButton;
+    private GameObject logsUI;
+    
 
     private void Awake()
     {
@@ -13,6 +18,8 @@ public class MiscControls : MonoBehaviour
         escMenu = GetComponentInChildren<Canvas>().gameObject;
         if (escMenu != null )
             escMenu.SetActive(false);
+        
+        
     }
 
     public void Restart()
@@ -29,16 +36,33 @@ public class MiscControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (escMenu == null) return;
+            if(logsUI == null)
+            {
+                logsUI = FindObjectOfType<Camera>().gameObject.transform.GetChild(1).gameObject;
+            }
+            if (closeButton == null)
+            {
+                closeButton = FindObjectOfType<Camera>().gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.GetComponent<UnityEngine.UI.Button>();
+                Debug.Log(closeButton.gameObject.name);
+            }
+
             if (escMenu.activeSelf)
             {
                 escMenu.SetActive(false);
                 Time.timeScale = 1f;
                 return;
             }
+            if (!logsUI.activeSelf)
+            {
+                escMenu.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            if (closeButton != null && !escMenu.activeSelf && logsUI.activeSelf)
+            {
 
-            escMenu.SetActive(true);
-            Time.timeScale = 0f;
-            
+                //closeButton.onClick.AddListener()
+            }
+
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
