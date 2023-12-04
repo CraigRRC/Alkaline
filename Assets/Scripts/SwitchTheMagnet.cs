@@ -41,7 +41,7 @@ public class SwitchTheMagnet : MonoBehaviour
             {
                 if (OnOff) //check if it will be turning on/off the magnets
                 {
-                    if (isOn) //check if teh magnets are on or not 
+                    if (magnets[i].polarityState != Polarity.Off) //check if teh magnets are on or not 
                     {
                         magnets[i].TurnMagnetOff();
                         isOn = false;

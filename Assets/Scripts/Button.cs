@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(AudioSource))]
 public class Button : Unlock
 {
     //public BoxCollider2D doorCollider;
@@ -9,18 +9,14 @@ public class Button : Unlock
     public ButtonState buttonState;
     private Animator buttonAnimator;
     private BoxCollider2D buttonCollider;
+    private AudioSource buttonAudioSource;
 
     private void Awake()
     {
-        /*
-        if(doorCollider != null)
-        {
-            doorCollider.enabled = false;
-        }
-        */
+        buttonAudioSource = GetComponent<AudioSource>();
+        buttonAudioSource.playOnAwake = false;
         buttonAnimator = GetComponent<Animator>();
         buttonCollider = GetComponentInChildren<BoxCollider2D>();
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,12 +25,10 @@ public class Button : Unlock
 
         if (collision.otherCollider.name == "ButtonHitBox")
         {
-            /*
-            if (doorCollider != null)
+            if (!buttonAudioSource.isPlaying)
             {
-                doorCollider.enabled = true;
+                buttonAudioSource.Play();
             }
-            */
             Activate();
             buttonAnimator.SetBool("IsButtonDown", true);
         }
@@ -44,15 +38,7 @@ public class Button : Unlock
     {
         if (collision.otherCollider.name == "ButtonHitBox")
         {
-            /*
-            if (doorCollider != null)
-            {
-                doorCollider.enabled = true;
-            }
-            */
             Activate();
-            //New anaimation to hold the last keyframe
-            //buttonAnimator.SetBool("IsButtonDown", true);
         }
     }
 
@@ -60,28 +46,20 @@ public class Button : Unlock
     {
         if(collision.otherCollider.name == "ButtonHitBox")
         {
-            
+
+            if (!buttonAudioSource.isPlaying)
+            {
+                buttonAudioSource.Play();
+            }
+
             if (buttonType == ButtonType.Hold)
             {
+                
                 Deactivate();
                 buttonAnimator.SetBool("IsButtonDown", false);
-            }
-           
+            }  
         }
-        
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        
-       
-    }
-
 }
 
 public enum ButtonType

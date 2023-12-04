@@ -993,7 +993,7 @@ MonoBehaviour:
   - {fileID: 7643287113515577868}
   - {fileID: 7026097041623007542}
   - {fileID: 7361470398075776760}
-  viewLogsObject: {fileID: 7244901474657539661}
+  levelNum: {fileID: 0}
 --- !u!1 &7816577078877103527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1406,10 @@ PrefabInstance:
     - target: {fileID: 7615532498766822800, guid: 0e3ecfd64ddb4ae478255766d1f6a209, type: 3}
       propertyPath: m_Name
       value: controlsdisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615532498766822800, guid: 0e3ecfd64ddb4ae478255766d1f6a209, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

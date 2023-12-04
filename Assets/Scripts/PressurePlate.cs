@@ -11,6 +11,7 @@ public class PressurePlate : Unlock
     private SpriteRenderer plateButton;
     private SpringJoint2D plateSpring;
     private Rigidbody2D rb;
+    private AudioSource breakSound;
     [SerializeField] LayerMask activeLayer;
 
     // Start is called before the first frame update
@@ -27,7 +28,10 @@ public class PressurePlate : Unlock
         plateAnimator = GetComponentInChildren<Animator>();
         plateCollider = GetComponent<BoxCollider2D>();
         rb = GetComponentInChildren<Rigidbody2D>();
+        breakSound = GetComponent<AudioSource>();
+        Debug.Log(breakSound);
         activeCheck = this.gameObject.transform.GetChild(0);
+        
     }
 
     // Update is called once per frame
@@ -46,6 +50,7 @@ public class PressurePlate : Unlock
         }
         if (!plateSpring.isActiveAndEnabled)
         {
+            breakSound.Play();
             plateAnimator.SetBool("IsPressBroken", true);
             rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         } 
