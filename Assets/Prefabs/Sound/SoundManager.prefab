@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7ac54075b91e246ae15846f2107e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  regularBGM: {fileID: 8300000, guid: 7756cfbf72b64204081150b1ecdc60a9, type: 3}
+  storySeven: {fileID: 8300000, guid: 8f67d6ca84c4d5a4289049a76096b916, type: 3}
+  endOne: {fileID: 8300000, guid: 4d20498691087894793c7ca66110f8c3, type: 3}
+  endTwo: {fileID: 8300000, guid: 1ab4b2e309e4ba241904a8749aed796c, type: 3}
 --- !u!82 &-5866587141528996814
 AudioSource:
   m_ObjectHideFlags: 0
