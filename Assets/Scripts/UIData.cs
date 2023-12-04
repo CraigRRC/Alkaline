@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
@@ -43,9 +45,19 @@ public class UIData : MonoBehaviour
 
     private void Update()
     {
+        if (Instance == null) return;
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(this.gameObject);
+        }
+
         if (HUD == null)
         {
             HUD = FindObjectOfType<UI>();
+            if(HUD == null)
+            {
+                return;
+            }
             PersistingBatteryCharges = new Image[HUD.OriginalBatteryCharges.Length];
             for (int i = 0; i < HUD.OriginalBatteryCharges.Length; i++)
             {
@@ -160,8 +172,6 @@ public class UIData : MonoBehaviour
             }
         }
 
-        Debug.Log(levelManager2.magnetsInLvl == null);
-        Debug.Log(levelManager2.magnetsInLvl.Count);
         audioSource.clip = batteryTic;
         audioSource.Play();
 
