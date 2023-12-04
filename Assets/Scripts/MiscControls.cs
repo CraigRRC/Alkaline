@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class MiscControls : MonoBehaviour
 {
     private GameObject escMenu;
-    public UnityEngine.UI.Button closeButton;
+    private GameObject HUD;
     private GameObject logsUI;
     
 
@@ -18,8 +18,6 @@ public class MiscControls : MonoBehaviour
         escMenu = GetComponentInChildren<Canvas>().gameObject;
         if (escMenu != null )
             escMenu.SetActive(false);
-        
-        
     }
 
     public void Restart()
@@ -40,10 +38,9 @@ public class MiscControls : MonoBehaviour
             {
                 logsUI = FindObjectOfType<Camera>().gameObject.transform.GetChild(1).gameObject;
             }
-            if (closeButton == null)
+            if (HUD == null)
             {
-                closeButton = FindObjectOfType<Camera>().gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.GetComponent<UnityEngine.UI.Button>();
-                Debug.Log(closeButton.gameObject.name);
+                HUD = FindObjectOfType<Camera>().gameObject.transform.GetChild(0).gameObject;
             }
 
             if (escMenu.activeSelf)
@@ -57,11 +54,15 @@ public class MiscControls : MonoBehaviour
                 escMenu.SetActive(true);
                 Time.timeScale = 0f;
             }
-            if (closeButton != null && !escMenu.activeSelf && logsUI.activeSelf)
+            if (HUD != null && !escMenu.activeSelf && logsUI.activeSelf)
             {
-
-                //closeButton.onClick.AddListener()
+                //Bugged
+                ////Simulate close button.
+                //HUD.SetActive(true);
+                //logsUI.SetActive(false);
+               
             }
+            
 
         }
         else if (Input.GetKeyDown(KeyCode.R))
