@@ -23,6 +23,7 @@ public class UIData : MonoBehaviour
     public Image[] persistingLogImage;
     public int depletedBatteryCount = 0;
     public int maxDepletedBatteryCount;
+    private bool storyTwoComputerPass;
 
     private void Awake()
     {
@@ -86,20 +87,20 @@ public class UIData : MonoBehaviour
                     }
                 }
 
-                //Might not need this...?
-                persistingLogImage = new Image[logData.logImages.Length];
-                for (int i = 0; i < logData.logImages.Length; i++)
-                {
-                    if (logData.logImages[i].name == "close" ||
-                        logData.logImages[i].name == "dimBG" ||
-                        logData.logImages[i].name == "screen" ||
-                        logData.logImages[i].name == "clickformoredetail")
-                    {
-                        continue;
-                    }
-                    persistingLogImage[i] = logData.logImages[i];
-                    persistingLogImage[i].gameObject.SetActive(false);
-                }
+                ////Might not need this...?
+                //persistingLogImage = new Image[logData.logImages.Length];
+                //for (int i = 0; i < logData.logImages.Length; i++)
+                //{
+                //    if (logData.logImages[i].name == "close" ||
+                //        logData.logImages[i].name == "dimBG" ||
+                //        logData.logImages[i].name == "screen" ||
+                //        logData.logImages[i].name == "clickformoredetail")
+                //    {
+                //        continue;
+                //    }
+                //    persistingLogImage[i] = logData.logImages[i];
+                //    persistingLogImage[i].gameObject.SetActive(false);
+                //}
             }
         }
 
@@ -224,4 +225,11 @@ public class UIData : MonoBehaviour
             }
         }
     }
+
+    public void CorrectPassword()
+    {
+        storyTwoComputerPass = true;
+    }
+
+    public bool GetPasswordStatus() { return storyTwoComputerPass; }
 }
