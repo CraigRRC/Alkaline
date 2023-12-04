@@ -5,16 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class MiscControls : MonoBehaviour
 {
+    private GameObject escMenu;
+
     private void Awake()
     {
-        DontDestroyOnLoad(this);   
+        DontDestroyOnLoad(this);
+        escMenu = GetComponentInChildren<Canvas>().gameObject;
+        if (escMenu != null )
+            escMenu.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        Destroy(this.gameObject);
     }
 
     private void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(this.gameObject);
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            if (escMenu == null) return;
+            if (escMenu.activeSelf)
+            {
+                escMenu.SetActive(false);
+                Time.timeScale = 1f;
+                return;
+            }
+
+            escMenu.SetActive(true);
+            Time.timeScale = 0f;
+            
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
