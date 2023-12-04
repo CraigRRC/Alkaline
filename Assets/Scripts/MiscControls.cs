@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class MiscControls : MonoBehaviour
 {
     private GameObject escMenu;
+    private GameObject HUD;
+    private GameObject logsUI;
+    
 
     private void Awake()
     {
@@ -29,16 +34,36 @@ public class MiscControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (escMenu == null) return;
+            if(logsUI == null)
+            {
+                logsUI = FindObjectOfType<Camera>().gameObject.transform.GetChild(1).gameObject;
+            }
+            if (HUD == null)
+            {
+                HUD = FindObjectOfType<Camera>().gameObject.transform.GetChild(0).gameObject;
+            }
+
             if (escMenu.activeSelf)
             {
                 escMenu.SetActive(false);
                 Time.timeScale = 1f;
                 return;
             }
-
-            escMenu.SetActive(true);
-            Time.timeScale = 0f;
+            if (!logsUI.activeSelf)
+            {
+                escMenu.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            if (HUD != null && !escMenu.activeSelf && logsUI.activeSelf)
+            {
+                //Bugged
+                ////Simulate close button.
+                //HUD.SetActive(true);
+                //logsUI.SetActive(false);
+               
+            }
             
+
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {

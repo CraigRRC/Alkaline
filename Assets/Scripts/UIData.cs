@@ -236,6 +236,10 @@ public class UIData : MonoBehaviour
         }
     }
 
+    public void LeaveTrigger()
+    {
+        logData.gameObject.SetActive(false);
+    }
     public void CorrectPassword()
     {
         storyTwoComputerPass = true;
