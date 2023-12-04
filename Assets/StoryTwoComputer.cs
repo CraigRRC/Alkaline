@@ -13,16 +13,16 @@ public class StoryTwoComputer : MonoBehaviour
     public GameObject lore;
     public bool correctPassword;
 
-
-
+    
     private void Update()
     {
         if (one.text == "3" && two.text == "2" && three.text == "0" && four.text == "2")
         {
-            correctPassword = true;
+            //UI.Intance
+            UIData.Instance.CorrectPassword();
         }
 
-        if(correctPassword)
+        if(UIData.Instance.GetPasswordStatus())
         {
             //Turn off all this junk and turn on the other junk.
             codeInputBox.SetActive(false);

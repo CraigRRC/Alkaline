@@ -23,6 +23,7 @@ public class UIData : MonoBehaviour
     public Image[] persistingLogImage;
     public int depletedBatteryCount = 0;
     public int maxDepletedBatteryCount;
+    private bool storyTwoComputerPass;
 
     private void Awake()
     {
@@ -224,4 +225,11 @@ public class UIData : MonoBehaviour
             }
         }
     }
+
+    public void CorrectPassword()
+    {
+        storyTwoComputerPass = true;
+    }
+
+    public bool GetPasswordStatus() { return storyTwoComputerPass; }
 }
