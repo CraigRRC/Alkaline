@@ -685,9 +685,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2533991667299426242}
     m_Modifications:
+    - target: {fileID: 1247024720508391159, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
+      objectReference: {fileID: 0}
+    - target: {fileID: 2245860091817934971, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693385274345506966, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
+      objectReference: {fileID: 0}
     - target: {fileID: 3176734118372447744, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
       propertyPath: m_Name
       value: CodeInputBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684996135174049969, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684996135174049969, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3722413337060903136, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
       propertyPath: m_Pivot.x
@@ -784,6 +804,22 @@ PrefabInstance:
     - target: {fileID: 3722413337060903136, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055565464330464388, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285442218492638093, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911404383421611194, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050290984249153606, guid: 5bd868e5d35644847bfd014e3bfaaa48, type: 3}
+      propertyPath: m_Text
+      value: _
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
