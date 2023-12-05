@@ -56,11 +56,9 @@ public class MiscControls : MonoBehaviour
             }
             if (HUD != null && !escMenu.activeSelf && logsUI.activeSelf)
             {
-                //Bugged
-                ////Simulate close button.
-                //HUD.SetActive(true);
-                //logsUI.SetActive(false);
-               
+                //Simulate close button.
+                HUD.SetActive(true);
+                logsUI.SetActive(false);
             }
             
 
