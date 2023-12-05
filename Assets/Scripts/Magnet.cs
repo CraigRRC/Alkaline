@@ -165,8 +165,12 @@ public class Magnet : MonoBehaviour
 
     public void TurnMagnetOff()
     {
-        cachedPolarity = polarityState;
-        polarityState = Polarity.Off;
+        if(polarityState != Polarity.Off)
+        {
+            cachedPolarity = polarityState;
+            polarityState = Polarity.Off;
+        }
+       
     }
 
     public void TurnMagnetOn() { polarityState = cachedPolarity; }

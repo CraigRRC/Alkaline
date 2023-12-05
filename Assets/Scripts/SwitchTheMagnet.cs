@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(AudioSource))]
 
 public class SwitchTheMagnet : MonoBehaviour
 {
+    private AudioSource source;
+
     [Header("Switch them on to off or vise versa")]
     public bool OnOff;
     private bool isOn = true;
@@ -23,6 +26,7 @@ public class SwitchTheMagnet : MonoBehaviour
     private void Awake()
     {
         switchAnimator = switchArt.GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +34,8 @@ public class SwitchTheMagnet : MonoBehaviour
         if (collision.gameObject.layer == 12) return;
         //play animation
         switchAnimator.SetTrigger("isActivated");
+        if(!source.isPlaying)
+            source.Play();
 
         //check if switch has magnets in magnet array
         if (magnets.Length <= 0) Debug.LogWarning("Nothing in Magnet array!!");
@@ -41,7 +47,7 @@ public class SwitchTheMagnet : MonoBehaviour
             {
                 if (OnOff) //check if it will be turning on/off the magnets
                 {
-                    if (isOn) //check if teh magnets are on or not 
+                    if (magnets[i].polarityState != Polarity.Off) //check if teh magnets are on or not 
                     {
                         magnets[i].TurnMagnetOff();
                         isOn = false;
