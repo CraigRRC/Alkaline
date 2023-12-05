@@ -1437,12 +1437,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 148063645632060328, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_Text
-      value: "That robot awakened Dr. Butterworth John's mind\nsuccessfully created
-        the antidote\nand revived everyone from their hibernation.\n\nSubsequently.
-        they did not cease their research. \nDr. John learned from the experience
-        and became more cautious.\n\nTen years later\nwith the help of Dr. Susan
-        Smith. Dr. Jameson King. and two assistants.\nthey successfully developed
-        a safe virus that\ninfinitely promotes plant growth.\n\nThey truly realized
+      value: "that robot awakened dr. butterworth john's mind\nsuccessfully created
+        the antidote\nand revived everyone from their hibernation.\n\nsubsequently,
+        they did not cease their research. \ndr. john learned from the experience
+        and became more cautious.\n\nten years later, with the help of dr. susan
+        smith, dr. jameson king,\nand two assistants. a safe virus that infinitely
+        promotes plant growth \nwas successfully developed.\n\nthey truly realized
         their vision\nfrom then on\nhumanity would never suffer from food scarcity
         again."
       objectReference: {fileID: 0}
@@ -1590,6 +1590,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4964942755115795035, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -398
+      objectReference: {fileID: 0}
     - target: {fileID: 7498417038891456214, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_SizeDelta.y
       value: -457.14
@@ -1597,6 +1601,14 @@ PrefabInstance:
     - target: {fileID: 7498417038891456214, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 103.57001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635085900896008181, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_Text
+      value: play bonus level
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816409824102549184, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_Text
+      value: main menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
