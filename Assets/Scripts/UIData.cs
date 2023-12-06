@@ -131,12 +131,11 @@ public class UIData : MonoBehaviour
             //Add it directly.
             for (int i = 0; i < persistingLogText.Length; i++)
             {
-                Debug.Log(log);
-                Debug.Log(persistingLogText[i].text);
                 if (log.Trim() == persistingLogText[i].text.Trim())
                 {
                     Debug.Log("Success!");
                     persistingLogText[i].enabled = true;
+                    persistingLogText[i].gameObject.GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
                     if (cachedLogs.Count == 0)
                     {
                         cachedLogs.Add(log);
