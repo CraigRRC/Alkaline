@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
@@ -43,9 +45,19 @@ public class UIData : MonoBehaviour
 
     private void Update()
     {
+        if (Instance == null) return;
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(this.gameObject);
+        }
+
         if (HUD == null)
         {
             HUD = FindObjectOfType<UI>();
+            if(HUD == null)
+            {
+                return;
+            }
             PersistingBatteryCharges = new Image[HUD.OriginalBatteryCharges.Length];
             for (int i = 0; i < HUD.OriginalBatteryCharges.Length; i++)
             {
@@ -109,7 +121,15 @@ public class UIData : MonoBehaviour
     public void AddLog(string log)
     {
         Debug.Log(log);
-        logData.gameObject.SetActive(true);
+        if(logData.gameObject.activeSelf)
+        {
+            logData.gameObject.SetActive(false);
+        }
+        else
+        {
+            logData.gameObject.SetActive(true);
+        }
+        
         if (persistingLogText.Length != 0)
         {
             foreach (var text in persistingLogText)
@@ -119,12 +139,11 @@ public class UIData : MonoBehaviour
             //Add it directly.
             for (int i = 0; i < persistingLogText.Length; i++)
             {
-                Debug.Log(log);
-                Debug.Log(persistingLogText[i].text);
                 if (log.Trim() == persistingLogText[i].text.Trim())
                 {
                     Debug.Log("Success!");
                     persistingLogText[i].enabled = true;
+                    persistingLogText[i].gameObject.GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
                     if (cachedLogs.Count == 0)
                     {
                         cachedLogs.Add(log);
@@ -160,8 +179,6 @@ public class UIData : MonoBehaviour
             }
         }
 
-        Debug.Log(levelManager2.magnetsInLvl == null);
-        Debug.Log(levelManager2.magnetsInLvl.Count);
         audioSource.clip = batteryTic;
         audioSource.Play();
 
@@ -204,17 +221,17 @@ public class UIData : MonoBehaviour
         {
             Debug.Log("Here"); 
             //Turn on mags.
-            PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
-            if (levelManager != null)
-            {
-                foreach (var magnet in levelManager.magnetsInLvl)
-                {
-                    if (magnet != null)
-                    {
-                        magnet.TurnMagnetOn();
-                    }
-                }
-            }
+            //PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
+            //if (levelManager != null)
+            //{
+            //    foreach (var magnet in levelManager.magnetsInLvl)
+            //    {
+            //        if (magnet != null)
+            //        {
+            //            magnet.TurnMagnetOn();
+            //        }
+            //    }
+            //}
         }
         depletedBatteryCount = 0;
         foreach (var battery in PersistingBatteryCharges)
@@ -226,6 +243,10 @@ public class UIData : MonoBehaviour
         }
     }
 
+    public void LeaveTrigger()
+    {
+        logData.gameObject.SetActive(false);
+    }
     public void CorrectPassword()
     {
         storyTwoComputerPass = true;

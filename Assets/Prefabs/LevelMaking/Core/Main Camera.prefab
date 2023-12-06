@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 10
 --- !u!114 &8793796237124686854
 MonoBehaviour:
@@ -239,6 +239,10 @@ PrefabInstance:
     - target: {fileID: 4186163458009701926, guid: 23aff0cb5f9bb481a9cd03c11fbdca70, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317769169262331753, guid: 23aff0cb5f9bb481a9cd03c11fbdca70, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7174047692284307928, guid: 23aff0cb5f9bb481a9cd03c11fbdca70, type: 3}
       propertyPath: m_Enabled
@@ -381,7 +385,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 401.4
+      value: 387
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733912711929979782, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359000498382715653, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 283.25232
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359000498382715653, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 279.75592
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359000498382715653, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 279.75592
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359000498382715653, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 429.4
       objectReference: {fileID: 0}
     - target: {fileID: 3591146502050873603, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: levelNum
@@ -516,8 +540,12 @@ PrefabInstance:
       value: HUDCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8703296299721359438, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703296299721359438, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 190
+      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

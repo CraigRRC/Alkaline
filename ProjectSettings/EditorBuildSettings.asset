@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Story_2.unity
     guid: beb23f17b8203aa489e6b12d2b453153
   - enabled: 1
-    path: Assets/Scenes/Levels/Level_2.unity
+    path: Assets/Scenes/Levels/Level_1.unity
     guid: 03826d7a7f068f949889425960ab0921
   - enabled: 1
     path: Assets/Scenes/Levels/Level_3.unity
@@ -75,18 +75,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level_54.unity
     guid: 448480fd0527d5340bd4f811be35a7a6
   - enabled: 1
-    path: Assets/Scenes/Levels/Level_56.unity
-    guid: 276ef5f587ec51c45bc3eb8347b74c5b
-  - enabled: 1
     path: Assets/Scenes/Levels/Story_7.unity
     guid: dddb9e7191a2acb429353b8411bd54d8
-  - enabled: 0
-    path: Assets/Scenes/Levels/Level_433.unity
-    guid: b6f1ce375ec14994a9bb4274f82375d8
   - enabled: 1
     path: Assets/Scenes/Levels/End_1_leave.unity
     guid: baa383f895d9fc64fa319d65e9f2a397
   - enabled: 1
     path: Assets/Scenes/Levels/End_2_awake.unity
     guid: 121444e3eb0d7e54e8c83dcdeb6f6381
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_56.unity
+    guid: 276ef5f587ec51c45bc3eb8347b74c5b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_433.unity
+    guid: b6f1ce375ec14994a9bb4274f82375d8
   m_configObjects: {}

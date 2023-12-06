@@ -13,7 +13,7 @@ public class LE_ScreenController : MonoBehaviour
     public InputField inputTwo;
     public InputField inputThree;
 
-    private bool cureSuccess = false;
+    public bool cureSuccess = false;
 
     private void Awake()
     {

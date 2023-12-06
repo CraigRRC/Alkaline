@@ -51,6 +51,8 @@ public abstract class Interactable : Unlock
         if (collision.gameObject.layer == 11)
         {
             inTrigger = false;
+            UIData.Instance.LeaveTrigger();
+            
         }
     }
 
