@@ -24,6 +24,7 @@ public class MiscControls : MonoBehaviour
 
     public void Restart()
     {
+        Destroy(UIData.Instance.gameObject);
         Destroy(this.gameObject);
     }
 
