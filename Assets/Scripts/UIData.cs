@@ -213,17 +213,17 @@ public class UIData : MonoBehaviour
         {
             Debug.Log("Here"); 
             //Turn on mags.
-            PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
-            if (levelManager != null)
-            {
-                foreach (var magnet in levelManager.magnetsInLvl)
-                {
-                    if (magnet != null)
-                    {
-                        magnet.TurnMagnetOn();
-                    }
-                }
-            }
+            //PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
+            //if (levelManager != null)
+            //{
+            //    foreach (var magnet in levelManager.magnetsInLvl)
+            //    {
+            //        if (magnet != null)
+            //        {
+            //            magnet.TurnMagnetOn();
+            //        }
+            //    }
+            //}
         }
         depletedBatteryCount = 0;
         foreach (var battery in PersistingBatteryCharges)
