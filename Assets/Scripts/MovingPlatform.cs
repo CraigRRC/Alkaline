@@ -13,12 +13,12 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = points[startingPoint].position;
+
     }
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
+        if (Vector2.Distance(transform.position, points[i].position) < 0.002f)
         {
             i++;
             if (i == points.Length)
@@ -26,6 +26,9 @@ public class MovingPlatform : MonoBehaviour
                 i = 0;
             }
         }
+        Debug.Log(transform.position);
+        Debug.Log(points[i].position);
+        Debug.Log("current position distance " + Vector2.Distance(transform.position, points[i].position));
 
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
