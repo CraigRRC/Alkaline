@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 959179878567269683}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: point 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7176366213514968655}
   - component: {fileID: 3154637499474914367}
   - component: {fileID: 2307214284153242531}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: FloatingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2458898350500554492}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: FloatingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 213210910956436113}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: point 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
