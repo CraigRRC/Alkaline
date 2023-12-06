@@ -133,9 +133,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1777340792908294816, guid: f8ccaf5c32e2edf42a0e884165f4c4c4, type: 3}
+      propertyPath: m_Text
+      value: restart game
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037345560771057281, guid: f8ccaf5c32e2edf42a0e884165f4c4c4, type: 3}
+      propertyPath: m_Text
+      value: main menu
+      objectReference: {fileID: 0}
     - target: {fileID: 4285480184399845465, guid: f8ccaf5c32e2edf42a0e884165f4c4c4, type: 3}
       propertyPath: m_Name
       value: ESC-menuUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249390066418231514, guid: f8ccaf5c32e2edf42a0e884165f4c4c4, type: 3}
+      propertyPath: m_Text
+      value: quit
       objectReference: {fileID: 0}
     - target: {fileID: 5462429932046921324, guid: f8ccaf5c32e2edf42a0e884165f4c4c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

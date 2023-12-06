@@ -121,7 +121,15 @@ public class UIData : MonoBehaviour
     public void AddLog(string log)
     {
         Debug.Log(log);
-        logData.gameObject.SetActive(true);
+        if(logData.gameObject.activeSelf)
+        {
+            logData.gameObject.SetActive(false);
+        }
+        else
+        {
+            logData.gameObject.SetActive(true);
+        }
+        
         if (persistingLogText.Length != 0)
         {
             foreach (var text in persistingLogText)
