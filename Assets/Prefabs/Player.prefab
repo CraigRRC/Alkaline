@@ -87,7 +87,7 @@ MonoBehaviour:
   - {x: -0.0753845, y: 0.013030194, z: 0.00000009848736}
   m_ShapePathHash: -90525098
   m_Mesh: {fileID: 0}
-  m_InstanceId: 179334
+  m_InstanceId: 36978
   m_LocalBounds:
     m_Center: {x: 0.00809747, y: 0.34457636, z: 0}
     m_Extent: {x: 0.1473262, y: 0.43578774, z: 0}
@@ -404,7 +404,7 @@ MonoBehaviour:
   xJumpConstraint: 2.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 25472
+    m_Bits: 156544
   grav: 0
   airGrav: 0
 --- !u!95 &-455935275463590334
