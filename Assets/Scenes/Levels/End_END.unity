@@ -1662,21 +1662,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 148063645632060328, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_Text
-      value: 'Congratulations!
+      value: 'CONGRATULATIONS!
 
 
-        You have received the highest honor
+        you have received the highest honor
 
 
         given
         by
 
-        Dr. Butterworth John   from AGI lab
+        dr. butterworth john   from AGI lab
 
         and
 
-        Dr.
-        Euler John   from PTI lab'
+        dr.
+        euler john   from PTI lab'
       objectReference: {fileID: 0}
     - target: {fileID: 1630380354725370994, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_IsActive
@@ -1829,6 +1829,10 @@ PrefabInstance:
     - target: {fileID: 7498417038891456214, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 246.20001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816409824102549184, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_Text
+      value: main menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
