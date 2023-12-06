@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 10
 --- !u!114 &8793796237124686854
 MonoBehaviour:
@@ -381,7 +381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 379817256822135578, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 401.4
+      value: 387
       objectReference: {fileID: 0}
     - target: {fileID: 3591146502050873603, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: levelNum
@@ -517,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8703296299721359438, guid: 661b01fa30ebf43cbb64a36a55a26dea, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 190
+      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
