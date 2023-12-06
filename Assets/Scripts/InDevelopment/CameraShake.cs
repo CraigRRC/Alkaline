@@ -14,6 +14,7 @@ public class CameraShake : MonoBehaviour
     private bool isShaking;
     public bool canShake = true;
     public float shakeDuration = 1.0f;
+    public float shakeMagnitude = 3.0f;
     private float elapsedTime  = 0.0f;
 
      /*if (collision.relativeVelocity.magnitude > lethalImpactForce)
@@ -42,20 +43,24 @@ public class CameraShake : MonoBehaviour
     {
         if(canShake && collision.relativeVelocity.magnitude > impactForce && isShaking == false)
         {
-            ShakeCam(shakeDuration);
+            ShakeCam(shakeDuration, shakeMagnitude);
         }
     }
 
-    void ShakeCam(float shakeDuration)
+    void ShakeCam(float shakeDuration, float magnitude)
     {
         origonalCamPos = cam.transform.position;
         isShaking = true;
+        Debug.Log("SHAKE");
 
         while (elapsedTime < shakeDuration)
         {
-            float x = Random.Range(-1f, 1f);
-            float y = Random.Range(-1f, 1f);                                //CURRENTLY EXTREEEEEEEMLY BROKEN DO NOT USE (yet)
+            Debug.Log("SHAKING");
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;                                //CURRENTLY EXTREEEEEEEMLY BROKEN DO NOT USE (yet)
             transform.position = new Vector2(x, y/*, origonalCamPos.z*/);
+
+            elapsedTime += Time.deltaTime;
         }
 
         transform.position = origonalCamPos;
