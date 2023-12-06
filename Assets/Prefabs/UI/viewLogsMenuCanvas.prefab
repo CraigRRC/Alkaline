@@ -863,7 +863,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: keycard of dr.john
+  m_Text: dr. buttoworth john's keycard
 --- !u!114 &1809683840739847177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,7 +2160,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: key of dr susan smith's locker
+  m_Text: key to dr susan smith's locker
 --- !u!114 &5055091619509956064
 MonoBehaviour:
   m_ObjectHideFlags: 0
