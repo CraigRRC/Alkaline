@@ -87,7 +87,7 @@ MonoBehaviour:
   - {x: -0.0753845, y: 0.013030194, z: 0.00000009848736}
   m_ShapePathHash: -90525098
   m_Mesh: {fileID: 0}
-  m_InstanceId: 55402
+  m_InstanceId: 65374
   m_LocalBounds:
     m_Center: {x: 0.00809747, y: 0.34457636, z: 0}
     m_Extent: {x: 0.1473262, y: 0.43578774, z: 0}
@@ -381,7 +381,7 @@ MonoBehaviour:
   death: {fileID: 8300000, guid: e3dbaed3f39b97a47b9847baab7336ff, type: 3}
   boxPush: {fileID: 8300000, guid: 4a9afc2bf95654042a59581a8c66648b, type: 3}
   walk: {fileID: 8300000, guid: 4302705b2f471814b816a277ec3c9ac0, type: 3}
-  thud: {fileID: 0}
+  thud: {fileID: 8300000, guid: 7f048c27b87bedd40a5fabf944280aae, type: 3}
   deathSprite: {fileID: 21300000, guid: 25b7ef8937031b84983b916d4ec3b355, type: 3}
   playerShadow: {fileID: 251045096934695340}
   currentPolaritySwitches: 0

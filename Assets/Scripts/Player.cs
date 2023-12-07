@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     public AudioClip death;
     public AudioClip boxPush;
     public AudioClip walk;
-    public AudioClip thud;
     private PlayerMovement movementScript;
     public Sprite deathSprite;
     public GameObject playerShadow;
@@ -54,11 +53,8 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        
-           
-        
 
-        if(playerState == PlayerState.Dead)
+        if (playerState == PlayerState.Dead)
         {
             magnetsInLvl = null;
             Destroy(gameObject, 3f);
@@ -73,7 +69,7 @@ public class Player : MonoBehaviour
         {
             SetPushSound(playerAnimator.GetBool("IsPushing"));
         }
-        
+
     }
 
 
@@ -84,6 +80,8 @@ public class Player : MonoBehaviour
             audioSource.clip = boxPush;
             if (!audioSource.isPlaying)
             {
+                audioSource.pitch = Random.Range(0.8f, 1);
+                audioSource.volume = Random.Range(0.8f, 1);
                 audioSource.Play();
                 timer = 0f;
             }
@@ -170,6 +168,8 @@ public class Player : MonoBehaviour
         audioSource.clip = death;
         if (!audioSource.isPlaying)
         {
+            audioSource.pitch = Random.Range(0.8f, 1);
+            audioSource.volume = Random.Range(0.8f, 1);
             audioSource.Play();
         }
         playerShadow.SetActive(false);
