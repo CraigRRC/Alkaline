@@ -99,7 +99,8 @@ public class MiscControls : MonoBehaviour
                 labScreen.SetActive(false);
             }
 
-            //Level 7 stuff
+
+           
 
 
         }
@@ -110,6 +111,11 @@ public class MiscControls : MonoBehaviour
                 Destroy(gameObject);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
