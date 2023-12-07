@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip death;
     public AudioClip boxPush;
+    public AudioClip walk;
+    public AudioClip thud;
     private PlayerMovement movementScript;
     public Sprite deathSprite;
     public GameObject playerShadow;
@@ -176,6 +178,14 @@ public class Player : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false;
         playerDeathBox.enabled = true;
         movementScript.enabled = false;
+    }
+
+    public void PlayWalkSound()
+    {
+        audioSource.clip = walk;
+        audioSource.pitch = Random.Range(0.8f, 1);
+        audioSource.volume = Random.Range(0.8f, 1);
+        audioSource.Play();
     }
 
     public PlayerState GetPlayerState() { return playerState; }
