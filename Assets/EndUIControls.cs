@@ -7,7 +7,7 @@ public class EndUIControls: MonoBehaviour
 {
     public void PlayBonus()
     {
-        SceneManager.LoadScene("Level_56");
+        SceneManager.LoadScene("Level_61");
     }
     
     public void MainMenu()

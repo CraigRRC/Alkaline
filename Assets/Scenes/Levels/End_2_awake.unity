@@ -1604,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635085900896008181, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_Text
-      value: play bonus level
+      value: play bonus levels
       objectReference: {fileID: 0}
     - target: {fileID: 7816409824102549184, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_Text
