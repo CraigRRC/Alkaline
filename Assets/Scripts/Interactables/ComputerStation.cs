@@ -43,7 +43,7 @@ public class ComputerStation : Interactable
                 UIData.Instance.AddLog("assistant joe's video");
                 break;
             case ComputerState.levelFive:
-                UIData.Instance.AddLog("key of dr susan smith's locker");
+                UIData.Instance.AddLog("key to dr susan smith's locker");
                 hasLockerKey = true;
                 break;
             case ComputerState.levelSix:

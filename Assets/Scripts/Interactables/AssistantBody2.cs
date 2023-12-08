@@ -7,7 +7,7 @@ public class AssistantBody2 : Interactable
     protected override void ActivateInteractable()
     {
         base.ActivateInteractable();
-        UIData.Instance.AddLog("keycard of dr.john");
+        UIData.Instance.AddLog("dr. buttoworth john's keycard");
         Activate();
     }
 }

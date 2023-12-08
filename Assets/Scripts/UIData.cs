@@ -89,10 +89,15 @@ public class UIData : MonoBehaviour
                     //Load the cached values.
                     for (int i = 0; i < cachedLogs.Count; i++)
                     {
+                        Debug.Log(cachedLogs.Count);
                         for (int j = 0; j < persistingLogText.Length; j++)
                         {
-                            if (cachedLogs[i] == persistingLogText[j].text)
+                            Debug.Log(cachedLogs[i]);
+                            Debug.Log(persistingLogText[j].text);
+                            if (cachedLogs[i] == persistingLogText[j].text.Trim())
                             {
+                                Debug.Log(cachedLogs[i]);
+                                Debug.Log(persistingLogText[j].text);
                                 persistingLogText[j].enabled = true;
                             }
                         }
@@ -120,7 +125,6 @@ public class UIData : MonoBehaviour
 
     public void AddLog(string log)
     {
-        Debug.Log(log);
         if(logData.gameObject.activeSelf)
         {
             logData.gameObject.SetActive(false);
@@ -141,6 +145,8 @@ public class UIData : MonoBehaviour
             {
                 if (log.Trim() == persistingLogText[i].text.Trim())
                 {
+                    Debug.Log(persistingLogText[i]);
+                    Debug.Log(log);
                     Debug.Log("Success!");
                     persistingLogText[i].enabled = true;
                     persistingLogText[i].gameObject.GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
@@ -152,8 +158,10 @@ public class UIData : MonoBehaviour
                     {
                         foreach (var cachedLog in cachedLogs)
                         {
+                            Debug.Log(cachedLog);
                             if (cachedLog != log)
                             {
+                                Debug.Log(cachedLog);
                                 cachedLogs.Add(log);
                                 return;
                             }
