@@ -84,9 +84,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/End_2_awake.unity
     guid: 121444e3eb0d7e54e8c83dcdeb6f6381
   - enabled: 1
+    path: Assets/Scenes/Levels/More Bonus Levels/Level_61.unity
+    guid: f68e5dfdfac95744c9af1831ad3d10ef
+  - enabled: 1
     path: Assets/Scenes/Levels/Level_56.unity
     guid: 276ef5f587ec51c45bc3eb8347b74c5b
   - enabled: 1
     path: Assets/Scenes/Levels/Level_433.unity
     guid: b6f1ce375ec14994a9bb4274f82375d8
+  - enabled: 1
+    path: Assets/Scenes/Levels/End_END.unity
+    guid: 55e928019944c324c838cb5156c56a80
   m_configObjects: {}

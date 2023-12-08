@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
@@ -39,6 +38,13 @@ public class BGM : MonoBehaviour
                 if (!source.isPlaying)
                     source.Play();
                 break;
+
+            case "End_END":
+                source.clip = endOne;
+                if (!source.isPlaying)
+                    source.Play(); 
+                break;
+
             default:
                 source.clip = regularBGM;
                 if (!source.isPlaying)

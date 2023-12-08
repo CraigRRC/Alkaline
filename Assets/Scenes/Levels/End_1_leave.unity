@@ -1435,6 +1435,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 148063645632060328, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_Text
+      value: "the agi spaceship successfully departed\ntowards the pti spacelab.
+        \n\ncan the people aboard endure until arrival?\nwhat's the situation at
+        the pti lab?\nhave they been infected by the virus?\n\neverything is at stake,\nbut
+        still there is hope."
+      objectReference: {fileID: 0}
     - target: {fileID: 2317638859990818410, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1574,6 +1581,18 @@ PrefabInstance:
     - target: {fileID: 4218253392195295432, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964942755115795035, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -398
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635085900896008181, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_Text
+      value: play bonus levels
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816409824102549184, guid: 33d1fab20bb1720409ae4532be3aeb2a, type: 3}
+      propertyPath: m_Text
+      value: main menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

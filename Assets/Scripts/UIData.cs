@@ -121,7 +121,15 @@ public class UIData : MonoBehaviour
     public void AddLog(string log)
     {
         Debug.Log(log);
-        logData.gameObject.SetActive(true);
+        if(logData.gameObject.activeSelf)
+        {
+            logData.gameObject.SetActive(false);
+        }
+        else
+        {
+            logData.gameObject.SetActive(true);
+        }
+        
         if (persistingLogText.Length != 0)
         {
             foreach (var text in persistingLogText)
@@ -131,12 +139,11 @@ public class UIData : MonoBehaviour
             //Add it directly.
             for (int i = 0; i < persistingLogText.Length; i++)
             {
-                Debug.Log(log);
-                Debug.Log(persistingLogText[i].text);
                 if (log.Trim() == persistingLogText[i].text.Trim())
                 {
                     Debug.Log("Success!");
                     persistingLogText[i].enabled = true;
+                    persistingLogText[i].gameObject.GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
                     if (cachedLogs.Count == 0)
                     {
                         cachedLogs.Add(log);
@@ -214,17 +221,17 @@ public class UIData : MonoBehaviour
         {
             Debug.Log("Here"); 
             //Turn on mags.
-            PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
-            if (levelManager != null)
-            {
-                foreach (var magnet in levelManager.magnetsInLvl)
-                {
-                    if (magnet != null)
-                    {
-                        magnet.TurnMagnetOn();
-                    }
-                }
-            }
+            //PlayerSpawner levelManager = FindAnyObjectByType<PlayerSpawner>();
+            //if (levelManager != null)
+            //{
+            //    foreach (var magnet in levelManager.magnetsInLvl)
+            //    {
+            //        if (magnet != null)
+            //        {
+            //            magnet.TurnMagnetOn();
+            //        }
+            //    }
+            //}
         }
         depletedBatteryCount = 0;
         foreach (var battery in PersistingBatteryCharges)

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4461453223149103126, guid: 7c1b17e4e798d354cb9c41ee89613e41, type: 3}
       propertyPath: m_InstanceId
-      value: -5008604
+      value: -151094
       objectReference: {fileID: 0}
     - target: {fileID: 4461453223149103126, guid: 7c1b17e4e798d354cb9c41ee89613e41, type: 3}
       propertyPath: m_ShapePathHash
@@ -127,6 +127,10 @@ PrefabInstance:
     - target: {fileID: 5076782513324482783, guid: 7c1b17e4e798d354cb9c41ee89613e41, type: 3}
       propertyPath: m_Offset.y
       value: 0.35598388
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140095855740099857, guid: 7c1b17e4e798d354cb9c41ee89613e41, type: 3}
+      propertyPath: soundOn
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6486875214941529643, guid: 7c1b17e4e798d354cb9c41ee89613e41, type: 3}
       propertyPath: m_Mass

@@ -10,6 +10,8 @@ public class MiscControls : MonoBehaviour
     private GameObject escMenu;
     private GameObject HUD;
     private GameObject logsUI;
+    private GameObject controlStationScreen;
+    private GameObject labScreen;
     
 
     private void Awake()
@@ -22,6 +24,7 @@ public class MiscControls : MonoBehaviour
 
     public void Restart()
     {
+        Destroy(UIData.Instance.gameObject);
         Destroy(this.gameObject);
     }
 
@@ -43,26 +46,62 @@ public class MiscControls : MonoBehaviour
                 HUD = FindObjectOfType<Camera>().gameObject.transform.GetChild(0).gameObject;
             }
 
+
+            if(SceneManager.GetActiveScene().name == "Story_7")
+            {
+                if (controlStationScreen == null)
+                {
+                    controlStationScreen = FindObjectOfType<CS_ScreenController>(true).gameObject;
+                }
+                if (labScreen == null)
+                {
+                    labScreen = FindObjectOfType<LE_ScreenController>(true).gameObject;
+                }
+            }
+            
             if (escMenu.activeSelf)
             {
                 escMenu.SetActive(false);
                 Time.timeScale = 1f;
                 return;
             }
-            if (!logsUI.activeSelf)
+
+            if(SceneManager.GetActiveScene().name == "Story_7")
             {
-                escMenu.SetActive(true);
-                Time.timeScale = 0f;
+                if (!logsUI.activeSelf && !controlStationScreen.activeSelf && !labScreen.activeSelf)
+                {
+                    escMenu.SetActive(true);
+                    Time.timeScale = 0f;
+                }
             }
+            else
+            {
+                if (!logsUI.activeSelf)
+                {
+                    escMenu.SetActive(true);
+                    Time.timeScale = 0f;
+                }
+            }
+
+            
             if (HUD != null && !escMenu.activeSelf && logsUI.activeSelf)
             {
-                //Bugged
-                ////Simulate close button.
-                //HUD.SetActive(true);
-                //logsUI.SetActive(false);
-               
+                //Simulate close button.
+                HUD.SetActive(true);
+                logsUI.SetActive(false);
             }
-            
+            if(controlStationScreen != null &&  !escMenu.activeSelf && !logsUI.activeSelf)
+            {
+                controlStationScreen.SetActive(false);
+            }
+            if (labScreen != null && !escMenu.activeSelf && !logsUI.activeSelf)
+            {
+                labScreen.SetActive(false);
+            }
+
+
+           
+
 
         }
         else if (Input.GetKeyDown(KeyCode.R))
@@ -72,6 +111,11 @@ public class MiscControls : MonoBehaviour
                 Destroy(gameObject);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
