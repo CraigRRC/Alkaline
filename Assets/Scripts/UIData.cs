@@ -89,10 +89,15 @@ public class UIData : MonoBehaviour
                     //Load the cached values.
                     for (int i = 0; i < cachedLogs.Count; i++)
                     {
+                        Debug.Log(cachedLogs.Count);
                         for (int j = 0; j < persistingLogText.Length; j++)
                         {
-                            if (cachedLogs[i] == persistingLogText[j].text)
+                            Debug.Log(cachedLogs[i]);
+                            Debug.Log(persistingLogText[j].text);
+                            if (cachedLogs[i] == persistingLogText[j].text.Trim())
                             {
+                                Debug.Log(cachedLogs[i]);
+                                Debug.Log(persistingLogText[j].text);
                                 persistingLogText[j].enabled = true;
                             }
                         }
@@ -153,8 +158,10 @@ public class UIData : MonoBehaviour
                     {
                         foreach (var cachedLog in cachedLogs)
                         {
+                            Debug.Log(cachedLog);
                             if (cachedLog != log)
                             {
+                                Debug.Log(cachedLog);
                                 cachedLogs.Add(log);
                                 return;
                             }
