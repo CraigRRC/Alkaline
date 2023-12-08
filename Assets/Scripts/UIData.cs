@@ -120,7 +120,6 @@ public class UIData : MonoBehaviour
 
     public void AddLog(string log)
     {
-        Debug.Log(log);
         if(logData.gameObject.activeSelf)
         {
             logData.gameObject.SetActive(false);
@@ -141,6 +140,8 @@ public class UIData : MonoBehaviour
             {
                 if (log.Trim() == persistingLogText[i].text.Trim())
                 {
+                    Debug.Log(persistingLogText[i]);
+                    Debug.Log(log);
                     Debug.Log("Success!");
                     persistingLogText[i].enabled = true;
                     persistingLogText[i].gameObject.GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
