@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 1386900662601105776}
   - component: {fileID: 3519594010637980564}
   m_Layer: 5
-  m_Name: Joe-video
+  m_Name: joe-video
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
